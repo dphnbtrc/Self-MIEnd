@@ -1,12 +1,15 @@
 <resources>
+    <!-- main -->
     <string name="app_name">Self-MIEnd</string>
     <string name="app_icon">Self-MIEnd Icon</string>
     <string name="app_tagline">Guiding Your Path to\nMental Wellness</string>
     <string name="app_name2">Self-Mind, Self-Mend</string>
     <string name="app_startBtn">START</string>
-    <string name="title_activity_main2">MainActivity2</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- about fragment -->
+    <string name="abt_hey">Hey There!</string>
+    <string name="abt_intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet proin fermentum. Tristique senectus et netus et.</string>
+    <string name="app_contBtn">Continue</string>
+    <string name="app_backBtn">Back</string>
+
 </resources>
