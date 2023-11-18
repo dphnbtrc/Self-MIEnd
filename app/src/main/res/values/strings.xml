@@ -15,12 +15,17 @@
     <string name="home_title">Select Activity</string>
     <string name="home_testBtn">Tests</string>
     <string name="home_actBtn">Activities to Try</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- greeting and select test fragment -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tests_title">Select a Test</string>
     <string name="stressTest_title">Stress</string>
     <string name="internet_addictionTest_title">Internet Addiction</string>
     <string name="depressionTest_title">Depression</string>
     <string name="anxietyTest_title">Anxiety</string>
+
+    <!--test fragment-->
+    <string name="test_text">Test</string>
+    <string name="test_question">Loading Question...</string>
 
 </resources>
