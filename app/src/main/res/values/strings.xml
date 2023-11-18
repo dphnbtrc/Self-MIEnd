@@ -11,7 +11,9 @@
     <string name="abt_intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet proin fermentum. Tristique senectus et netus et.</string>
     <string name="app_contBtn">Continue</string>
     <string name="app_backBtn">Back</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home_title">Select Activity</string>
+    <string name="home_testBtn">Tests</string>
+    <string name="home_actBtn">Activities to Try</string>
 
 </resources>

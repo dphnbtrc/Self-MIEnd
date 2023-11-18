@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GreetingFragment">
+    tools:context=".HomeFragment">
 
     <TextView
         android:id="@+id/textView"
         style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/abt_hey"
+        android:text="@string/home_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -19,31 +19,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.114" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/testsBtn"
         style="@style/SubheadingText"
-        android:layout_width="303dp"
-        android:layout_height="291dp"
-        android:text="@string/abt_intro"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="274dp"
+        android:layout_height="222dp"
+        android:text="@string/home_testBtn"
+        app:layout_constraintBottom_toTopOf="@+id/activitiesBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/startBtn"
+        android:id="@+id/activitiesBtn"
+        style="@style/SubheadingText"
+        android:layout_width="274dp"
+        android:layout_height="222dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/home_actBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="@string/app_contBtn"
-        android:textSize="22sp"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
