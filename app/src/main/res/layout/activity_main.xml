@@ -29,6 +29,7 @@
         android:background="#80ED99"
         android:elevation="10dp"
         android:fontFamily="sans-serif-medium"
+        android:shadowColor="@color/gray"
         android:text="@string/app_startBtn"
         android:textAlignment="center"
         android:textColor="@color/lapis_lazuli"
