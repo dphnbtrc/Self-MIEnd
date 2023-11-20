@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/beige"
     tools:context=".MainActivity">
 
     <TextView
@@ -27,7 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
         android:background="#80ED99"
-        android:elevation="10dp"
         android:fontFamily="sans-serif-medium"
         android:shadowColor="@color/gray"
         android:text="@string/app_startBtn"
@@ -46,7 +46,7 @@
         style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-medium"
         android:shadowColor="@color/gray"
         android:text="@string/app_name"
@@ -57,25 +57,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:layout_width="255dp"
-        android:layout_height="255dp"
-        android:layout_marginTop="72dp"
-        android:contentDescription="@string/app_icon"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/self_miend_icon" />
-
     <TextView
         android:id="@+id/textView3"
         style="@style/SubheadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/app_name2"
         android:textColor="@color/emerald"
@@ -83,5 +70,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="289dp"
+        android:layout_height="283dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/app_icon"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/self_miend_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
