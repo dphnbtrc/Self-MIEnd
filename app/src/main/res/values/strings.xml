@@ -8,7 +8,7 @@
 
     <!-- about fragment -->
     <string name="abt_hey">Hey There!</string>
-    <string name="abt_intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet proin fermentum. Tristique senectus et netus et.</string>
+    <string name="abt_intro">Self MIEnd is your personal companion on the journey to mental health and well-being. The application allows you to engage in a self-discovery process, providing a safe and supportive environment for self-reflection and personal growth. We provide self-assessment tests for common mental health problems for you to evaluate your mental well-being and determine whether professional help may be necessary.\n\n We also got you some activities and tips to try!</string>
     <string name="app_contBtn">Continue</string>
     <string name="app_backBtn">Back</string>
 
@@ -27,5 +27,6 @@
     <!--test fragment-->
     <string name="test_text">Test</string>
     <string name="test_question">Loading Question...</string>
+    <string name="greeting_title">How\'s it going?</string>
 
 </resources>
