@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <item name="startButton" type="id"/>
+    <item name="continueAboutButton" type="id"/>
+    <item name="continueGreetingButton" type="id"/>
+    <item name="testsButton" type="id"/>
+    <item name="activitiesButton" type="id"/>
+    <item name="anxietyTestButton" type="id"/>
+    <item name="depressionTestButton" type="id"/>
+    <item name="internetAddictionTestButton" type="id"/>
+    <item name="stressTestButton" type="id"/>
+    <!--<item name="" type="id"/>-->
+
+    <item name="testTitle" type="id"/>
+    <item name="testQuestionContainer" type="id"/>
+    <item name="rate1" type="id"/>
+    <item name="rate2" type="id"/>
+    <item name="rate3" type="id"/>
+    <item name="rate4" type="id"/>
+    <item name="rate5" type="id"/>
+    <item name="backButton" type="id"/>
+    <item name="nextButton" type="id"/>
+
+
     <item name="testResultScore" type="id"/>
     <item name="testResultSeverity" type="id"/>
-    <item name="doneButton" type="id"/>
+    <item name="resultAdvice" type="id"/>
+    <item name="resultDoneButton" type="id"/>
     <item name="hotline" type="id"/>
 
 </resources>

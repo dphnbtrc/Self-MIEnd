@@ -35,5 +35,8 @@
     <string name="temp_score">0</string>
     <string name="temp_level">Minimal</string>
     <string name="hotline">Experiencing emotional hurdles?\nCall 1553 for support.</string>
+    <string name="backText">Back</string>
+    <string name="nextText">Next</string>
+    <string name="loading_questionText">Loading Question...</string>
 
 </resources>

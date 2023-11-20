@@ -10,15 +10,15 @@
         android:id="@+id/rate2"
         android:layout_width="172dp"
         android:layout_height="61dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="51dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="132dp"
         app:layout_constraintBottom_toTopOf="@+id/rate5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_question_container" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/resultTitle"
+        android:id="@+id/testTitle"
         style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,13 +31,13 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/test_question_container"
+        android:id="@+id/cardView"
         android:layout_width="323dp"
         android:layout_height="193dp"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTitle">
+        app:layout_constraintTop_toBottomOf="@+id/testTitle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,13 +47,13 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/test_question"
+                android:id="@+id/testQuestionContainer"
                 style="@style/SubheadingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Loading Question..." />
+                android:text="@string/loading_questionText" />
 
         </LinearLayout>
 
@@ -68,34 +68,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_question_container"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.921" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:layout_marginStart="16dp"
+        android:text="@string/backText"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/nextButton"
         app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
-
-    <!--<TextView
-        android:id="@+id/testContainer"
-        style="@style/SubheadingText"
-        android:layout_width="300dp"
-        android:layout_height="204dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:gravity="center"
-        android:text="@string/test_question"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testText" /> -->
+        app:layout_constraintVertical_bias="0.947" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@id/rate5"
@@ -109,16 +96,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/nextText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintVertical_bias="0.946" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/rate4"
@@ -136,13 +123,13 @@
         android:id="@+id/rate1"
         android:layout_width="172dp"
         android:layout_height="61dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="49dp"
         android:layout_marginBottom="136dp"
         app:layout_constraintBottom_toTopOf="@+id/rate4"
         app:layout_constraintEnd_toStartOf="@+id/rate2"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_question_container" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

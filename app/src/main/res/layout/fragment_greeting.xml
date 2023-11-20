@@ -7,7 +7,6 @@
     tools:context=".GreetingFragment">
 
     <TextView
-        android:id="@+id/textView"
         style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +19,6 @@
         app:layout_constraintVertical_bias="0.114" />
 
     <TextView
-        android:id="@+id/textView2"
         style="@style/SubheadingText"
         android:layout_width="320dp"
         android:layout_height="459dp"
@@ -34,7 +32,7 @@
         app:layout_constraintVertical_bias="0.581" />
 
     <Button
-        android:id="@+id/startBtn"
+        android:id="@+id/continueGreetingButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/app_contBtn"
