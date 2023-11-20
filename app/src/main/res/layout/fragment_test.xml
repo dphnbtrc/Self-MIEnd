@@ -18,7 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/test_question_container" />
 
     <TextView
-        android:id="@+id/testText"
+        android:id="@+id/resultTitle"
         style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testText">
+        app:layout_constraintTop_toBottomOf="@+id/resultTitle">
 
         <LinearLayout
             android:layout_width="match_parent"

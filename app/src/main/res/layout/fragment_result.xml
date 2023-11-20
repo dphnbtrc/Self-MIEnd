@@ -7,25 +7,24 @@
     tools:context=".ResultFragment">
 
     <TextView
-        android:id="@+id/testText"
+        android:id="@+id/resultTitle"
         style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:text="@string/test_result_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/resultContainer"
-        android:layout_width="307dp"
-        android:layout_height="239dp"
-        android:layout_marginTop="25dp"
+        android:layout_width="312dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testText">
+        app:layout_constraintTop_toBottomOf="@+id/resultTitle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +72,44 @@
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/resultAdvice"
+        style="@style/SubheadingText"
+        android:layout_width="303dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Advice CHUCHU"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultContainer" />
 
+    <TextView
+        android:id="@+id/hotline"
+        style="@style/SubheadingText"
+        android:layout_width="307dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/hotline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultAdvice" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="40dp"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotline"
+        app:layout_constraintVertical_bias="0.121" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
