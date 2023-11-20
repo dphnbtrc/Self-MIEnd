@@ -10,12 +10,12 @@
         android:id="@+id/rate2"
         android:layout_width="172dp"
         android:layout_height="61dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="132dp"
         app:layout_constraintBottom_toTopOf="@+id/rate5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testContainer"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/test_question_container" />
 
     <TextView
         android:id="@+id/testText"
@@ -30,17 +30,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.048" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/test_question_container"
+        android:layout_width="323dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/test_question"
+                style="@style/SubheadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Loading Question..." />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/rate3"
         android:layout_width="172dp"
         android:layout_height="61dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginBottom="208dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testContainer"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/test_question_container"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button"
@@ -54,7 +83,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.951" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/testContainer"
         style="@style/SubheadingText"
         android:layout_width="300dp"
@@ -66,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testText" />
+        app:layout_constraintTop_toBottomOf="@+id/testText" /> -->
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@id/rate5"
@@ -107,13 +136,13 @@
         android:id="@+id/rate1"
         android:layout_width="172dp"
         android:layout_height="61dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="136dp"
         app:layout_constraintBottom_toTopOf="@+id/rate4"
         app:layout_constraintEnd_toStartOf="@+id/rate2"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testContainer"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/test_question_container" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
