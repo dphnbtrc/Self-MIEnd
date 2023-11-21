@@ -5,7 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 
-    <style name="ThemeOverlay.SelfMIEnd.FullscreenContainer" parent="">
+    <style name="ThemeOverlay.SelfMIEnd.FullscreenContainer" parent="ThemeOverlay.MaterialComponents.Dark">
         <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
         <item name="fullscreenTextColor">@color/light_blue_A400</item>
     </style>

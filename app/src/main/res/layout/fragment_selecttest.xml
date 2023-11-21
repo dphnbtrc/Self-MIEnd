@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SelectTestFragment">
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <Button
         android:id="@+id/anxietyTestButton"
         style="@style/SubheadingText"
         android:layout_width="279dp"
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <Button
         android:id="@+id/stressTestButton"
         style="@style/SubheadingText"
         android:layout_width="279dp"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <Button
         android:id="@+id/internetAddictionTestButton"
         style="@style/SubheadingText"
         android:layout_width="279dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.418" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <Button
         android:id="@+id/depressionTestButton"
         style="@style/SubheadingText"
         android:layout_width="279dp"
