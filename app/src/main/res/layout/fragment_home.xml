@@ -14,7 +14,7 @@
         android:layout_height="102dp"
         android:layout_marginBottom="204dp"
         android:background="@color/emerald"
-        android:text="Activities to Try"
+        android:text="@string/act_try"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
