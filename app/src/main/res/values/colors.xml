@@ -8,7 +8,22 @@
     <color name="emerald">#57CC99</color>
     <color name="light_green">#80ED99</color>
     <color name="tea_green">#C7F9CC</color>
+
+    <!-- drawable/bg_gradient_yellow -->
     <color name="beige">#F5F5DC</color>
+    <color name="beige2">#fffff2</color>
+    <color name="beige3">#fffeb5</color>
+
+    <!-- drawable/bg_gradient_blue -->
+    <color name="blue_violet1">#2da5fb</color>
+    <color name="blue_violet2">#ddb7e4</color>
+    <color name="blue_violet3">#27fad8</color>
+
+    <!-- colors for fragment_test -->
+
+
+    <!-- colors for fragment_test -->
+
 
     <!-- res/values/colors.xml -->
     <color name="light_blue_600">#3F51B5</color>
