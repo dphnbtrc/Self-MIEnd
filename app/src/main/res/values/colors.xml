@@ -22,6 +22,15 @@
     <!-- colors for fragment_test -->
 
 
+    <!-- colors for fragment_select_test -->
+    <color name="select1">#f9ff52</color>
+    <color name="select2">#fce96a</color>
+    <color name="select3">#fabf52</color>
+    <color name="select4">#FFFF00</color>
+    <color name="select5">#17ff4d</color>
+
+
+
     <!-- colors for fragment_result-->
 
 
