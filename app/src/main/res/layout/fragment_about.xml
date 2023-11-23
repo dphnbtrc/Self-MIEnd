@@ -6,11 +6,12 @@
     tools:context="com.example.android.navigation.AboutFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aboutFragmentLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_gradient_yellow"
         tools:context=".AboutFragment"
-        android:id="@+id/aboutFragment">
+        >
 
         <TextView
             android:id="@+id/textView5"
