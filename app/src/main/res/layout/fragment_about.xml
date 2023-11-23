@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.navigation.AboutFragment">
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/aboutFragmentLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/aboutFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_gradient_yellow"
-        tools:context=".AboutFragment"
-        >
+        tools:context=".AboutFragment">
 
         <TextView
             android:id="@+id/textView5"
@@ -62,4 +59,3 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</layout>
