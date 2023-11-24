@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
 
         val openActButton = view.findViewById<Button>(R.id.openActivitiesButton)
         openActButton.setOnClickListener {
-            val activitiesToTryFragment = SelectTestFragment()
+            val activitiesToTryFragment = ActivitiesFragment()
             val transactionActToTryFragment: FragmentTransaction = requireFragmentManager().beginTransaction()
             transactionActToTryFragment.replace(R.id.activityMainLayout, activitiesToTryFragment,)
             transactionActToTryFragment.commit()
