@@ -15,7 +15,7 @@
         style="@style/SubheadingText"
         android:layout_width="220dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="192dp"
+        android:layout_marginBottom="168dp"
         android:background="@color/emerald"
         android:text="@string/act_try"
         android:textColor="@color/lapis_lazuli"
@@ -25,12 +25,27 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        style="@style/HeadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/home_title"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/testsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Button
         android:id="@+id/testsButton"
         style="@style/SubheadingText"
         android:layout_width="220dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="52dp"
         android:background="@color/light_green"
         android:text="@string/home_testBtn"
         android:textColor="@color/lapis_lazuli"
@@ -40,19 +55,4 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        style="@style/HeadingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginBottom="50dp"
-        android:text="@string/home_title"
-        android:textColor="@color/lapis_lazuli"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/testsButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.495" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
