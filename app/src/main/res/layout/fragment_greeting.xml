@@ -35,13 +35,13 @@
             android:text="chuchuchuchucu"
             android:textAlignment="center"
             android:textColor="@color/gray"
-            app:layout_constraintBottom_toTopOf="@+id/continueGreetingButton"
+            app:layout_constraintBottom_toTopOf="@+id/openHomeButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/continueGreetingButton"
+            android:id="@+id/openHomeButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="56dp"

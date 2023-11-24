@@ -20,7 +20,7 @@
             android:text="@string/abt_intro"
             android:textAlignment="center"
             android:textColor="@color/verdigris"
-            app:layout_constraintBottom_toTopOf="@+id/continueAboutButton"
+            app:layout_constraintBottom_toTopOf="@+id/openGreetingButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent" />
@@ -42,7 +42,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/continueAboutButton"
+            android:id="@+id/openGreetingButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="56dp"
