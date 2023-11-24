@@ -19,7 +19,7 @@
     <!-- greeting and select test fragment -->
     <string name="tests_title">Select a Test</string>
     <string name="stressTest_title">Stress</string>
-    <string name="internet_addictionTest_title">Internet Addiction</string>
+    <string name="internet_addictionTest_title">Internet\nAddiction</string>
     <string name="depressionTest_title">Depression</string>
     <string name="anxietyTest_title">Anxiety</string>
 
@@ -41,6 +41,6 @@
     <string name="done_button">Done</string>
 
     <!--home fragment-->
-    <string name="act_try">Activities to Try</string>
+    <string name="act_try">Activities\nto Try</string>
 
 </resources>

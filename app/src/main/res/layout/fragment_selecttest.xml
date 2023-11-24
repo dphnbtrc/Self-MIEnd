@@ -16,8 +16,10 @@
         android:layout_width="279dp"
         android:layout_height="105dp"
         android:layout_marginBottom="28dp"
-        android:background="@color/select4"
+        android:background="@color/lapis_lazuli"
         android:text="@string/anxietyTest_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/depressionTestButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -28,50 +30,57 @@
         android:layout_width="279dp"
         android:layout_height="105dp"
         android:layout_marginBottom="32dp"
-        android:background="@color/select4"
+        android:background="@color/lapis_lazuli"
         android:text="@string/depressionTest_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/internetAddictionTestButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-            android:id="@+id/stressTestButton"
-            style="@style/SubheadingText"
-            android:layout_width="279dp"
-            android:layout_height="105dp"
-            android:layout_marginBottom="84dp"
-            android:text="@string/stressTest_title"
-            android:background="@color/select4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/stressTestButton"
+        style="@style/SubheadingText"
+        android:layout_width="279dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="84dp"
+        android:background="@color/lapis_lazuli"
+        android:text="@string/stressTest_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/internetAddictionTestButton"
-            style="@style/SubheadingText"
-            android:layout_width="279dp"
-            android:layout_height="105dp"
-            android:layout_marginBottom="28dp"
-            android:text="@string/internet_addictionTest_title"
-            android:background="@color/select4"
-            app:layout_constraintBottom_toTopOf="@+id/stressTestButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/internetAddictionTestButton"
+        style="@style/SubheadingText"
+        android:layout_width="279dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/lapis_lazuli"
+        android:text="@string/internet_addictionTest_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/stressTestButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/textView"
-            style="@style/HeadingText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="30dp"
-            android:text="@string/tests_title"
-            android:textColor="@color/lapis_lazuli"
-            app:layout_constraintBottom_toTopOf="@+id/anxietyTestButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.418" />
+    <TextView
+        android:id="@+id/textView"
+        style="@style/HeadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/tests_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/anxietyTestButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
