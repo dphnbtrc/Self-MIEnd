@@ -6,23 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TestFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TestFragment : Fragment() {
 
     data class AnxietyTest(
         val anxietyQ: List<String>
     )
 
-    fun AnxietyTest() {
+    fun anxietyTest() {
         val anxietyA = listOf(
             "Not at all" to 0,
             "Several days" to 1,
@@ -48,7 +38,7 @@ class TestFragment : Fragment() {
     data class DepressionTest(
         val depressionQ: List<String>
     )
-    fun DepressionTest() {
+    fun depressionTest() {
         val depressionA = listOf(
             "Not at all" to 0,
             "Several days" to 1,
@@ -76,7 +66,7 @@ class TestFragment : Fragment() {
     data class InternetAddictionTest(
         val iaQ: List<String>
     )
-    fun InternetAddictionTest() {
+    fun internetAddictionTest() {
         val iaA = listOf(
             "Not Applicable" to 0,
             "Rarely" to 1,
@@ -89,25 +79,98 @@ class TestFragment : Fragment() {
         val iaQ = InternetAddictionTest(
             listOf(
                 "How often do you find that you stay online longer than you intended?",
-
+                "How often do you neglect household chores to spend more time online?",
+                "How often do you prefer the excitement of the Internet to intimacy with your partner?",
+                "How often do you form new relationships with fellow online users?",
+                "How often do others in your life complain to you about the amount of time you spend online?",
+                "How often do your grades or school work suffer because of the amount of time you spend online?",
+                "How often do you check your email before something else that you need to do?",
+                "How often does your job performance or productivity suffer because of the Internet?",
+                "How often do you become defensive or secretive when anyone asks you what you do online?",
+                "How often do you block out disturbing thoughts about your life with soothing thoughts of the Internet?",
+                "How often do you find yourself anticipating when you will go online again?",
+                "How often do you fear that life without the Internet would be boring, empty, and joyless?",
+                "How often do you snap, yell, or act annoyed if someone bothers you while you are online?",
+                "How often do you lose sleep due to being online?",
+                "How often do you feel preoccupied with the Internet when off-line, or fantasize about being online?",
+                "How often do you find yourself saying \"just a few more minutes\" when online?",
+                "How often do you try to cut down the amount of time you spend online and fail?",
+                "How often do you try to hide how long you've been online?",
+                "How often do you choose to spend more time online over going out with others?",
+                "How often do you feel depressed, moody, or nervous when you are off-line, which goes away once you are back online?"
             )
         )
 
         //
     }
 
-    /** TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    data class StressTest(
+        val anxietyQ: List<String>
+    )
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    fun stressTest() {
+        val stressA = listOf(
+            "Never" to 0,
+            "Almost Never" to 1,
+            "Sometimes" to 2,
+            "Fairly often" to 3,
+            "Very often" to 4
+        )
+
+        val stressQ = StressTest(
+            listOf(
+                "In the last month, how often have you been upset because of something that happened unexpectedly?",
+                "In the last month, how often have you felt that you were unable to control the important things in your life?",
+                "In the last month, how often have you felt nervous and stressed?",
+                "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+                "In the last month, how often have you felt that things were going your way?",
+                "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+                "In the last month, how often have you been able to control irritations in your life?",
+                "In the last month, how often have you felt that you were on top of things?",
+                "In the last month, how often have you been angered because of things that happened that were outside of your control?",
+                "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?"
+            )
+        )
+
+        //
     }
-    */
+
+    data class PTSDTest(
+        val ptsdQ: List<String>
+    )
+
+    fun ptsdTest() {
+        val ptsdA = listOf(
+            "Not at all" to 0,
+            "A little bit" to 1,
+            "Moderately" to 2,
+            "Quite a bit" to 3,
+            "Extremely" to 4
+        )
+
+        val ptsdQ = PTSDTest(
+            listOf(
+                "Repeated, disturbing, and unwanted memories of the stressful experience?",
+                "Repeated, disturbing dreams of the stressful experience?",
+                "Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?",
+                "Feeling very upset when something reminded you of the stressful experience?",
+                "Having strong physical reactions when something reminded you of the stressful experience (e.g., heart pounding, trouble breathing, sweating)?",
+                "Avoiding memories, thoughts, or feelings related to the stressful experience?",
+                "Avoiding external reminders of the stressful experience (e.g., people, places, conversation, activities, objects, or situations)?",
+                "Trouble remembering important parts of the stressful experience?",
+                "Having strong negative beliefs about yourself, other people, or the world (e.g., having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?",
+                "Blaming yourself or someone else for the stressful experience or what happened after it?",
+                "Having strong negative feelings such as fear, horror, anger, guilt, or shame?",
+                "Loss of interest in activities that you used to enjoy?",
+                "Feeling distant or cut off from other people?",
+                "Trouble experiencing positive feelings (e.g., being unable to feel happiness or have loving feelings for people close to you)?",
+                "Irritable behavior, angry outbursts, or acting aggressively?",
+                "Taking too many risks or doing things that could cause you harm?",
+                "Being “super-alert” or watchful on guard?"
+            )
+        )
+        //
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -117,23 +180,4 @@ class TestFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_test, container, false)
     }
 
-    /**companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TestFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TestFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }*/
 }
