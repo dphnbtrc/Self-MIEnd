@@ -11,7 +11,22 @@
         tools:context=".HomeFragment">
 
     <Button
-        android:id="@+id/activitiesButton"
+        android:id="@+id/openDiffTestsButton"
+        style="@style/SubheadingText"
+        android:layout_width="220dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="52dp"
+        android:background="@color/light_green"
+        android:text="@string/home_testBtn"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/openActivitiesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/openActivitiesButton"
         style="@style/SubheadingText"
         android:layout_width="220dp"
         android:layout_height="150dp"
@@ -34,25 +49,12 @@
         android:text="@string/home_title"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/testsButton"
+        app:layout_constraintBottom_toTopOf="@+id/openDiffTestsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/testsButton"
-        style="@style/SubheadingText"
-        android:layout_width="220dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="52dp"
-        android:background="@color/light_green"
-        android:text="@string/home_testBtn"
-        android:textColor="@color/lapis_lazuli"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/activitiesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
