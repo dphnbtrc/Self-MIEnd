@@ -29,6 +29,5 @@ class GreetingFragment : Fragment() {
         }
 
         return view
-        //HEHEHEHEHEHE
     }
 }
