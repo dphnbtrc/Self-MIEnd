@@ -26,6 +26,7 @@ class AboutFragment : Fragment() {
             aboutFragButton.visibility = View.GONE
         }
         return view
+        //hehehehe
     }
 }
 
