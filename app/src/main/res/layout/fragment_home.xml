@@ -1,37 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/homeFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg_gradient_yellow"
-        tools:context=".HomeFragment">
-
-    <Button
-        android:id="@+id/openDiffTestsButton"
-        style="@style/SubheadingText"
-        android:layout_width="220dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="52dp"
-        android:background="@color/light_green"
-        android:text="@string/home_testBtn"
-        android:textColor="@color/lapis_lazuli"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/openActivitiesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    tools:context=".HomeFragment">
 
     <Button
         android:id="@+id/openActivitiesButton"
         style="@style/SubheadingText"
         android:layout_width="220dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="168dp"
-        android:background="@color/emerald"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/emerald"
         android:text="@string/act_try"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="bold"
@@ -40,12 +25,30 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/openDiffTestsButton"
+        style="@style/SubheadingText"
+        android:layout_width="220dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/light_green"
+        android:shadowColor="#ededed"
+        android:text="@string/home_testBtn"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/openActivitiesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
+        android:id="@+id/selectActivityTitle"
         style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/home_title"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="bold"
@@ -53,8 +56,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/remove_icon"
+        android:contentDescription="@string/exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
 
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/home_icon"
+        android:contentDescription="@string/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

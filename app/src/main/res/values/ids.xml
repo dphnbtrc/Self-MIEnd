@@ -4,12 +4,14 @@
     <item name="startButton" type="id"/>
     <item name="continueAboutButton" type="id"/>
     <item name="continueGreetingButton" type="id"/>
+    <item name="selectActivityTitle" type="id"/>
     <item name="testsButton" type="id"/>
     <item name="activitiesButton" type="id"/>
     <item name="anxietyTestButton" type="id"/>
     <item name="depressionTestButton" type="id"/>
     <item name="internetAddictionTestButton" type="id"/>
     <item name="stressTestButton" type="id"/>
+    <item name="exitButton" type="id"/>
     <!--<item name="" type="id"/>-->
 
     <item name="testTitle" type="id"/>

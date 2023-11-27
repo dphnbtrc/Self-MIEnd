@@ -1,60 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/aboutFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg_gradient_yellow"
-        tools:context=".AboutFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    tools:context=".AboutFragment">
 
-        <TextView
-            android:id="@+id/textView5"
-            style="@style/ParagraphText"
-            android:layout_width="296dp"
-            android:layout_height="438dp"
-            android:layout_marginBottom="52dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/abt_intro"
-            android:textAlignment="center"
-            android:textColor="@color/verdigris"
-            app:layout_constraintBottom_toTopOf="@+id/openGreetingButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/ParagraphText"
+        android:layout_width="300dp"
+        android:layout_height="451dp"
+        android:layout_marginBottom="56dp"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing=".1"
+        android:text="@string/abt_intro"
+        android:textAlignment="center"
+        android:textColor="@color/verdigris"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/openGreetingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            style="@style/HeadingText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:layout_marginBottom="45dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/abt_hey"
-            android:textColor="@color/lapis_lazuli"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        style="@style/HeadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/abt_hey"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
 
-        <Button
-            android:id="@+id/openGreetingButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="56dp"
-            android:background="@color/light_green"
-            android:text="@string/app_contBtn"
-            android:textColor="@color/lapis_lazuli"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/openGreetingButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/light_green"
+        android:text="@string/app_contBtn"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
