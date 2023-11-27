@@ -50,5 +50,7 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="exit_question">Are you sure you want to exit?</string>
+    <string name="title_activities_tips_for_mental_well_being"><![CDATA[Activities & Tips for Mental Well-being]]></string>
+    <string name="self_care_for_mental_wellness">Self-care for Mental Wellness</string>
 
 </resources>

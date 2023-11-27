@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="#ededed"
+    android:orientation="vertical"
+    tools:context=".GeneralActsTipsFragment">
+
+
+    <Button
+        android:id="@+id/backButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/light_green"
+        android:text="@string/backText"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <Button
+
+        style="@style/SubheadingText"
+        android:layout_width="144dp"
+        android:layout_height="108dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/tea_green"
+        android:shadowColor="#ededed"
+        android:text="@string/stressTest_title"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="490dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="322dp"
+        android:layout_height="73dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/blue_violet2"
+        android:text="@string/self_care_for_mental_wellness"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="166dp" />
+
+    <Button
+
+        style="@style/SubheadingText"
+        android:layout_width="144dp"
+        android:layout_height="108dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/tea_green"
+        android:shadowColor="#ededed"
+        android:text="@string/internet_addictionTest_title"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="490dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/SubheadingText"
+        android:layout_width="288dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="@string/title_activities_tips_for_mental_well_being"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <TextView
+        android:id="@+id/hotline"
+        style="@style/ParagraphText"
+        android:layout_width="301dp"
+        android:layout_height="53dp"
+        android:gravity="center"
+        android:text="For specific chuchu:"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <Button
+
+        style="@style/SubheadingText"
+        android:layout_width="144dp"
+        android:layout_height="108dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/tea_green"
+        android:shadowColor="#ededed"
+        android:text="@string/anxietyTest_title"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <Button
+
+        style="@style/SubheadingText"
+        android:layout_width="144dp"
+        android:layout_height="108dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/tea_green"
+        android:shadowColor="#ededed"
+        android:text="@string/depressionTest_title"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
