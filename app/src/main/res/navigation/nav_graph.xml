@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_homeFragment_to_selectTestFragment2"
             app:destination="@id/selectTestFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_generalActsTipsFragment"
+            app:destination="@id/generalActsTipsFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectTestFragment2"
@@ -51,10 +54,40 @@
         <action
             android:id="@+id/action_selectTestFragment2_to_testFragment"
             app:destination="@id/testFragment" />
+        <action
+            android:id="@+id/action_selectTestFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
         android:name="com.example.self_miend.TestFragment"
         android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_testFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalActsTipsFragment"
+        android:name="com.example.self_miend.GeneralActsTipsFragment"
+        android:label="fragment_general_acts_tips"
+        tools:layout="@layout/fragment_general_acts_tips" >
+        <action
+            android:id="@+id/action_generalActsTipsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.self_miend.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_resultDoneFragment"
+            app:destination="@id/resultDoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultDoneFragment"
+        android:name="com.example.self_miend.ResultDoneFragment"
+        android:label="fragment_result_done"
+        tools:layout="@layout/fragment_result_done" />
 </navigation>
