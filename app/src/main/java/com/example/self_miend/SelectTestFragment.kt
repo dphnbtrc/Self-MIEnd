@@ -26,6 +26,51 @@ class SelectTestFragment : Fragment() {
 
             backButton.visibility = View.GONE
         }
+
+        val anxietyButton = view.findViewById<Button>(R.id.anxietyTestButton)
+        anxietyButton.setOnClickListener {
+            val testFragment = TestFragment()
+            val transactionSelectTestFragment: FragmentTransaction =
+                requireFragmentManager().beginTransaction()
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.commit()
+
+            anxietyButton.visibility = View.GONE
+        }
+
+        val depressionButton = view.findViewById<Button>(R.id.depressionTestButton)
+        depressionButton.setOnClickListener {
+            val testFragment = TestFragment()
+            val transactionSelectTestFragment: FragmentTransaction =
+                requireFragmentManager().beginTransaction()
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.commit()
+
+            depressionButton.visibility = View.GONE
+        }
+
+        val internetAddictionButton = view.findViewById<Button>(R.id.internetAddictionTestButton)
+        internetAddictionButton.setOnClickListener {
+            val testFragment = TestFragment()
+            val transactionSelectTestFragment: FragmentTransaction =
+                requireFragmentManager().beginTransaction()
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.commit()
+
+            internetAddictionButton.visibility = View.GONE
+        }
+
+        val stressButton = view.findViewById<Button>(R.id.stressTestButton)
+        stressButton.setOnClickListener {
+            val testFragment = TestFragment()
+            val transactionSelectTestFragment: FragmentTransaction =
+                requireFragmentManager().beginTransaction()
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.commit()
+
+            stressButton.visibility = View.GONE
+        }
+
         return view
     }
 
