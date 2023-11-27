@@ -34,7 +34,8 @@
     <string name="test_result_severity_levelText">Severity Level:</string>
     <string name="temp_score">0</string>
     <string name="temp_level">Minimal</string>
-    <string name="hotline">Experiencing emotional hurdles?\nCall 1553 for support.</string>
+    <string name="hotline_caption">Experiencing emotional hurdles?</string>
+    <string name="hotline_call">Click for Call Support</string>
     <string name="backText">Back</string>
     <string name="nextText">Next</string>
     <string name="loading_questionText">Loading Question&#8230;</string>

@@ -99,20 +99,41 @@
     <TextView
         android:id="@+id/hotline"
         style="@style/ParagraphText"
-        android:layout_width="307dp"
-        android:layout_height="137dp"
+        android:layout_width="301dp"
+        android:layout_height="53dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp"
         android:gravity="center"
-        android:text="@string/hotline"
+        android:text="@string/hotline_caption"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/hotlineCall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultAdvice" />
+        app:layout_constraintTop_toBottomOf="@+id/resultAdvice"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <Button
+        android:id="@+id/hotlineCall"
+        android:layout_width="276dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/light_green"
+        android:letterSpacing=".1"
+        android:text="@string/hotline_call"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resultDoneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/resultDoneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/lapis_lazuli"
@@ -121,9 +142,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotline"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
