@@ -60,9 +60,9 @@
     </fragment>
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.example.self_miend.TestFragment"
+        android:name="com.example.self_miend.AnxietyTestFragment"
         android:label="fragment_test"
-        tools:layout="@layout/fragment_test" >
+        tools:layout="@layout/fragment_anxiety_test" >
         <action
             android:id="@+id/action_testFragment_to_resultFragment"
             app:destination="@id/resultFragment" />

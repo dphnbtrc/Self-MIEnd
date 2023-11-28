@@ -29,10 +29,10 @@ class SelectTestFragment : Fragment() {
 
         val anxietyButton = view.findViewById<Button>(R.id.anxietyTestButton)
         anxietyButton.setOnClickListener {
-            val testFragment = TestFragment()
+            val anxietyTestFragment = AnxietyTestFragment()
             val transactionSelectTestFragment: FragmentTransaction =
                 requireFragmentManager().beginTransaction()
-            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, anxietyTestFragment,)
             transactionSelectTestFragment.commit()
 
             anxietyButton.visibility = View.GONE
@@ -40,10 +40,10 @@ class SelectTestFragment : Fragment() {
 
         val depressionButton = view.findViewById<Button>(R.id.depressionTestButton)
         depressionButton.setOnClickListener {
-            val testFragment = TestFragment()
+            val anxietyTestFragment = AnxietyTestFragment()
             val transactionSelectTestFragment: FragmentTransaction =
                 requireFragmentManager().beginTransaction()
-            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, anxietyTestFragment,)
             transactionSelectTestFragment.commit()
 
             depressionButton.visibility = View.GONE
@@ -51,10 +51,10 @@ class SelectTestFragment : Fragment() {
 
         val internetAddictionButton = view.findViewById<Button>(R.id.internetAddictionTestButton)
         internetAddictionButton.setOnClickListener {
-            val testFragment = TestFragment()
+            val anxietyTestFragment = AnxietyTestFragment()
             val transactionSelectTestFragment: FragmentTransaction =
                 requireFragmentManager().beginTransaction()
-            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, anxietyTestFragment,)
             transactionSelectTestFragment.commit()
 
             internetAddictionButton.visibility = View.GONE
@@ -62,10 +62,10 @@ class SelectTestFragment : Fragment() {
 
         val stressButton = view.findViewById<Button>(R.id.stressTestButton)
         stressButton.setOnClickListener {
-            val testFragment = TestFragment()
+            val anxietyTestFragment = AnxietyTestFragment()
             val transactionSelectTestFragment: FragmentTransaction =
                 requireFragmentManager().beginTransaction()
-            transactionSelectTestFragment.replace(R.id.activityMainLayout, testFragment,)
+            transactionSelectTestFragment.replace(R.id.activityMainLayout, anxietyTestFragment,)
             transactionSelectTestFragment.commit()
 
             stressButton.visibility = View.GONE
