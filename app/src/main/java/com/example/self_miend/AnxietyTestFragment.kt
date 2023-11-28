@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentTransaction
 
 class AnxietyTestFragment : Fragment() {
 
-
     private val questionsAnxiety = listOf(
         "Feeling nervous, anxious, or on edge",
         "Not being able to stop or control worrying",
