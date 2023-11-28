@@ -28,9 +28,9 @@
     <TextView
         android:id="@+id/textView6"
         style="@style/SubheadingText"
-        android:layout_width="322dp"
-        android:layout_height="369dp"
-        android:layout_marginBottom="76dp"
+        android:layout_width="282dp"
+        android:layout_height="325dp"
+        android:layout_marginBottom="68dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/greetings"
         android:textAlignment="center"
@@ -38,14 +38,13 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/openHomeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/openHomeButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="88dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/light_green"
         android:text="@string/app_contBtn"
@@ -57,5 +56,5 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
