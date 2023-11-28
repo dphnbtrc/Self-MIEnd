@@ -92,7 +92,7 @@
         android:layout_height="53dp"
         android:layout_marginBottom="28dp"
         android:gravity="center"
-        android:text="For specific chuchu:"
+        android:text="@string/for_specific_areas"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/button4"

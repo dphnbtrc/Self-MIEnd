@@ -25,20 +25,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView6"
-            style="@style/SubheadingText"
-            android:layout_width="320dp"
-            android:layout_height="459dp"
-            android:layout_marginBottom="47dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="chuchuchuchucu"
-            android:textAlignment="center"
-            android:textColor="@color/gray"
-            app:layout_constraintBottom_toTopOf="@+id/openHomeButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/SubheadingText"
+        android:layout_width="322dp"
+        android:layout_height="369dp"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/greetings"
+        android:textAlignment="center"
+        android:textColor="@color/verdigris"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/openHomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/openHomeButton"
