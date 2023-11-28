@@ -36,6 +36,8 @@ class ExitDialogFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, homeS)
             transaction.commit()
         }
+
     }
+
 }
 

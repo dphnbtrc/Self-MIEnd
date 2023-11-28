@@ -72,4 +72,5 @@ class DepressionTestFragment : Fragment() {
         currentQuestionDepressionIndex = (currentQuestionDepressionIndex + 1) % questionsDepression.size
         displayDepressionQuestion()
     }
+
 }

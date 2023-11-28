@@ -28,5 +28,7 @@ class SelfCareTipsAndActsFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, actAndTipsS)
             transaction.commit()
         }
+
     }
+
 }

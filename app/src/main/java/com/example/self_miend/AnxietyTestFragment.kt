@@ -37,7 +37,6 @@ class AnxietyTestFragment : Fragment() {
 
         val rate1B = view.findViewById<Button>(R.id.rate1)
 
-        // Add a button click listener to load the next question
         rate1B.setOnClickListener {
             showNextAnxietyQuestion()
         }

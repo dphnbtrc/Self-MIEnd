@@ -28,5 +28,7 @@ class GreetingFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, homeS)
             transaction.commit()
         }
+
     }
+
 }

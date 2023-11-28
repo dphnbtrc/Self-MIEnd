@@ -46,5 +46,7 @@ class HomeFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, exitS)
             transaction.commit()
         }
+
     }
+
 }

@@ -28,5 +28,7 @@ class MainActivity : AppCompatActivity() {
             startingButton.visibility = View.GONE
 
         }
+
     }
+
 }

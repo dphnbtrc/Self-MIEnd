@@ -29,5 +29,7 @@ class ResultFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultDoneS)
             transaction.commit()
         }
+
     }
+
 }

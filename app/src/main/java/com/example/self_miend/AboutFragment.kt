@@ -28,6 +28,8 @@ class AboutFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, greetingS)
             transaction.commit()
         }
+
     }
+
 }
 
