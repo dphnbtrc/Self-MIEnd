@@ -11,26 +11,98 @@
     app:navGraph="@navigation/nav_graph"
     tools:context=".AnxietyTestFragment">
 
-    <TextView
-        android:id="@+id/testTitle"
-        style="@style/HeadingText"
+    <Button
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/test_text"
-        android:textColor="@color/lapis_lazuli"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/lapis_lazuli"
+        android:text="@string/backText"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nextButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/lapis_lazuli"
+        android:text="@string/nextText"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <Button
+        android:id="@+id/cancel_test_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/tea_green"
+        android:text="Cancel"
+        android:textColor="@color/lapis_lazuli"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nextButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/rate4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/emerald"
+        android:letterSpacing=".1"
+        android:text="Nearly Every Day"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rate2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/emerald"
+        android:letterSpacing=".1"
+        android:text="@string/several_days"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rate3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="330dp"
         android:layout_height="193dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testTitle">
 
@@ -57,38 +129,6 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/lapis_lazuli"
-        android:text="@string/nextText"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/lapis_lazuli"
-        android:text="@string/backText"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/nextButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
-
-    <Button
         android:id="@+id/rate1"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -106,30 +146,26 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/rate2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/emerald"
-        android:letterSpacing=".1"
-        android:text="@string/several_days"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rate3"
+    <TextView
+        android:id="@+id/testTitle"
+        style="@style/HeadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="@string/test_text"
+        android:textColor="@color/lapis_lazuli"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/rate3"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/emerald"
         android:letterSpacing=".1"
@@ -138,23 +174,6 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rate4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/rate4"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="160dp"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/emerald"
-        android:letterSpacing=".1"
-        android:text="Nearly Every Day"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
