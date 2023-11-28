@@ -14,27 +14,29 @@ class GeneralActsTipsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_general_acts_tips, container, false)
+        return inflater.inflate(R.layout.fragment_general_acts_tips, container, false)
+    }
 
-        val backButton = view.findViewById<Button>(R.id.backButton2)
-        backButton.setOnClickListener {
-            val homeFragment = HomeFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.activityMainLayout, homeFragment)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toSelfCareB = view.findViewById<Button>(R.id.selfCareButton)
+
+        toSelfCareB.setOnClickListener {
+            val selfCareS = SelfCareTipsAndActsFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, selfCareS)
             transaction.commit()
-
-            backButton.visibility = View.GONE
         }
 
-        val selfButton = view.findViewById<Button>(R.id.selfCareButton)
-        selfButton.setOnClickListener {
-            val selfCareTips = SelfCareTipsAndActsFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.activityMainLayout, selfCareTips)
-            transaction.commit()
+        val toHomeB3 = view.findViewById<Button>(R.id.backHomeButton3)
 
-            selfButton.visibility = View.GONE
+        toHomeB3.setOnClickListener {
+            val hS3 = HomeFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, hS3)
+            transaction.commit()
         }
-        return view
+
     }
 }

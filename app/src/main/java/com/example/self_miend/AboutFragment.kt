@@ -14,18 +14,20 @@ class AboutFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_about, container, false)
+        return inflater.inflate(R.layout.fragment_about, container, false)
+    }
 
-        val aboutFragButton = view.findViewById<Button>(R.id.openGreetingButton)
-        aboutFragButton.setOnClickListener {
-            val greetingFragment = GreetingFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.activityMainLayout, greetingFragment)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toGreetingB = view.findViewById<Button>(R.id.openGreetingButton)
+
+        toGreetingB.setOnClickListener {
+            val greetingS = GreetingFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, greetingS)
             transaction.commit()
-
-            aboutFragButton.visibility = View.GONE
         }
-        return view
     }
 }
 

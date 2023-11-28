@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.FragmentTransaction
 
 class InternetAddictionTestFragment : Fragment() {
+
+    /*
 
     data class InternetAddictionTest(
         val iaQ: List<String>
@@ -57,4 +61,27 @@ class InternetAddictionTestFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_internet_addiction_test, container, false)
     }
 
+}
+
+     */
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_internet_addiction_test, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toResultB3 = view.findViewById<Button>(R.id.nextButton)
+
+        toResultB3.setOnClickListener {
+            val resultS3 = ResultFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, resultS3)
+            transaction.commit()
+        }
+    }
 }

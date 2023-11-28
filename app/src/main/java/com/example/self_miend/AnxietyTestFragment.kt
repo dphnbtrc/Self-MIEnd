@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.fragment.findNavController
 
 class AnxietyTestFragment : Fragment() {
 
+    /*
     private var testScore = 0
     private var anxietyQ = 0
 
@@ -40,12 +40,10 @@ class AnxietyTestFragment : Fragment() {
 
         //
     }
+     */
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        /*
         val view = inflater.inflate(R.layout.fragment_anxiety_test, container, false)
 
         val toResultButton = view.findViewById<Button>(R.id.nextButton)
@@ -59,5 +57,27 @@ class AnxietyTestFragment : Fragment() {
             toResultButton.visibility = View.GONE
         }
         return view
+    }
+
+         */
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_anxiety_test, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toResultB1 = view.findViewById<Button>(R.id.nextButton)
+
+        toResultB1.setOnClickListener {
+            val resultS1 = ResultFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, resultS1)
+            transaction.commit()
+        }
     }
 }

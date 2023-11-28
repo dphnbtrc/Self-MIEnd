@@ -8,6 +8,7 @@ import android.view.ViewGroup
 
 class PtsdTestFragment : Fragment() {
 
+    /*
     data class PTSDTest(
         val ptsdQ: List<String>
     )
@@ -53,5 +54,7 @@ class PtsdTestFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_ptsd_test, container, false)
     }
+
+     */
 
 }

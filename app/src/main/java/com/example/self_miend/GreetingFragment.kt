@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
 
 class GreetingFragment : Fragment() {
 
@@ -16,18 +14,19 @@ class GreetingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_greeting, container, false)
+        return inflater.inflate(R.layout.fragment_greeting, container, false)
+    }
 
-        val greetFragButton = view.findViewById<Button>(R.id.openHomeButton)
-        greetFragButton.setOnClickListener {
-            val homeFragment = HomeFragment()
-            val transaction: FragmentTransaction = requireFragmentManager()!!.beginTransaction()
-            transaction.replace(R.id.activityMainLayout, homeFragment,)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toHomeB = view.findViewById<Button>(R.id.openHomeButton)
+
+        toHomeB.setOnClickListener {
+            val homeS = HomeFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, homeS)
             transaction.commit()
-
-            greetFragButton.visibility = View.GONE
         }
-
-        return view
     }
 }

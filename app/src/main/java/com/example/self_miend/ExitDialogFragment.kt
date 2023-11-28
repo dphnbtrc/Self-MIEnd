@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
+import kotlin.system.exitProcess
 
 class ExitDialogFragment : Fragment() {
 
@@ -14,29 +15,27 @@ class ExitDialogFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_exit_dialog, container, false)
+        return inflater.inflate(R.layout.fragment_exit_dialog, container, false)
+    }
 
-        val backHomeButton = view.findViewById<Button>(R.id.noButton)
-        val exitSelfButton = view.findViewById<Button>(R.id.yesButton)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        backHomeButton.setOnClickListener {
-            val homeFragment = HomeFragment()
-            val transactionSelectTestFragment: FragmentTransaction =
-                requireFragmentManager().beginTransaction()
-            transactionSelectTestFragment.replace(R.id.activityMainLayout, homeFragment,)
-            transactionSelectTestFragment.commit()
+        val quitB = view.findViewById<Button>(R.id.yesButton)
 
-            backHomeButton.visibility = View.GONE
-            exitSelfButton.visibility = View.GONE
+        quitB.setOnClickListener {
+            android.os.Process.killProcess(android.os.Process.myPid())
+            exitProcess(1)
         }
 
-        exitSelfButton.setOnClickListener {
-           android.os.Process.killProcess(android.os.Process.myPid())
-            System.exit(1)
+        val backToHomeB = view.findViewById<Button>(R.id.noButton)
+
+        backToHomeB.setOnClickListener {
+            val homeS = HomeFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, homeS)
+            transaction.commit()
         }
-
-
-
-        return view
     }
 }
+

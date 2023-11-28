@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
+import kotlin.system.exitProcess
 
 
 class ResultDoneFragment : Fragment() {
@@ -15,17 +16,28 @@ class ResultDoneFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_result_done, container, false)
-
-        val goBackHomeButton = view.findViewById<Button>(R.id.button6)
-        goBackHomeButton.setOnClickListener {
-            val homeFragment = HomeFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.activityMainLayout, homeFragment)
-            transaction.commit()
-
-            goBackHomeButton.visibility = View.GONE
-        }
-        return view
+        return inflater.inflate(R.layout.fragment_self_care_tips_and_acts, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toHomeB2 = view.findViewById<Button>(R.id.backToHomeButton2)
+
+        toHomeB2.setOnClickListener {
+            val homeS = HomeFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, homeS)
+            transaction.commit()
+        }
+
+        val quitAppB2 = view.findViewById<Button>(R.id.quitAppButton2)
+
+        quitAppB2.setOnClickListener {
+            android.os.Process.killProcess(android.os.Process.myPid())
+            exitProcess(1)
+        }
+
+    }
+
 }

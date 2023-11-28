@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.FragmentTransaction
 
 class DepressionTestFragment : Fragment() {
 
+    /*
     data class DepressionTest(
         val depressionQ: List<String>
     )
@@ -44,4 +47,26 @@ class DepressionTestFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_depression_test, container, false)
     }
 
+}
+
+     */
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_depression_test, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toResultB2 = view.findViewById<Button>(R.id.nextButton)
+
+        toResultB2.setOnClickListener {
+            val resultS2 = ResultFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, resultS2)
+            transaction.commit()
+        }
+    }
 }

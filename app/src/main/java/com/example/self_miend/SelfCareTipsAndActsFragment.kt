@@ -14,17 +14,19 @@ class SelfCareTipsAndActsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_self_care_tips_and_acts, container, false)
+        return inflater.inflate(R.layout.fragment_self_care_tips_and_acts, container, false)
+    }
 
-        val backButton = view.findViewById<Button>(R.id.backButton2)
-        backButton.setOnClickListener {
-            val genActFragment = GeneralActsTipsFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.activityMainLayout, genActFragment)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val toActAndTipsB = view.findViewById<Button>(R.id.backToActsAndTips)
+
+        toActAndTipsB.setOnClickListener {
+            val actAndTipsS = GeneralActsTipsFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, actAndTipsS)
             transaction.commit()
-
-            backButton.visibility = View.GONE
         }
-        return view
     }
 }

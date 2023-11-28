@@ -14,39 +14,37 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
+    }
 
-        val openTestsButton = view.findViewById<Button>(R.id.openDiffTestsButton)
-        openTestsButton.setOnClickListener {
-            val selectTestFragment = SelectTestFragment()
-            val transactionSelectTestFragment: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transactionSelectTestFragment.replace(R.id.activityMainLayout, selectTestFragment,)
-            transactionSelectTestFragment.commit()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-            openTestsButton.visibility = View.GONE
+        val toSelectTestB = view.findViewById<Button>(R.id.openDiffTestsButton)
+
+        toSelectTestB.setOnClickListener {
+            val selectTestS = SelectTestFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, selectTestS)
+            transaction.commit()
         }
 
-        val openActButton = view.findViewById<Button>(R.id.openActivitiesButton)
-        openActButton.setOnClickListener {
-            val generalActTipsFragment = GeneralActsTipsFragment()
-            val transactionActToTryFragment: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transactionActToTryFragment.replace(R.id.activityMainLayout, generalActTipsFragment,)
-            transactionActToTryFragment.commit()
+        val toActAndTips = view.findViewById<Button>(R.id.openActivitiesButton)
 
-            openActButton.visibility = View.GONE
+        toActAndTips.setOnClickListener {
+            val genActTipsS = GeneralActsTipsFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, genActTipsS)
+            transaction.commit()
         }
 
-        val endSelf = view.findViewById<Button>(R.id.exitButton)
-        endSelf.setOnClickListener {
-            val exitSelfFragment = ExitDialogFragment()
-            val transactionActToTryFragment: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transactionActToTryFragment.replace(R.id.activityMainLayout, exitSelfFragment)
-            transactionActToTryFragment.commit()
+        val exitB = view.findViewById<Button>(R.id.exitButton)
 
-            endSelf.visibility = View.GONE
+        exitB.setOnClickListener {
+            val exitS = ExitDialogFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, exitS)
+            transaction.commit()
         }
-
-        return view
-
     }
 }
