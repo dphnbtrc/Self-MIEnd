@@ -6,60 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
 class AnxietyTestFragment : Fragment() {
 
-    /*
-    private var testScore = 0
-    private var anxietyQ = 0
 
-    data class AnxietyTest(
-        val anxietyQ: List<String>
+    private val questionsAnxiety = listOf(
+        "Feeling nervous, anxious, or on edge",
+        "Not being able to stop or control worrying",
+        "Worrying too much about different things",
+        "Trouble relaxing",
+        "Being so restless that it is hard to sit still",
+        "Becoming easily annoyed or irritable",
+        "Feeling afraid, as if something awful might happen"
     )
 
-    fun anxietyTest() {
-        val anxietyA = listOf(
-            "Not at all" to 0,
-            "Several days" to 1,
-            "More than half the days" to 2,
-            "Nearly every day" to 3
-        )
-
-        val anxietyQ = AnxietyTest(
-            listOf(
-                "Feeling nervous, anxious, or on edge",
-                "Not being able to stop or control worrying",
-                "Worrying too much about different things",
-                "Trouble relaxing",
-                "Being so restless that it is hard to sit still",
-                "Becoming easily annoyed or irritable",
-                "Feeling afraid, as if something awful might happen"
-            )
-        )
-
-        //
-    }
-     */
-
-
-        /*
-        val view = inflater.inflate(R.layout.fragment_anxiety_test, container, false)
-
-        val toResultButton = view.findViewById<Button>(R.id.nextButton)
-
-        toResultButton.setOnClickListener {
-            val resultFragment = ResultFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.activityMainLayout, resultFragment)
-            transaction.commit()
-
-            toResultButton.visibility = View.GONE
-        }
-        return view
-    }
-
-         */
+    private var currentQuestionAnxietyIndex = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -71,6 +34,15 @@ class AnxietyTestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        displayAnxietyQuestion()
+
+        val rate1B = view.findViewById<Button>(R.id.rate1)
+
+        // Add a button click listener to load the next question
+        rate1B.setOnClickListener {
+            showNextAnxietyQuestion()
+        }
+
         val toResultB1 = view.findViewById<Button>(R.id.nextButton)
 
         toResultB1.setOnClickListener {
@@ -80,4 +52,14 @@ class AnxietyTestFragment : Fragment() {
             transaction.commit()
         }
     }
+    private fun displayAnxietyQuestion() {
+        val questionsAnxietyTry = requireView().findViewById<TextView>(R.id.testQuestionAnxietyContainer)
+        questionsAnxietyTry.text = questionsAnxiety[currentQuestionAnxietyIndex]
+    }
+
+    private fun showNextAnxietyQuestion() {
+        currentQuestionAnxietyIndex = (currentQuestionAnxietyIndex + 1) % questionsAnxiety.size
+        displayAnxietyQuestion()
+    }
+
 }

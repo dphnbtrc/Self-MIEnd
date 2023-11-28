@@ -6,50 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
 class DepressionTestFragment : Fragment() {
 
-    /*
-    data class DepressionTest(
-        val depressionQ: List<String>
+    private val questionsDepression = listOf(
+        "Little interest or pleasure in doing things",
+        "Feeling down, depressed, or hopeless",
+        "Trouble falling or staying asleep, sleeping to much",
+        "Feeling tired or having little energy",
+        "Poor appetite or overeating",
+        "Feeling bad about yourself – or that you are a failure or have let yourself or your family down",
+        "Trouble concentrating on things, such as reading the newspaper or watching television",
+        "Moving or speaking so slowly that other people could have noticed. Or the opposite – being so fidgety or restless that you have been moving around a lot more than usual",
+        "Thoughts that you would be better off dead, or of hurting yourself"
     )
-    fun depressionTest() {
-        val depressionA = listOf(
-            "Not at all" to 0,
-            "Several days" to 1,
-            "More than half the days" to 2,
-            "Nearly every day" to 3
-        )
 
-        val depressionQ = DepressionTest(
-            listOf(
-                "Little interest or pleasure in doing things",
-                "Feeling down, depressed, or hopeless",
-                "Trouble falling or staying asleep, sleeping to much",
-                "Feeling tired or having little energy",
-                "Poor appetite or overeating",
-                "Feeling bad about yourself – or that you are a failure or have let yourself or your family down",
-                "Trouble concentrating on things, such as reading the newspaper or watching television",
-                "Moving or speaking so slowly that other people could have noticed. Or the opposite – being so fidgety or restless that you have been moving around a lot more than usual",
-                "Thoughts that you would be better off dead, or of hurting yourself"
-            )
-        )
+    private var currentQuestionDepressionIndex = 0
 
-        //
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_depression_test, container, false)
-    }
-
-}
-
-     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -60,6 +35,14 @@ class DepressionTestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        displayDepressionQuestion()
+
+        val rate1B2 = view.findViewById<Button>(R.id.rate1)
+
+        rate1B2.setOnClickListener {
+            showNextDepressionQuestion()
+        }
+
         val toResultB2 = view.findViewById<Button>(R.id.nextButton)
 
         toResultB2.setOnClickListener {
@@ -68,5 +51,15 @@ class DepressionTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS2)
             transaction.commit()
         }
+    }
+
+    private fun displayDepressionQuestion() {
+        val questionsDepressionTry = requireView().findViewById<TextView>(R.id.testQuestionDepressionContainer)
+        questionsDepressionTry.text = questionsDepression[currentQuestionDepressionIndex]
+    }
+
+    private fun showNextDepressionQuestion() {
+        currentQuestionDepressionIndex = (currentQuestionDepressionIndex + 1) % questionsDepression.size
+        displayDepressionQuestion()
     }
 }

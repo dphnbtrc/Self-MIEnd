@@ -6,10 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
 class StressTestFragment : Fragment() {
 
+    private val questionsStress = listOf(
+        "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        "In the last month, how often have you felt that you were unable to control the important things in your life?",
+        "In the last month, how often have you felt nervous and stressed?",
+        "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+        "In the last month, how often have you felt that things were going your way?",
+        "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+        "In the last month, how often have you been able to control irritations in your life?",
+        "In the last month, how often have you felt that you were on top of things?",
+        "In the last month, how often have you been angered because of things that happened that were outside of your control?",
+        "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?"
+    )
+
+    private var currentQuestionStressIndex = 0
     /*
     data class StressTest(
         val anxietyQ: List<String>
@@ -62,6 +77,14 @@ class StressTestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        displayStressQuestion()
+
+        val rate1B3 = view.findViewById<Button>(R.id.rate1)
+
+        rate1B3.setOnClickListener {
+            showNextStressQuestion()
+        }
+
         val toResultB4 = view.findViewById<Button>(R.id.nextButton)
 
         toResultB4.setOnClickListener {
@@ -71,4 +94,15 @@ class StressTestFragment : Fragment() {
             transaction.commit()
         }
     }
+
+    private fun displayStressQuestion() {
+        val questionsStressTry = requireView().findViewById<TextView>(R.id.testQuestionStressContainer)
+        questionsStressTry.text = questionsStress[currentQuestionStressIndex]
+    }
+
+    private fun showNextStressQuestion() {
+        currentQuestionStressIndex = (currentQuestionStressIndex + 1) % questionsStress.size
+        displayStressQuestion()
+    }
+
 }
