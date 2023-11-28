@@ -25,6 +25,16 @@ class GeneralActsTipsFragment : Fragment() {
 
             backButton.visibility = View.GONE
         }
+
+        val selfButton = view.findViewById<Button>(R.id.selfCareButton)
+        selfButton.setOnClickListener {
+            val selfCareTips = SelfCareTipsAndActsFragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.activityMainLayout, selfCareTips)
+            transaction.commit()
+
+            selfButton.visibility = View.GONE
+        }
         return view
     }
 }

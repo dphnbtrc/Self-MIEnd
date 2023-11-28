@@ -8,6 +8,9 @@ import android.view.ViewGroup
 
 class AnxietyTestFragment : Fragment() {
 
+    private var testScore = 0
+    private var anxietyQ = 0
+
     data class AnxietyTest(
         val anxietyQ: List<String>
     )
@@ -35,12 +38,16 @@ class AnxietyTestFragment : Fragment() {
         //
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_anxiety_test, container, false)
+
+
+
     }
 
 }

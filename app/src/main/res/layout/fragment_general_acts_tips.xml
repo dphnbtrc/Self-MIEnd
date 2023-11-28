@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activitiesAndTips"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
@@ -11,23 +12,23 @@
 
 
     <Button
-        android:id="@+id/backButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/selfCareButton"
+        android:layout_width="322dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/light_green"
-        android:text="@string/backText"
+        android:backgroundTint="@color/blue_violet2"
+        android:text="@string/self_care_for_mental_wellness"
         android:textColor="@color/lapis_lazuli"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/hotline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <Button
-
         android:id="@+id/button3"
         style="@style/SubheadingText"
         android:layout_width="144dp"
@@ -44,24 +45,8 @@
         app:layout_constraintBottom_toTopOf="@+id/backButton2"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="322dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/blue_violet2"
-        android:text="@string/self_care_for_mental_wellness"
-        android:textColor="@color/lapis_lazuli"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/hotline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-
         android:id="@+id/button5"
         style="@style/SubheadingText"
         android:layout_width="144dp"
@@ -81,6 +66,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:id="@+id/textView7"
         style="@style/SubheadingText"
@@ -98,6 +84,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.031" />
 
+
     <TextView
         android:id="@+id/hotline"
         style="@style/ParagraphText"
@@ -112,8 +99,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
 
+    <Button
         android:id="@+id/button4"
         style="@style/SubheadingText"
         android:layout_width="144dp"
@@ -130,8 +117,8 @@
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
 
+    <Button
         android:id="@+id/button2"
         style="@style/SubheadingText"
         android:layout_width="144dp"
@@ -147,5 +134,23 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/backButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/light_green"
+        android:text="@string/backText"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
