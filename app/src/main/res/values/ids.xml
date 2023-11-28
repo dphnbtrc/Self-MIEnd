@@ -12,6 +12,8 @@
     <item name="internetAddictionTestButton" type="id"/>
     <item name="stressTestButton" type="id"/>
     <item name="exitButton" type="id"/>
+    <item name="yesButton" type="id"/>
+    <item name="noButton" type="id"/>
     <!--<item name="" type="id"/>-->
 
     <item name="testTitle" type="id"/>

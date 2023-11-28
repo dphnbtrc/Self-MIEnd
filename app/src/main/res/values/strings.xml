@@ -52,5 +52,8 @@
     <string name="exit_question">Are you sure you want to exit?</string>
     <string name="title_activities_tips_for_mental_well_being"><![CDATA[Activities & Tips for Mental Well-being]]></string>
     <string name="self_care_for_mental_wellness">Self-care for Mental Wellness</string>
+    <string name="thankyou_message">Your wellness journey matters. Thank you!</string>
+    <string name="done_question">Would you like to try the other Tests and Activities?</string>
+    <string name="exitButton">Exit</string>
 
 </resources>

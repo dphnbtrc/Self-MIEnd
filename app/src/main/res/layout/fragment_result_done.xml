@@ -1,46 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ededed"
     tools:context=".ResultDoneFragment">
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+
+        android:contentDescription="@string/app_icon"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/self_miend_icon" />
 
     <TextView
         android:id="@+id/textView8"
         style="@style/HeadingText"
         android:layout_width="301dp"
         android:layout_height="147dp"
+        android:layout_marginBottom="49dp"
         android:gravity="center"
-        android:text="Your wellness journey matters. Thank you!"
+        android:text="@string/thankyou_message"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="136dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        style="@style/SubheadingText"
-        android:layout_width="236dp"
-        android:layout_height="99dp"
-        android:gravity="center"
-        android:text="Would you like to try the other tests?"
-        android:textColor="@color/emerald"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="339dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/light_green"
-        android:text="YES"
-        android:textColor="@color/lapis_lazuli"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="496dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button7"
@@ -48,10 +41,37 @@
         android:layout_height="wrap_content"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/tea_green"
-        android:text="EXIT"
+        android:text="@string/exitButton"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="575dp" />
+        tools:layout_editor_absoluteY="642dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/SubheadingText"
+        android:layout_width="287dp"
+        android:layout_height="97dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center"
+        android:text="@string/done_question"
+        android:textColor="@color/emerald"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/light_green"
+        android:text="@string/yes"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        tools:layout_editor_absoluteX="152dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
