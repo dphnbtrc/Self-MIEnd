@@ -52,6 +52,16 @@ class StressTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS4)
             transaction.commit()
         }
+
+        val toSelectTestB4 = view.findViewById<Button>(R.id.backButton)
+
+        toSelectTestB4.setOnClickListener {
+            val selectS4 = SelectTestFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, selectS4)
+            transaction.commit()
+        }
+
     }
 
     private fun displayStressQuestion() {

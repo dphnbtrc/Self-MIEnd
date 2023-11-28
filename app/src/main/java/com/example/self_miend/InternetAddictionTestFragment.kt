@@ -62,6 +62,16 @@ class InternetAddictionTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS3)
             transaction.commit()
         }
+
+        val toSelectTestB3 = view.findViewById<Button>(R.id.backButton)
+
+        toSelectTestB3.setOnClickListener {
+            val selectS3 = SelectTestFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, selectS3)
+            transaction.commit()
+        }
+
     }
 
     private fun displayInternetAddictionQuestion() {

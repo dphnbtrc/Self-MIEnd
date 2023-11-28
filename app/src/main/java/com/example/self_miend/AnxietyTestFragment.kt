@@ -50,6 +50,16 @@ class AnxietyTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS1)
             transaction.commit()
         }
+
+        val toSelectTestB1 = view.findViewById<Button>(R.id.backButton)
+
+        toSelectTestB1.setOnClickListener {
+            val selectS1 = SelectTestFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, selectS1)
+            transaction.commit()
+        }
+
     }
     private fun displayAnxietyQuestion() {
         val questionsAnxietyTry = requireView().findViewById<TextView>(R.id.testQuestionAnxietyContainer)

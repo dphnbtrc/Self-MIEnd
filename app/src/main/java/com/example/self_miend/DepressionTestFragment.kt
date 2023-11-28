@@ -51,6 +51,16 @@ class DepressionTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS2)
             transaction.commit()
         }
+
+        val toSelectTestB2 = view.findViewById<Button>(R.id.backButton)
+
+        toSelectTestB2.setOnClickListener {
+            val selectS2 = SelectTestFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, selectS2)
+            transaction.commit()
+        }
+
     }
 
     private fun displayDepressionQuestion() {
