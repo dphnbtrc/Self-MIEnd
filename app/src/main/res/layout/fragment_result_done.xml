@@ -39,13 +39,16 @@
         android:id="@+id/quitAppButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/tea_green"
         android:text="@string/exitButton"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="642dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
