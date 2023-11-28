@@ -71,5 +71,10 @@
     <string name="self_care_tips_activities"><![CDATA[Self-Care Tips & Activities]]></string>
     <string name="for_specific_areas">For specific areas:</string>
     <string name="greetings">Time for a quick mental health check! Take a moment to reflect on your well-being. If you\'ve taken any assessments, we\'re here to discuss the results and provide support and guidance.</string>
+    <string name="cancel">Cancel</string>
+    <string name="anxiety_test_text">Anxiety Test</string>
+    <string name="depression_test_text">Depression Test</string>
+    <string name="stress_test_text">Stress Test</string>
+    <string name="internet_addiction_test_text">Internet Addiction Test</string>
 
 </resources>

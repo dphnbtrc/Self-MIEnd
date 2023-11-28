@@ -9,50 +9,23 @@
     android:background="#ededed"
     tools:context=".DepressionTestFragment">
 
-    <TextView
-        android:id="@+id/testTitle"
-        style="@style/HeadingText"
+    <Button
+        android:id="@+id/cancel_test_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/test_text"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/tea_green"
+        android:text="@string/cancel"
         android:textColor="@color/lapis_lazuli"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nextButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="330dp"
-        android:layout_height="193dp"
-        android:layout_marginTop="25dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testTitle">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/testQuestionDepressionContainer"
-                style="@style/SubheadingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="@string/loading_questionText"
-                android:textColor="@color/lapis_lazuli" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/nextButton"
@@ -87,6 +60,35 @@
         app:layout_constraintVertical_bias="0.975" />
 
     <Button
+        android:id="@+id/rate4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/emerald"
+        android:letterSpacing=".1"
+        android:text="@string/nearly_every_day"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/testTitle"
+        style="@style/HeadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/depression_test_text"
+        android:textColor="@color/lapis_lazuli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/rate1"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -104,21 +106,21 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.526" />
 
     <Button
-        android:id="@+id/rate4"
+        android:id="@+id/rate3"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/emerald"
         android:letterSpacing=".1"
-        android:text="@string/nearly_every_day"
+        android:text="@string/more_than_half_the_days"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rate4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
@@ -127,7 +129,7 @@
         android:id="@+id/rate2"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/emerald"
         android:letterSpacing=".1"
@@ -140,22 +142,38 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/rate3"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/emerald"
-        android:letterSpacing=".1"
-        android:text="@string/more_than_half_the_days"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rate4"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="330dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/testQuestionDepressionContainer"
+                style="@style/SubheadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/loading_questionText"
+                android:textColor="@color/lapis_lazuli" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
