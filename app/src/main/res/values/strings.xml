@@ -67,5 +67,6 @@
     <string name="occasionally">Occasionally</string>
     <string name="often">Often</string>
     <string name="always">Always</string>
+    <string name="nearly_every_day">Nearly Every Day</string>
 
 </resources>
