@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.fragment.findNavController
 
 class AnxietyTestFragment : Fragment() {
 
@@ -43,11 +46,18 @@ class AnxietyTestFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_anxiety_test, container, false)
+        val view = inflater.inflate(R.layout.fragment_anxiety_test, container, false)
 
+        val toResultButton = view.findViewById<Button>(R.id.nextButton)
 
+        toResultButton.setOnClickListener {
+            val resultFragment = ResultFragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.activityMainLayout, resultFragment)
+            transaction.commit()
 
+            toResultButton.visibility = View.GONE
+        }
+        return view
     }
-
 }

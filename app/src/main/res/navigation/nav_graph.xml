@@ -52,20 +52,11 @@
         android:label="fragment_selecttest"
         tools:layout="@layout/fragment_selecttest" >
         <action
-            android:id="@+id/action_selectTestFragment2_to_testFragment"
-            app:destination="@id/testFragment" />
-        <action
             android:id="@+id/action_selectTestFragment2_to_homeFragment"
             app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/testFragment"
-        android:name="com.example.self_miend.AnxietyTestFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_anxiety_test" >
         <action
-            android:id="@+id/action_testFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            android:id="@+id/action_selectTestFragment2_to_anxietyTestFragment"
+            app:destination="@id/anxietyTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/generalActsTipsFragment"
@@ -90,4 +81,15 @@
         android:name="com.example.self_miend.ResultDoneFragment"
         android:label="fragment_result_done"
         tools:layout="@layout/fragment_result_done" />
+
+    <fragment
+        android:id="@+id/anxietyTestFragment"
+        android:name="com.example.self_miend.AnxietyTestFragment"
+        android:label="fragment_anxiety_test"
+        tools:layout="@layout/fragment_anxiety_test" >
+        <action
+            android:id="@+id/action_anxietyTestFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
 </navigation>
