@@ -68,5 +68,6 @@
     <string name="often">Often</string>
     <string name="always">Always</string>
     <string name="nearly_every_day">Nearly Every Day</string>
+    <string name="self_care_tips_activities"><![CDATA[Self-Care Tips & Activities]]></string>
 
 </resources>
