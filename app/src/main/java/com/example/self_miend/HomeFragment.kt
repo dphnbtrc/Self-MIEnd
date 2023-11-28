@@ -36,6 +36,16 @@ class HomeFragment : Fragment() {
             openActButton.visibility = View.GONE
         }
 
+        val endSelf = view.findViewById<Button>(R.id.exitButton)
+        endSelf.setOnClickListener {
+            val exitSelfFragment = ExitDialogFragment()
+            val transactionActToTryFragment: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transactionActToTryFragment.replace(R.id.activityMainLayout, exitSelfFragment)
+            transactionActToTryFragment.commit()
+
+            endSelf.visibility = View.GONE
+        }
+
         return view
 
     }

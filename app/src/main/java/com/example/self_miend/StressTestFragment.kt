@@ -6,27 +6,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [StressTestFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StressTestFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    data class StressTest(
+        val anxietyQ: List<String>
+    )
+
+    fun stressTest() {
+        val stressA = listOf(
+            "Never" to 0,
+            "Almost Never" to 1,
+            "Sometimes" to 2,
+            "Fairly often" to 3,
+            "Very often" to 4
+        )
+
+        val stressQ = StressTest(
+            listOf(
+                "In the last month, how often have you been upset because of something that happened unexpectedly?",
+                "In the last month, how often have you felt that you were unable to control the important things in your life?",
+                "In the last month, how often have you felt nervous and stressed?",
+                "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+                "In the last month, how often have you felt that things were going your way?",
+                "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+                "In the last month, how often have you been able to control irritations in your life?",
+                "In the last month, how often have you felt that you were on top of things?",
+                "In the last month, how often have you been angered because of things that happened that were outside of your control?",
+                "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?"
+            )
+        )
+
+        //
     }
 
     override fun onCreateView(
@@ -37,23 +47,4 @@ class StressTestFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_stress_test, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment StressTestFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            StressTestFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

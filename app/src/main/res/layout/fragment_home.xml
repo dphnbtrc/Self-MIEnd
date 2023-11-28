@@ -9,21 +9,6 @@
     android:background="#ededed"
     tools:context=".HomeFragment">
 
-    <Button
-        android:id="@+id/openActivitiesButton"
-        style="@style/SubheadingText"
-        android:layout_width="220dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/emerald"
-        android:text="@string/act_try"
-        android:textColor="@color/lapis_lazuli"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/openDiffTestsButton"
@@ -42,6 +27,24 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
+
+    <Button
+        android:id="@+id/openActivitiesButton"
+        style="@style/SubheadingText"
+        android:layout_width="220dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/emerald"
+        android:text="@string/act_try"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
     <TextView
         android:id="@+id/selectActivityTitle"
         style="@style/HeadingText"
@@ -58,6 +61,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <Button
         android:id="@+id/exitButton"
         android:layout_width="60dp"
@@ -70,5 +74,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.937" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,27 +6,47 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [InternetAddictionTestFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class InternetAddictionTestFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    data class InternetAddictionTest(
+        val iaQ: List<String>
+    )
+    fun internetAddictionTest() {
+        val iaA = listOf(
+            "Not Applicable" to 0,
+            "Rarely" to 1,
+            "Occasionally" to 2,
+            "Frequently" to 3,
+            "Often" to 4,
+            "Always" to 5
+        )
+
+        val iaQ = InternetAddictionTest(
+            listOf(
+                "How often do you find that you stay online longer than you intended?",
+                "How often do you neglect household chores to spend more time online?",
+                "How often do you prefer the excitement of the Internet to intimacy with your partner?",
+                "How often do you form new relationships with fellow online users?",
+                "How often do others in your life complain to you about the amount of time you spend online?",
+                "How often do your grades or school work suffer because of the amount of time you spend online?",
+                "How often do you check your email before something else that you need to do?",
+                "How often does your job performance or productivity suffer because of the Internet?",
+                "How often do you become defensive or secretive when anyone asks you what you do online?",
+                "How often do you block out disturbing thoughts about your life with soothing thoughts of the Internet?",
+                "How often do you find yourself anticipating when you will go online again?",
+                "How often do you fear that life without the Internet would be boring, empty, and joyless?",
+                "How often do you snap, yell, or act annoyed if someone bothers you while you are online?",
+                "How often do you lose sleep due to being online?",
+                "How often do you feel preoccupied with the Internet when off-line, or fantasize about being online?",
+                "How often do you find yourself saying \"just a few more minutes\" when online?",
+                "How often do you try to cut down the amount of time you spend online and fail?",
+                "How often do you try to hide how long you've been online?",
+                "How often do you choose to spend more time online over going out with others?",
+                "How often do you feel depressed, moody, or nervous when you are off-line, which goes away once you are back online?"
+            )
+        )
+
+        //
     }
 
     override fun onCreateView(
@@ -37,23 +57,4 @@ class InternetAddictionTestFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_internet_addiction_test, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment InternetAddictionTestFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            InternetAddictionTestFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
