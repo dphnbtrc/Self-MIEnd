@@ -16,7 +16,7 @@ class ResultDoneFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_self_care_tips_and_acts, container, false)
+        return inflater.inflate(R.layout.fragment_result_done, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
