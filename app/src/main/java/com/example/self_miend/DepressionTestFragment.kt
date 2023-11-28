@@ -52,7 +52,7 @@ class DepressionTestFragment : Fragment() {
             transaction.commit()
         }
 
-        val toSelectTestB2 = view.findViewById<Button>(R.id.backButton)
+        val toSelectTestB2 = view.findViewById<Button>(R.id.cancel_test_Button)
 
         toSelectTestB2.setOnClickListener {
             val selectS2 = SelectTestFragment()

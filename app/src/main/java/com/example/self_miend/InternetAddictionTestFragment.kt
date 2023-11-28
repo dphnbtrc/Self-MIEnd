@@ -63,7 +63,7 @@ class InternetAddictionTestFragment : Fragment() {
             transaction.commit()
         }
 
-        val toSelectTestB3 = view.findViewById<Button>(R.id.backButton)
+        val toSelectTestB3 = view.findViewById<Button>(R.id.cancel_test_Button)
 
         toSelectTestB3.setOnClickListener {
             val selectS3 = SelectTestFragment()

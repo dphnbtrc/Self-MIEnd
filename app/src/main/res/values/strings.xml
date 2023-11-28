@@ -76,5 +76,6 @@
     <string name="depression_test_text">Depression Test</string>
     <string name="stress_test_text">Stress Test</string>
     <string name="internet_addiction_test_text">Internet Addiction Test</string>
+    <string name="frequently">Frequently</string>
 
 </resources>
