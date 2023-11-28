@@ -55,5 +55,17 @@
     <string name="thankyou_message">Your wellness journey matters. Thank you!</string>
     <string name="done_question">Would you like to try the other Tests and Activities?</string>
     <string name="exitButton">Exit</string>
+    <string name="several_days">Several Days</string>
+    <string name="not_at_all">Not at all</string>
+    <string name="more_than_half_the_days">More Than Half The Days</string>
+    <string name="moderately">Moderately</string>
+    <string name="a_little_bit">A Little Bit</string>
+    <string name="quite_a_bit">Quite A Bit</string>
+    <string name="extremely">Extremely</string>
+    <string name="not_applicable">Not Applicable</string>
+    <string name="rarely">Rarely</string>
+    <string name="occasionally">Occasionally</string>
+    <string name="often">Often</string>
+    <string name="always">Always</string>
 
 </resources>
