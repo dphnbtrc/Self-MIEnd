@@ -78,4 +78,97 @@
     <string name="internet_addiction_test_text">Internet Addiction Test</string>
     <string name="frequently">Frequently</string>
 
+
+
+
+    <!-- Title Strings -->
+    <string name="tip_title_1">1. Practice Mindfulness Meditation:\n</string>
+    <string name="tip_title_2">2. Establish a Routine:\n</string>
+    <string name="tip_title_3">3. Stay Connected:\n</string>
+    <string name="tip_title_4">4. Exercise Regularly:\n</string>
+    <string name="tip_title_5">5. Set Realistic Goals:\n</string>
+    <string name="tip_title_6">6. Limit Screen Time:\n</string>
+    <string name="tip_title_7">7. Prioritize Sleep:\n</string>
+    <string name="tip_title_8">8. Express Yourself Creatively:\n</string>
+    <string name="tip_title_9">9. Learn to Say No:\n</string>
+    <string name="tip_title_10">10. Practice Gratitude:\n</string>
+    <string name="tip_title_11">11. Seek Professional Support:\n</string>
+    <string name="tip_title_12">12. Engage in Hobbies:\n</string>
+    <string name="tip_title_13">13. Take Breaks:\n</string>
+    <string name="tip_title_14">14. Practice Self-Compassion:\n</string>
+
+    <!-- Description Strings -->
+    <string name="tip_desc_1"><![CDATA[
+    • Set aside a few minutes each day to practice mindfulness meditation.\n
+    • Focus on your breath and bring your attention to the present moment.\n
+    • Apps like Headspace or Calm can guide you through meditation sessions.\n
+]]></string>
+
+    <string name="tip_desc_2"><![CDATA[
+    • Create a daily schedule that includes regular sleep, meals, and breaks.\n
+    • Consistent routines can provide a sense of stability and predictability.\n
+]]></string>
+
+    <string name="tip_desc_3"><![CDATA[
+    • Maintain relationships with friends and family.\n
+    • Schedule regular social activities, even if they&apos;re virtual, to stay connected.\n
+]]></string>
+
+    <string name="tip_desc_4"><![CDATA[
+    • Engage in physical activities you enjoy, such as walking, jogging, or yoga.\n
+    • Exercise releases endorphins, which can improve your mood.\n
+]]></string>
+
+    <string name="tip_desc_5"><![CDATA[
+    • Break down large tasks into smaller, manageable goals.\n
+    • Celebrate your achievements, no matter how small.\n
+]]></string>
+
+    <string name="tip_desc_6"><![CDATA[
+    • Set boundaries for your screen time, especially on social media.\n
+    • Allocate time for activities that don&apos;t involve screens, like reading or outdoor pursuits.\n
+]]></string>
+
+    <string name="tip_desc_7"><![CDATA[
+    • Ensure you get enough restful sleep each night.\n
+    • Create a calming bedtime routine to signal to your body that it&apos;s time to wind down.\n
+]]></string>
+
+    <string name="tip_desc_8"><![CDATA[
+    • Engage in creative activities such as writing, drawing, or playing an instrument.\n
+    • Expressing yourself creatively can be therapeutic.\n
+]]></string>
+
+    <string name="tip_desc_9"><![CDATA[
+    • Set boundaries and learn to say no when you need to.\n
+    • Prioritize your well-being by not overcommitting.\n
+]]></string>
+
+    <string name="tip_desc_10"><![CDATA[
+    • Keep a gratitude journal to reflect on positive aspects of your life.\n
+    • Focus on the things you&apos;re thankful for, no matter how small.\n
+]]></string>
+
+    <string name="tip_desc_11"><![CDATA[
+    • If needed, don&apos;t hesitate to reach out to a mental health professional.\n
+    • Therapy or counseling can provide valuable tools for managing stress and challenges.\n
+]]></string>
+
+    <string name="tip_desc_12"><![CDATA[
+    • Spend time doing things you love, whether it&apos;s gardening, painting, or playing a sport.\n
+    • Hobbies can bring joy and fulfillment to your life.\n
+]]></string>
+
+    <string name="tip_desc_13"><![CDATA[
+    • Incorporate short breaks into your day to rest and recharge.\n
+    • Step away from work or stressful situations to clear your mind.\n
+]]></string>
+
+    <string name="tip_desc_14"><![CDATA[
+    • Be kind to yourself and recognize that everyone makes mistakes.\n
+    • Treat yourself with the same kindness and understanding you would offer a friend.\n
+]]></string>
+    <string name="selfcare_desc">Taking care of your mental well-being is crucial for overall health and happiness. Here are some self-care activities and tips that can contribute to your mental well-being:</string>
+
+
 </resources>

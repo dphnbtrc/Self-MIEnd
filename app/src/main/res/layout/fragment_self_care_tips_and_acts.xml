@@ -8,23 +8,6 @@
     tools:context=".SelfCareTipsAndActsFragment">
 
 
-    <TextView
-        style="@style/SubheadingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="1dp"
-        android:gravity="center"
-        android:text="@string/self_care_tips_activities"
-        android:textColor="@color/lapis_lazuli"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/backToActsAndTips"
         android:layout_width="wrap_content"
@@ -40,19 +23,345 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="@string/selfcare_desc"
+        android:textColor="@color/darker_blue_violet2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        style="@style/SubheadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/self_care_tips_activities"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="548dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/backButton2"
+        android:layout_height="450dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/backToActsAndTips"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_width="330dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_1"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_2"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_2"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_3"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_3"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_4"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_4"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_5"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_5"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_6"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_6"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_7"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_7"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_8"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_8"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_9"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_9"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_10"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_10"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_11"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_11"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_12"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_12"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_13"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_13"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tip_title_14"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tip_desc_14"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
