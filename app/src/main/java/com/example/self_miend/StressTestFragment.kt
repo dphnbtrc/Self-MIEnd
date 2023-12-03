@@ -82,7 +82,7 @@ class StressTestFragment : Fragment() {
         if (currentQuestionStressIndex < questionsStress.size - 1) {
             currentQuestionStressIndex++
         } else {
-            currentQuestionStressIndex = questionsStress.size - 1 // Set index to last question
+            currentQuestionStressIndex = questionsStress.size - 1
         }
         displayStressQuestion()
     }

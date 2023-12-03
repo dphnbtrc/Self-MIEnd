@@ -78,7 +78,7 @@ class DepressionTestFragment : Fragment() {
         if (currentQuestionDepressionIndex < questionsDepression.size - 1) {
             currentQuestionDepressionIndex++
         } else {
-            currentQuestionDepressionIndex = questionsDepression.size - 1 // Set index to last question
+            currentQuestionDepressionIndex = questionsDepression.size - 1
         }
         displayDepressionQuestion()
     }
