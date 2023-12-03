@@ -48,9 +48,39 @@ class InternetAddictionTestFragment : Fragment() {
 
         displayInternetAddictionQuestion()
 
-        val rate1B3 = view.findViewById<Button>(R.id.rate1)
+        val rateInternetAddiction1B = view.findViewById<Button>(R.id.rate1)
 
-        rate1B3.setOnClickListener {
+        rateInternetAddiction1B.setOnClickListener {
+            showNextInternetAddictionQuestion()
+        }
+
+        val rateInternetAddiction2B = view.findViewById<Button>(R.id.rate2)
+
+        rateInternetAddiction2B.setOnClickListener {
+            showNextInternetAddictionQuestion()
+        }
+
+        val rateInternetAddiction3B = view.findViewById<Button>(R.id.rate3)
+
+        rateInternetAddiction3B.setOnClickListener {
+            showNextInternetAddictionQuestion()
+        }
+
+        val rateInternetAddiction4B = view.findViewById<Button>(R.id.rate4)
+
+        rateInternetAddiction4B.setOnClickListener {
+            showNextInternetAddictionQuestion()
+        }
+
+        val rateInternetAddiction5B = view.findViewById<Button>(R.id.rate5)
+
+        rateInternetAddiction5B.setOnClickListener {
+            showNextInternetAddictionQuestion()
+        }
+
+        val rateInternetAddiction6B = view.findViewById<Button>(R.id.rate6)
+
+        rateInternetAddiction6B.setOnClickListener {
             showNextInternetAddictionQuestion()
         }
 

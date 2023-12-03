@@ -38,9 +38,33 @@ class StressTestFragment : Fragment() {
 
         displayStressQuestion()
 
-        val rate1B3 = view.findViewById<Button>(R.id.rate1)
+        val rateStress1B = view.findViewById<Button>(R.id.rate1)
 
-        rate1B3.setOnClickListener {
+        rateStress1B.setOnClickListener {
+            showNextStressQuestion()
+        }
+
+        val rateStress2B = view.findViewById<Button>(R.id.rate2)
+
+        rateStress2B.setOnClickListener {
+            showNextStressQuestion()
+        }
+
+        val rateStress3B = view.findViewById<Button>(R.id.rate3)
+
+        rateStress3B.setOnClickListener {
+            showNextStressQuestion()
+        }
+
+        val rateStress4B = view.findViewById<Button>(R.id.rate4)
+
+        rateStress4B.setOnClickListener {
+            showNextStressQuestion()
+        }
+
+        val rateStress5B = view.findViewById<Button>(R.id.rate5)
+
+        rateStress5B.setOnClickListener {
             showNextStressQuestion()
         }
 

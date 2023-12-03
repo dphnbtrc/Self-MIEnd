@@ -37,9 +37,27 @@ class DepressionTestFragment : Fragment() {
 
         displayDepressionQuestion()
 
-        val rate1B2 = view.findViewById<Button>(R.id.rate1)
+        val rateDepression1B = view.findViewById<Button>(R.id.rate1)
 
-        rate1B2.setOnClickListener {
+        rateDepression1B.setOnClickListener {
+            showNextDepressionQuestion()
+        }
+
+        val rateDepression2B = view.findViewById<Button>(R.id.rate2)
+
+        rateDepression2B.setOnClickListener {
+            showNextDepressionQuestion()
+        }
+
+        val rateDepression3B = view.findViewById<Button>(R.id.rate3)
+
+        rateDepression3B.setOnClickListener {
+            showNextDepressionQuestion()
+        }
+
+        val rateDepression4B = view.findViewById<Button>(R.id.rate4)
+
+        rateDepression4B.setOnClickListener {
             showNextDepressionQuestion()
         }
 

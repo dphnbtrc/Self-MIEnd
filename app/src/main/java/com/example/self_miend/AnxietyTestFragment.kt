@@ -35,11 +35,30 @@ class AnxietyTestFragment : Fragment() {
 
         displayAnxietyQuestion()
 
-        val rate1B = view.findViewById<Button>(R.id.rate1)
+        val rate1AnxietyB = view.findViewById<Button>(R.id.rate1)
 
-        rate1B.setOnClickListener {
+        rate1AnxietyB.setOnClickListener {
             showNextAnxietyQuestion()
         }
+
+        val rate2AnxietyB = view.findViewById<Button>(R.id.rate2)
+
+        rate2AnxietyB.setOnClickListener {
+            showNextAnxietyQuestion()
+        }
+
+        val rate3AnxietyB = view.findViewById<Button>(R.id.rate3)
+
+        rate3AnxietyB.setOnClickListener {
+            showNextAnxietyQuestion()
+        }
+
+        val rate4AnxietyB = view.findViewById<Button>(R.id.rate4)
+
+        rate4AnxietyB.setOnClickListener {
+            showNextAnxietyQuestion()
+        }
+
 
         val backToPreviousAnxietyQuestionB = view.findViewById<Button>(R.id.backButton)
 
