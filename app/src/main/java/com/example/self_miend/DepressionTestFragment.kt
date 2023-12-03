@@ -43,6 +43,12 @@ class DepressionTestFragment : Fragment() {
             showNextDepressionQuestion()
         }
 
+        val backToPreviousDepressionQuestionB = view.findViewById<Button>(R.id.backButton)
+
+        backToPreviousDepressionQuestionB.setOnClickListener {
+            showPreviousDepressionQuestion()
+        }
+
         val toResultB2 = view.findViewById<Button>(R.id.nextButton)
 
         toResultB2.setOnClickListener {
@@ -69,7 +75,20 @@ class DepressionTestFragment : Fragment() {
     }
 
     private fun showNextDepressionQuestion() {
-        currentQuestionDepressionIndex = (currentQuestionDepressionIndex + 1) % questionsDepression.size
+        if (currentQuestionDepressionIndex < questionsDepression.size - 1) {
+            currentQuestionDepressionIndex++
+        } else {
+            currentQuestionDepressionIndex = questionsDepression.size - 1 // Set index to last question
+        }
+        displayDepressionQuestion()
+    }
+
+    private fun showPreviousDepressionQuestion() {
+        if (currentQuestionDepressionIndex > 0) {
+            currentQuestionDepressionIndex--
+        } else {
+            currentQuestionDepressionIndex = 0
+        }
         displayDepressionQuestion()
     }
 

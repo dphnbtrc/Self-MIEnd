@@ -44,11 +44,18 @@ class StressTestFragment : Fragment() {
             showNextStressQuestion()
         }
 
+        val backToPreviousStressQuestionB = view.findViewById<Button>(R.id.backButton)
+
+        backToPreviousStressQuestionB.setOnClickListener {
+            showPreviousStressQuestion()
+        }
+
         val toResultB4 = view.findViewById<Button>(R.id.nextButton)
 
         toResultB4.setOnClickListener {
             val resultS4 = ResultFragment()
-            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            val transaction: FragmentTransaction =
+                requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS4)
             transaction.commit()
         }
@@ -57,7 +64,8 @@ class StressTestFragment : Fragment() {
 
         toSelectTestB4.setOnClickListener {
             val selectS4 = SelectTestFragment()
-            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            val transaction: FragmentTransaction =
+                requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, selectS4)
             transaction.commit()
         }
@@ -65,12 +73,26 @@ class StressTestFragment : Fragment() {
     }
 
     private fun displayStressQuestion() {
-        val questionsStressTry = requireView().findViewById<TextView>(R.id.testQuestionStressContainer)
+        val questionsStressTry =
+            requireView().findViewById<TextView>(R.id.testQuestionStressContainer)
         questionsStressTry.text = questionsStress[currentQuestionStressIndex]
     }
 
     private fun showNextStressQuestion() {
-        currentQuestionStressIndex = (currentQuestionStressIndex + 1) % questionsStress.size
+        if (currentQuestionStressIndex < questionsStress.size - 1) {
+            currentQuestionStressIndex++
+        } else {
+            currentQuestionStressIndex = questionsStress.size - 1 // Set index to last question
+        }
+        displayStressQuestion()
+    }
+
+    private fun showPreviousStressQuestion() {
+        if (currentQuestionStressIndex > 0) {
+            currentQuestionStressIndex--
+        } else {
+            currentQuestionStressIndex = 0
+        }
         displayStressQuestion()
     }
 

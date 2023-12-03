@@ -54,6 +54,12 @@ class InternetAddictionTestFragment : Fragment() {
             showNextInternetAddictionQuestion()
         }
 
+        val backToPreviousInternetAddictionQuestionB = view.findViewById<Button>(R.id.backButton)
+
+        backToPreviousInternetAddictionQuestionB.setOnClickListener {
+            showPreviousInternetAddictionQuestion()
+        }
+
         val toResultB3 = view.findViewById<Button>(R.id.nextButton)
 
         toResultB3.setOnClickListener {
@@ -80,7 +86,20 @@ class InternetAddictionTestFragment : Fragment() {
     }
 
     private fun showNextInternetAddictionQuestion() {
-        currentQuestionInternetAddictionIndex = (currentQuestionInternetAddictionIndex + 1) % questionsInternetAddiction.size
+        if (currentQuestionInternetAddictionIndex < questionsInternetAddiction.size - 1) {
+            currentQuestionInternetAddictionIndex++
+        } else {
+            currentQuestionInternetAddictionIndex = questionsInternetAddiction.size - 1
+        }
+        displayInternetAddictionQuestion()
+    }
+
+    private fun showPreviousInternetAddictionQuestion() {
+        if (currentQuestionInternetAddictionIndex > 0) {
+            currentQuestionInternetAddictionIndex--
+        } else {
+            currentQuestionInternetAddictionIndex = 0
+        }
         displayInternetAddictionQuestion()
     }
 

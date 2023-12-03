@@ -41,6 +41,12 @@ class AnxietyTestFragment : Fragment() {
             showNextAnxietyQuestion()
         }
 
+        val backToPreviousAnxietyQuestionB = view.findViewById<Button>(R.id.backButton)
+
+        backToPreviousAnxietyQuestionB.setOnClickListener {
+            showPreviousAnxietyQuestion()
+        }
+
         val toResultB1 = view.findViewById<Button>(R.id.nextButton)
 
         toResultB1.setOnClickListener {
@@ -66,7 +72,20 @@ class AnxietyTestFragment : Fragment() {
     }
 
     private fun showNextAnxietyQuestion() {
-        currentQuestionAnxietyIndex = (currentQuestionAnxietyIndex + 1) % questionsAnxiety.size
+        if (currentQuestionAnxietyIndex < questionsAnxiety.size - 1) {
+            currentQuestionAnxietyIndex++
+        } else {
+            currentQuestionAnxietyIndex = questionsAnxiety.size - 1
+        }
+        displayAnxietyQuestion()
+    }
+
+    private fun showPreviousAnxietyQuestion() {
+        if (currentQuestionAnxietyIndex > 0) {
+            currentQuestionAnxietyIndex--
+        } else {
+            currentQuestionAnxietyIndex = 0
+        }
         displayAnxietyQuestion()
     }
 
