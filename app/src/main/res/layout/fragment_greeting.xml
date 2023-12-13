@@ -32,13 +32,12 @@
         android:layout_height="325dp"
         android:layout_marginBottom="68dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/abt_hey"
+        android:text="@string/greetings"
         android:textAlignment="center"
         android:textColor="@color/verdigris"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/openHomeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

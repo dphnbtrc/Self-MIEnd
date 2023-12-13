@@ -9,12 +9,14 @@
     android:background="#ededed"
     tools:context=".AboutFragment">
 
+
     <TextView
         android:id="@+id/textView5"
         style="@style/ParagraphText"
         android:layout_width="300dp"
         android:layout_height="451dp"
-        android:layout_marginBottom="56dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
         android:fontFamily="sans-serif-medium"
         android:letterSpacing=".1"
         android:text="@string/abt_intro"
@@ -32,7 +34,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:layout_marginBottom="10dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/abt_hey"
         android:textColor="@color/lapis_lazuli"
@@ -42,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.785" />
+        app:layout_constraintVertical_bias="0.266" />
 
     <Button
         android:id="@+id/openGreetingButton"

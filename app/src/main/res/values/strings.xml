@@ -168,5 +168,20 @@
 ]]></string>
     <string name="selfcare_desc">Taking care of your mental well-being is crucial for overall health and happiness. Here are some self-care activities and tips that can contribute to your mental well-being:</string>
 
+    <string name="disclaimer"><![CDATA[The information and tools provided by this mobile application are for informational purposes only and should not be construed as medical advice or a substitute for professional mental health care. The results of any self-assessment tools should not be used to diagnose or treat any mental health condition. If you are concerned about your mental health, please seek professional help from a qualified mental health professional.\n
+\n
+Please note that:\n
+\n
+The self-assessment tools in this app are not 100% accurate and may not detect all mental health conditions.
+The information provided in this app is not intended to be a complete overview of mental health and may not address all of your questions or concerns.
+If you are experiencing a mental health crisis, please call a suicide hotline or go to the nearest emergency room.
+We encourage you to:\n
+\n
+Use this app as a starting point for learning more about mental health.
+Talk to your doctor or a mental health professional if you have any concerns about your mental health.
+Take care of yourself and seek help if you need it.
+\n
+Thank you for using our app. We hope that it helps you on your journey to better mental health.
+]]></string>
 
 </resources>
