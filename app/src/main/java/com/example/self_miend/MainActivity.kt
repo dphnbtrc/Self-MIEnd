@@ -15,11 +15,11 @@ class MainActivity : AppCompatActivity() {
         val startingButton = findViewById<Button>(R.id.startButton)
         startingButton.setOnClickListener {
 
-            val goToFragments = GreetingFragment()
+            val goToFragmentS = DisclaimerFragment()
 
             supportFragmentManager.beginTransaction()
                 .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-                .replace(R.id.activityMainLayout, goToFragments)
+                .replace(R.id.activityMainLayout, goToFragmentS)
                 .addToBackStack(null)
                 .commit()
 
