@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
-class GreetingFragment : Fragment() {
+class TestDaphne : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_greeting, container, false)
+        return inflater.inflate(R.layout.fragment_test_daphne, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -23,28 +22,19 @@ class GreetingFragment : Fragment() {
 
         val toHomeB = view.findViewById<Button>(R.id.openHomeButton)
 
-        val stringsList = listOf(
-            "Hello",
-            "Pisti ka",
-            "Murag Fish",
-            "killer"
-            //Balyui dide yot an mga namefuls daphins
-        )
-
-        val randomIndex = (stringsList.indices).random()
-        val randomString = stringsList[randomIndex]
-
-        val greetingsRandom = view.findViewById<TextView>(R.id.textView6)
-
-        greetingsRandom.text = randomString
-
         toHomeB.setOnClickListener {
-            val homeS = HomeFragment()
+            val bundle = Bundle()
+            bundle.putString("dataKey", "Data to pass")
+
+            val testVenusS = TestVenus()
+            testVenusS.arguments = bundle
+
+            val homeS = TestVenus()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, homeS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
-
     }
-
 }
+
