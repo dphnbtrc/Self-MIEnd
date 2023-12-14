@@ -26,6 +26,7 @@ class SelfCareTipsAndActsFragment : Fragment() {
             val actAndTipsS = GeneralActsTipsFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, actAndTipsS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

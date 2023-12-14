@@ -26,6 +26,7 @@ class HomeFragment : Fragment() {
             val selectTestS = SelectTestFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, selectTestS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -35,6 +36,7 @@ class HomeFragment : Fragment() {
             val genActTipsS = GeneralActsTipsFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, genActTipsS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -44,6 +46,7 @@ class HomeFragment : Fragment() {
             val exitS = ExitDialogFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, exitS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

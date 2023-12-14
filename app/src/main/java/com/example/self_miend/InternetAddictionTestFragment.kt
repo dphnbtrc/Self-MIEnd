@@ -96,6 +96,7 @@ class InternetAddictionTestFragment : Fragment() {
             val resultS3 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS3)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -105,6 +106,7 @@ class InternetAddictionTestFragment : Fragment() {
             val selectS3 = SelectTestFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, selectS3)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

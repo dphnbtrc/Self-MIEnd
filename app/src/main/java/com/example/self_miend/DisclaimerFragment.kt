@@ -16,22 +16,20 @@ class DisclaimerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_disclaimer, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        // Delay the navigation to the next fragment
-
         handler.postDelayed({
             val greetingS = GreetingFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, greetingS)
+            transaction.addToBackStack(null)
             transaction.commit()
-        }, 7000) // 7 seconds in milliseconds
+        }, 7000)
     }
 
     override fun onDestroy() {

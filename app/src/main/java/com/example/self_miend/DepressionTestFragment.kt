@@ -73,6 +73,7 @@ class DepressionTestFragment : Fragment() {
             val resultS2 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS2)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -82,6 +83,7 @@ class DepressionTestFragment : Fragment() {
             val selectS2 = SelectTestFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, selectS2)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

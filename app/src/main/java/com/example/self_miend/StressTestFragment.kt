@@ -81,6 +81,7 @@ class StressTestFragment : Fragment() {
             val transaction: FragmentTransaction =
                 requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS4)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -91,6 +92,7 @@ class StressTestFragment : Fragment() {
             val transaction: FragmentTransaction =
                 requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, selectS4)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

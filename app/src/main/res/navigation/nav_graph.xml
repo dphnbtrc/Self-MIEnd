@@ -57,6 +57,12 @@
         <action
             android:id="@+id/action_selectTestFragment2_to_anxietyTestFragment"
             app:destination="@id/anxietyTestFragment" />
+        <action
+            android:id="@+id/action_selectTestFragment2_to_depressionTestFragment"
+            app:destination="@id/depressionTestFragment" />
+        <action
+            android:id="@+id/action_selectTestFragment2_to_internetAddictionTestFragment"
+            app:destination="@id/internetAddictionTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/generalActsTipsFragment"
@@ -81,7 +87,6 @@
         android:name="com.example.self_miend.ResultDoneFragment"
         android:label="fragment_result_done"
         tools:layout="@layout/fragment_result_done" />
-
     <fragment
         android:id="@+id/anxietyTestFragment"
         android:name="com.example.self_miend.AnxietyTestFragment"
@@ -89,6 +94,24 @@
         tools:layout="@layout/fragment_anxiety_test" >
         <action
             android:id="@+id/action_anxietyTestFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/depressionTestFragment"
+        android:name="com.example.self_miend.DepressionTestFragment"
+        android:label="fragment_depression_test"
+        tools:layout="@layout/fragment_depression_test" >
+        <action
+            android:id="@+id/action_depressionTestFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/internetAddictionTestFragment"
+        android:name="com.example.self_miend.InternetAddictionTestFragment"
+        android:label="fragment_internet_addiction_test"
+        tools:layout="@layout/fragment_internet_addiction_test" >
+        <action
+            android:id="@+id/action_internetAddictionTestFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
 

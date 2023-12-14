@@ -78,6 +78,8 @@
     <string name="internet_addiction_test_text">Internet Addiction Test</string>
     <string name="frequently">Frequently</string>
 
+    <string name="display_score_label">%d</string>
+
 
     <!-- Title Strings -->
     <string name="tip_title_1">1. Practice Mindfulness Meditation:\n</string>

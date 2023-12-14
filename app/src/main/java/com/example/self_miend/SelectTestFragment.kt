@@ -25,6 +25,7 @@ class SelectTestFragment : Fragment() {
             val anxietyS = AnxietyTestFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, anxietyS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -34,6 +35,7 @@ class SelectTestFragment : Fragment() {
             val depressionS = DepressionTestFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, depressionS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -43,6 +45,7 @@ class SelectTestFragment : Fragment() {
             val internetAddictionS = InternetAddictionTestFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, internetAddictionS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -52,6 +55,7 @@ class SelectTestFragment : Fragment() {
             val stressS = StressTestFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, stressS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
@@ -61,6 +65,7 @@ class SelectTestFragment : Fragment() {
             val homeS = HomeFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, homeS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

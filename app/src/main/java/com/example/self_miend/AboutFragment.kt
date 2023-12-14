@@ -26,6 +26,7 @@ class AboutFragment : Fragment() {
             val greetingS = GreetingFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, greetingS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 

@@ -42,6 +42,7 @@ class GreetingFragment : Fragment() {
             val homeS = HomeFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, homeS)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
 
