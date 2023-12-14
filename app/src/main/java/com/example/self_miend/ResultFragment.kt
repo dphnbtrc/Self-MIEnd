@@ -69,6 +69,14 @@ class ResultFragment : Fragment() {
         val testResultLevel = requireView().findViewById<TextView>(R.id.testResultSeverity)
 
         if (comingFromAnxietyTest == true) {
+
+            val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
+
+            val randomAdvicesAnxietyIndex = (advicesListAnxiety.indices).random()
+            val randomAdvicesAnxiety = advicesListAnxiety[randomAdvicesAnxietyIndex]
+
+            tipsOrQuotesOrAdvice.text = randomAdvicesAnxiety
+
             when (scoreResultAnxiety) {
                 in 0..4 -> {
                     testResultLevel.text = getString(R.string.anxietyR1)
@@ -90,6 +98,14 @@ class ResultFragment : Fragment() {
         testResultScore.text = "$scoreResultDepression"
 
         if (comingFromDepressionTest == true) {
+
+            val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
+
+            val randomAdvicesDepressionIndex = (advicesListDepression.indices).random()
+            val randomAdvicesDepression = advicesListAnxiety[randomAdvicesDepressionIndex]
+
+            tipsOrQuotesOrAdvice.text = randomAdvicesDepression
+
             when (scoreResultDepression) {
                 in 0..4 -> {
                     testResultLevel.text = getString(R.string.depressionR1)
@@ -117,6 +133,14 @@ class ResultFragment : Fragment() {
         testResultScore.text = "$scoreResultInternetAddiction"
 
         if (comingFromInternetAddictionTest == true) {
+
+            val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
+
+            val randomAdvicesInternetAddictionIndex = (advicesListInternetAddiction.indices).random()
+            val advicesListInternetAddiction = advicesListAnxiety[randomAdvicesInternetAddictionIndex]
+
+            tipsOrQuotesOrAdvice.text = advicesListInternetAddiction
+
             when (scoreResultInternetAddiction) {
                 in 0..30 -> {
                     testResultLevel.text = getString(R.string.internetAddictionR1)
@@ -141,6 +165,14 @@ class ResultFragment : Fragment() {
         testResultScore.text = "$scoreResultStress"
 
         if (comingFromStressTest == true) {
+
+            val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
+
+            val randomAdvicesStressIndex = (advicesListStress.indices).random()
+            val advicesListStress = advicesListAnxiety[randomAdvicesStressIndex]
+
+            tipsOrQuotesOrAdvice.text = advicesListStress
+
             when (scoreResultStress) {
                 in 0..13 -> {
                     testResultLevel.text = getString(R.string.stressR1)
@@ -163,13 +195,6 @@ class ResultFragment : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
         }
-
-        val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
-
-        val randomAdvicesIndex = (advicesList.indices).random()
-        val randomAdvices = advicesList[randomAdvicesIndex]
-
-        tipsOrQuotesOrAdvice.text = randomAdvices
 
     }
 
