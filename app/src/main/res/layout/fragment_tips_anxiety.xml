@@ -27,14 +27,15 @@
         android:id="@+id/textView10"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
         android:text="@string/at_desc"
+        android:textAlignment="center"
         android:textColor="@color/darker_blue_violet2"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -56,10 +57,10 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:layout_marginBottom="34dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/backToActsAndTips"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
@@ -71,7 +72,7 @@
             <TextView
                 android:layout_width="350dp"
                 android:layout_height="match_parent"
-                android:text="@string/tat1"
+                android:text="@string/tast1"
                 android:textAlignment="viewStart"
                 android:textColor="@color/verdigris"
                 android:textSize="16sp"
@@ -81,7 +82,178 @@
                 android:layout_width="315dp"
                 android:layout_height="match_parent"
                 android:lineSpacingExtra="6sp"
-                android:text="@string/tatd1"
+                android:text="@string/tasd1"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast2"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd2"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast3"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd3"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast4"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd4"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast5"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd5"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast6"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd6"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast7"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd7"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast8"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd8"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast9"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd9"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tast10"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tasd10"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
                 android:textColor="@color/gray"

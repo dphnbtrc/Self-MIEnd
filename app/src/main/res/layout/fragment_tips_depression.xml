@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="350dp"
                 android:layout_height="match_parent"
-                android:text="@string/tat1"
+                android:text="@string/tdt1"
                 android:textAlignment="viewStart"
                 android:textColor="@color/verdigris"
                 android:textSize="16sp"
@@ -82,7 +82,178 @@
                 android:layout_width="315dp"
                 android:layout_height="match_parent"
                 android:lineSpacingExtra="6sp"
-                android:text="@string/tatd1"
+                android:text="@string/tdd1"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt2"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd2"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt3"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd3"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt4"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd4"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt5"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd5"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt6"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd6"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt7"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd7"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt8"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd8"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt9"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd9"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tdt10"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tdd10"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
                 android:textColor="@color/gray"

@@ -216,54 +216,102 @@ Thank you for using our app. We hope that it helps you on your journey to better
     <string name="disclaimerHead">Disclaimer</string>
 
     <!-- Anxiety Tips Strings -->
-    <string name="tat1">Guided Meditation and Breathing Exercises:\n</string>
-    <string name="tat2">Mindfulness and Relaxation Techniques: \n</string>
-    <string name="tat3">Stress-Relief Exercises:\n</string>
-    <string name="tat4">Journaling or Mood Tracking:\n</string>
-    <string name="tat5">Nature Sounds or Relaxing Music:\n</string>
-    <string name="tat6">Cognitive Behavioral Therapy (CBT) Tools:\n</string>
-    <string name="tat7">Progress Tracking and Goal Setting:\n</string>
-    <string name="tat8">Virtual Support Groups or Forums:\n</string>
-    <string name="tat9">Stress Assessments or Coping Strategies:\n</string>
-    <string name="tat10">SelfCare Reminders or Daily Affirmations:\n</string>
-    <string name="tat11">Sleep Improvement Tools:\n</string>
-    <string name="tat12">Coping Strategies Toolbox:\n</string>
-    <string name="tat13">Mood Diary or Emotion Tracking:\n</string>
-    <string name="tat14">Virtual Reality (VR) Relaxation Environments:\n</string>
-    <string name="tat15">Educational Resources and Articles:\n</string>
-    <string name="tat16">Gratitude Journals or Daily Reflections:\n</string>
-    <string name="tat17">Progressive Stress Reduction Programs:\n</string>
+    <string name="tast1">Deep Breathing\n</string>
+    <string name="tast2">Regular Exercise\n</string>
+    <string name="tast3">Healthy Diet\n</string>
+    <string name="tast4">Mindfulness and Meditation\n</string>
+    <string name="tast5">Get Enough Sleep\n</string>
+    <string name="tast6">Limit Exposure to Stress\n</string>
+    <string name="tast7">Seek Support\n</string>
+    <string name="tast8">Set Realistic Goals\n</string>
+    <string name="tast9">Time Management\n</string>
+    <string name="tast10">Limit Media Consumption\n</string>
 
-    <string name="tatd1">Offer guided meditation sessions or breathing exercises within the app. These can help users relax, reduce stress, and focus on their breath to calm anxiety.
-\n</string>
-    <string name="tatd2">Include features that guide users through mindfulness practices, such as body scans, progressive muscle relaxation, or guided imagery.
-\n</string>
-    <string name="tatd3">Provide activities like stretching routines, gentle yoga practices, or tai chi exercises designed to alleviate stress and tension.\n</string>
-    <string name="tatd4">Incorporate a feature where users can log their thoughts, feelings, or mood changes. This can help them track patterns and gain insights into their emotions.
-\n</string>
-    <string name="tatd5">Include a library of calming sounds, nature sounds, or soothing music that users can listen to for relaxation purposes.
-\n</string>
-    <string name="tatd6">Offer tools or techniques based on CBT principles to help users challenge negative thoughts and reframe their thinking patterns.\n</string>
-    <string name="tatd7">Create a system that allows users to set achievable goals and track their progress. Celebrating small achievements can boost confidence and reduce anxiety.
-\n</string>
-    <string name="tatd8"> Implement a feature that connects users with others experiencing similar challenges. This can provide a sense of community and support.\n</string>
-    <string name="tatd9">Provide assessments to help users identify their stressors and suggest coping strategies or resources tailored to their needs.
-\n</string>
-    <string name="tatd10">Send users regular reminders for selfcare activities or positive affirmations to boost their mood and self-esteem.
-\n</string>
-    <string name="tatd11">Integrate tools to promote better sleep, such as sleep trackers, calming bedtime stories, or guided sleep meditations, as quality sleep can significantly impact anxiety levels.
-\n</string>
-    <string name="tatd12">Create a repository of coping strategies and techniques for managing anxiety, such as grounding exercises, thought-stopping techniques, or self-soothing practices.
-\n</string>
-    <string name="tatd13">Enable users to track their moods over time, allowing them to recognize patterns and better understand their emotions.
-\n</string>
-    <string name="tatd14">For more immersive experiences, consider offering VR environments that simulate peaceful landscapes or tranquil settings to promote relaxation and mindfulness.
-\n</string>
-    <string name="tatd15">Provide curated articles, blogs, or educational content about anxiety management, coping mechanisms, and mental health awareness.\n</string>
-    <string name="tatd16">Incorporate prompts for users to reflect on things they are grateful for or encourage daily reflection on positive moments, fostering a more optimistic outlook.
-\n</string>
-    <string name="tatd17">Develop structured programs that gradually introduce stress-relieving activities or mindfulness exercises to help users build healthy habits and resilience over time.
-\n</string>
+    <string name="tasd1">Practice deep breathing exercises to calm your nervous system and reduce anxiety.\n</string>
+    <string name="tasd2">Engage in regular physical activity as it helps in reducing stress and anxiety.\n</string>
+    <string name="tasd3">Maintain a balanced diet and limit caffeine and sugar intake, as they can contribute to anxiety.\n</string>
+    <string name="tasd4">Practice mindfulness techniques or meditation to ground yourself in the present moment and reduce anxiety.\n</string>
+    <string name="tasd5">Ensure you get adequate sleep as lack of sleep can exacerbate anxiety.\n</string>
+    <string name="tasd6">Ensure you get adequate sleep as lack of sleep can exacerbate anxiety.\n</string>
+    <string name="tasd7">Talk to someone you trust, a friend, family member, or therapist, about your feelings and worries.\n</string>
+    <string name="tasd8">Break down tasks into manageable steps to reduce overwhelming feelings.\n</string>
+    <string name="tasd9">Organize your time effectively to reduce stress caused by feeling rushed or overwhelmed.\n</string>
+    <string name="tasd10">Reduce exposure to distressing news or social media if it tends to increase your anxiety.\n</string>
+
+    <!-- Internet Addiction Tips Strings -->
+
+    <string name="tiat1">Set Boundaries\n</string>
+    <string name="tiat2">Identify Triggers\n</string>
+    <string name="tiat3">Limit Access\n</string>
+    <string name="tiat4">Find Offline Activities\n</string>
+    <string name="tiat5">Practice Mindfulness\n</string>
+    <string name="tiat6">Social Interaction\n</string>
+    <string name="tiat7">Create Tech-Free Zones\n</string>
+    <string name="tiat8">Seek Support\n</string>
+    <string name="tiat9">Digital Detox\n</string>
+    <string name="tiat10">Reflect and Evaluate\n</string>
+
+    <string name="tiad1">Establish specific times for using the internet and stick to them. Create a schedule to limit excessive usage.\n</string>
+    <string name="tiad2">Recognize situations or emotions that lead to excessive internet use and find ways to address them differently.\n</string>
+    <string name="tiad3">Remove or limit access to devices or apps that consume the most time and attention.\n</string>
+    <string name="tiad4">Engage in hobbies, sports, or activities that dont involve screens to diversify your interests and reduce dependency on the internet..\n</string>
+    <string name="tiad5">Be mindful of your online activities and take breaks to assess whether youre using the internet out of habit or necessity..\n</string>
+    <string name="tiad6">Foster real-life connections by spending quality time with friends and family offline.\n</string>
+    <string name="tiad7">Designate specific areas (like bedrooms or dining areas) as tech-free zones to encourage offline activities and interactions.\n</string>
+    <string name="tiad8">Consider joining support groups or seeking professional help to manage and overcome internet addiction.\n</string>
+    <string name="tiad9">Plan periodic breaks from the internet, whether its a day or a weekend, to reset and recalibrate your relationship with technology.\n</string>
+    <string name="tiad10">Regularly assess your internet usage patterns and their impact on your life. Adjust habits accordingly to maintain a healthy balance.\n</string>
+
+    <!-- Stress Tips Strings -->
+
+    <string name="tst1">Deep Breathing And Relaxation:\n</string>
+    <string name="tst2">Regular Exercise:\n</string>
+    <string name="tst3">Healthy Eating Habits:\n</string>
+    <string name="tst4">Adequete Sleep:\n</string>
+    <string name="tst5">Time Management:\n</string>
+    <string name="tst6">Set Boundaries:\n</string>
+    <string name="tst7">Seek Support:\n</string>
+    <string name="tst8">Mindfulness and Relaxation:\n</string>
+    <string name="tst9">Time for Yourself:\n</string>
+    <string name="tst10">Positive Outlook:\n</string>
+
+    <string name="tsd1">Practice deep breathing, meditation, or progressive muscle relaxation to calm your mind and body.\n</string>
+    <string name="tsd2">Engage in physical activities like walking, yoga, or any exercise you enjoy to reduce stress hormones and boost endorphins.\n</string>
+    <string name="tsd3">Maintain a balanced diet rich in fruits, vegetables, and whole grains to support your bodys stress-coping mechanisms.\n</string>
+    <string name="tsd4">Ensure you get enough quality sleep as it plays a vital role in managing stress levels.\n</string>
+    <string name="tsd5">Organize tasks, prioritize, and set realistic goals to reduce overwhelming feelings caused by time constraints.\n</string>
+    <string name="tsd6">Learn to say no when necessary and establish boundaries to manage your commitments and avoid overload.\n</string>
+    <string name="tsd7">Talk to friends, family, or a professional counselor for emotional support and guidance when dealing with stress.\n</string>
+    <string name="tsd8">Practice mindfulness or engage in activities like reading, listening to music, or hobbies to relax your mind.\n</string>
+    <string name="tsd9">Schedule time for activities you enjoy or for self-care to recharge and alleviate stress.\n</string>
+    <string name="tsd10">Focus on the positives, cultivate gratitude, and try to adopt a more optimistic perspective on challenging situations.\n</string>
+
+
+    <!-- Depression Tips Strings -->
+
+    <string name="tdt1">Professional Help\n</string>
+    <string name="tdt2">Social Support\n</string>
+    <string name="tdt3">Regular Exercise\n</string>
+    <string name="tdt4">Healthy Diet\n</string>
+    <string name="tdt5">Sleep Hygiene\n</string>
+    <string name="tdt6">Mindfulness and Meditation\n</string>
+    <string name="tdt7">Avoid Isolation\n</string>
+    <string name="tdt8">Set Realistic Goals\n</string>
+    <string name="tdt9">Limit Stress\n</string>
+    <string name="tdt10">Be Kind to Yourself\n</string>
+
+    <string name="tdd1">Seek support from a mental health professional such as a therapist, counselor, or psychiatrist. They can provide therapy, medication, or a combination of both tailored to your needs.\n</string>
+    <string name="tdd2">Connect with friends, family, or support groups. Sharing your feelings and experiences with others can alleviate feelings of isolation and offer emotional support.\n</string>
+    <string name="tdd3">Engage in regular physical activity as it helps in releasing endorphins, improving mood, and reducing symptoms of depression.\n</string>
+    <string name="tdd4">Eat a well-balanced diet rich in fruits, vegetables, whole grains, and lean proteins. Certain nutrients can positively impact mood and energy levels.\n</string>
+    <string name="tdd5">Maintain a regular sleep schedule and create a relaxing bedtime routine. Quality sleep is crucial for mental health.\n</string>
+    <string name="tdd6">Practice mindfulness, meditation, or deep breathing exercises to reduce stress and promote relaxation.\n</string>
+    <string name="tdd7">Make efforts to stay connected with others, even when you might feel like withdrawing. Social interaction is important for mental well-being.\n</string>
+    <string name="tdd8">Break tasks into manageable steps and set achievable goals to avoid feeling overwhelmed by large tasks.\n</string>
+    <string name="tdd9">Identify and minimize stress triggers. Use stress reduction techniques like yoga, journaling, or hobbies to cope with stress.\n</string>
+    <string name="tdd10">Practice self-compassion and avoid self-criticism. Treat yourself with kindness and understanding, acknowledging that recovery from depression takes time.\n</string>
+
+    <!-- others -->
 
     <string name="at_desc">Discover simple, effective strategies to ease anxiety and boost your well-being. From quick calming exercises to practical tips, we\'ve got your back on the path to a more relaxed you.</string>
     <string name="anxiety_management_tips">Anxiety Management Tips</string>

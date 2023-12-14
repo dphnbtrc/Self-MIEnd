@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="350dp"
                 android:layout_height="match_parent"
-                android:text="@string/tat1"
+                android:text="@string/tiat1"
                 android:textAlignment="viewStart"
                 android:textColor="@color/verdigris"
                 android:textSize="16sp"
@@ -82,7 +82,178 @@
                 android:layout_width="315dp"
                 android:layout_height="match_parent"
                 android:lineSpacingExtra="6sp"
-                android:text="@string/tatd1"
+                android:text="@string/tiad1"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat2"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad2"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat3"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad3"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat4"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad4"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat5"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad5"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat6"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad6"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat7"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad7"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat8"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad8"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat9"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad9"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:text="@string/tiat10"
+                android:textAlignment="viewStart"
+                android:textColor="@color/verdigris"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/tiad10"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
                 android:textColor="@color/gray"
