@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
-class ResultFragment : Fragment() {
+class ResultFragment : Fragment(), DataPassListener {
 
     private val advicesListAnxiety = listOf(
         "Practice deep breathing exercises to calm your nervous system and reduce anxiety.",
@@ -63,6 +63,11 @@ class ResultFragment : Fragment() {
         "Focus on the positives, cultivate gratitude, and try to adopt a more optimistic perspective on challenging situations."
     )
 
+    override fun onDataPassed(myStringValue: String, myIntValue: Int) {
+        val textViewResult: TextView = requireView().findViewById(R.id.testResultScore)
+        textViewResult.text = "String: $myStringValue, Int: $myIntValue"
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -73,16 +78,15 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val testResultScore : TextView = requireView().findViewById(R.id.testResultScore)
         val testResultLevel : TextView = requireView().findViewById(R.id.testResultSeverity)
 
         //Anxiety Test
         val comingFromAnxietyTest = arguments?.getBoolean("comingFromAnxietyTest", false)
 
-        val scoreResultAnxiety = arguments?.getInt("AnxietyScore", 0) ?: 0
-        testResultScore.text = "$scoreResultAnxiety"
-
         if (comingFromAnxietyTest == true) {
+
+            //val receivedString = arguments?.getString("keyMyString")
+            val scoreResultAnxiety = arguments?.getInt("AnxietyScore", 0) ?: 0
 
             val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
 
@@ -95,23 +99,28 @@ class ResultFragment : Fragment() {
                 in 0..4 -> {
                     testResultLevel.text = getString(R.string.anxietyR1)
                 }
+
                 in 5..9 -> {
                     testResultLevel.text = getString(R.string.anxietyR2)
                 }
+
                 in 10..14 -> {
                     testResultLevel.text = getString(R.string.anxietyR3)
                 }
+
                 in 15..21 -> {
                     testResultLevel.text = getString(R.string.anxietyR4)
                 }
+
             }
+
         }
 
         //Depression Test
         val comingFromDepressionTest = arguments?.getBoolean("comingFromDepressionTest", false)
 
         val scoreResultDepression = arguments?.getInt("DepressionScore", 0) ?: 0
-        testResultScore.text = "$scoreResultDepression"
+
 
         if (comingFromDepressionTest == true) {
 
@@ -142,6 +151,7 @@ class ResultFragment : Fragment() {
                 in 20..27 -> {
                     testResultLevel.text = getString(R.string.depressionR5)
                 }
+
             }
         }
 
@@ -149,7 +159,7 @@ class ResultFragment : Fragment() {
         val comingFromInternetAddictionTest = arguments?.getBoolean("comingFromInternetAddictionTest", false)
 
         val scoreResultInternetAddiction = arguments?.getInt("InternetAddictionScore", 0) ?: 0
-        testResultScore.text = "$scoreResultInternetAddiction"
+
 
         if (comingFromInternetAddictionTest == true) {
 
@@ -184,7 +194,7 @@ class ResultFragment : Fragment() {
         val comingFromStressTest = arguments?.getBoolean("comingFromStressTest", false)
 
         val scoreResultStress = arguments?.getInt("StressScore", 0) ?: 0
-        testResultScore.text = "$scoreResultStress"
+
 
         if (comingFromStressTest == true) {
 

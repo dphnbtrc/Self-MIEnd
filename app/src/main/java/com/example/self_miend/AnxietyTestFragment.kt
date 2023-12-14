@@ -1,5 +1,6 @@
 package com.example.self_miend
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,7 +14,6 @@ class AnxietyTestFragment : Fragment() {
 
     private var scoreAnxietyTest = 0
 
-
     private val questionsAnxiety = listOf(
         "Feeling nervous, anxious, or on edge",
         "Not being able to stop or control worrying",
@@ -23,6 +23,8 @@ class AnxietyTestFragment : Fragment() {
         "Becoming easily annoyed or irritable",
         "Feeling afraid, as if something awful might happen"
     )
+
+    private var dataPassListener: DataPassListener? = null
 
     private var currentQuestionAnxietyIndex = 0
 
@@ -37,8 +39,6 @@ class AnxietyTestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         displayAnxietyQuestion()
-
-
 
         val rate1AnxietyB = view.findViewById<Button>(R.id.rate1)
 
@@ -102,22 +102,20 @@ class AnxietyTestFragment : Fragment() {
 
         toResultB1.setOnClickListener {
 
+            passDataToResultFragment()
+
             val resultS1 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS1)
             transaction.addToBackStack(null)
             transaction.commit()
 
+
             val bundle = Bundle().apply {
                 putBoolean("comingFromAnxietyTest", true)
             }
-            resultS1.arguments = bundle
 
-            val scoreAnxiety = Bundle().apply {
-                putInt("AnxietyScore", scoreAnxietyTest)
-            }
-            val resultFragment = ResultFragment()
-            resultFragment.arguments = scoreAnxiety
+            resultS1.arguments = bundle
 
             }
 
@@ -158,6 +156,17 @@ class AnxietyTestFragment : Fragment() {
             currentQuestionAnxietyIndex = 0
         }
         displayAnxietyQuestion()
+    }
+    private fun passDataToResultFragment() {
+        val myStringValue = "Hello, Fragment B!"
+        val myIntValue = 30
+        dataPassListener?.onDataPassed(myStringValue, myIntValue)
+    }
+    override fun onAttach(anxietyContext: Context) {
+        super.onAttach(anxietyContext)
+        if (anxietyContext is DataPassListener) {
+            dataPassListener = anxietyContext
+        }
     }
 
 }

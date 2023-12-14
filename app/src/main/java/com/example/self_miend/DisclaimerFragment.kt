@@ -29,7 +29,7 @@ class DisclaimerFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, greetingS)
             transaction.addToBackStack(null)
             transaction.commit()
-        }, 18000)
+        }, 1000)
     }
 
     override fun onDestroy() {
