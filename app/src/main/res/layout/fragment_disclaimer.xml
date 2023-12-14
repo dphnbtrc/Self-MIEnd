@@ -14,8 +14,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="24dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Disclaimer"
-
+        android:text="@string/disclaimerHead"
         android:textColor="@color/lapis_lazuli"
         android:textSize="32sp"
         android:textStyle="bold"

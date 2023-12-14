@@ -212,6 +212,8 @@ Thank you for using our app. We hope that it helps you on your journey to better
     <string name="stressR2">Moderate Stress</string>
     <string name="stressR3">High Perceived Stress</string>
 
+    <!-- Disclaimer -->
+    <string name="disclaimerHead">Disclaimer</string>
 
     <!-- Anxiety Tips Strings -->
     <string name="tat1">Guided Meditation and Breathing Exercises:\n</string>
