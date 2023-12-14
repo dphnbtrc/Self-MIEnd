@@ -37,6 +37,4 @@ class DisclaimerFragment : Fragment() {
         handler.removeCallbacksAndMessages(null)
     }
 
-
 }
-
