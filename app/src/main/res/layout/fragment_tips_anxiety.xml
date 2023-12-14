@@ -36,14 +36,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/backToActsAndTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/customized_buttons"
+        android:backgroundTint="@color/light_green"
+        android:text="@string/backText"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="450dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/backToActsAndTips"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="177dp">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="330dp"
@@ -54,7 +70,7 @@
             <TextView
                 android:layout_width="350dp"
                 android:layout_height="match_parent"
-                android:text="@string/tip_title_1"
+                android:text="@string/tat1"
                 android:textAlignment="viewStart"
                 android:textColor="@color/verdigris"
                 android:textSize="16sp"
@@ -64,11 +80,12 @@
                 android:layout_width="315dp"
                 android:layout_height="match_parent"
                 android:lineSpacingExtra="6sp"
-                android:text="@string/tip_desc_1"
+                android:text="@string/tatd1"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
                 android:textColor="@color/gray"
                 android:textSize="16sp" />
+
 
         </LinearLayout>
 
