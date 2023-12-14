@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.FragmentTransaction
 
 
 class TipsStressFragment : Fragment() {
@@ -13,8 +15,21 @@ class TipsStressFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tips_stress, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val backToTips = view.findViewById<Button>(R.id.backToActsAndTips)
+
+        backToTips.setOnClickListener {
+            val generalActTipsS = GeneralActsTipsFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, generalActTipsS)
+            transaction.commit()
+        }
+
     }
 
 }

@@ -40,6 +40,46 @@ class GeneralActsTipsFragment : Fragment() {
             transaction.commit()
         }
 
+        val toAnxietyTipsB = view.findViewById<Button>(R.id.button4)
+
+        toAnxietyTipsB.setOnClickListener {
+            val tipsAnxiety = TipsAnxietyFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, tipsAnxiety)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
+        val toDepressionTipsB = view.findViewById<Button>(R.id.button2)
+
+        toDepressionTipsB.setOnClickListener {
+            val tipsDepression = TipsDepressionFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, tipsDepression)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
+        val toInternetAddictionTipsB = view.findViewById<Button>(R.id.button5)
+
+        toInternetAddictionTipsB.setOnClickListener {
+            val tipsIntAddict = TipsIntAddictFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, tipsIntAddict)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
+        val toStressTipsB= view.findViewById<Button>(R.id.button3)
+
+        toStressTipsB.setOnClickListener {
+            val tipsStress = TipsStressFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, tipsStress)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
     }
 
 }
