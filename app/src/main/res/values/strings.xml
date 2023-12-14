@@ -35,7 +35,7 @@
     <string name="temp_score">0</string>
     <string name="temp_level">Minimal</string>
     <string name="hotline_caption">Experiencing emotional hurdles?</string>
-    <string name="hotline_call">Click for Call Support</string>
+    <string name="hotline_call">Click to Find Support</string>
     <string name="backText">Back</string>
     <string name="nextText">Next</string>
     <string name="loading_questionText">Loading Question&#8230;</string>
@@ -267,5 +267,10 @@ Thank you for using our app. We hope that it helps you on your journey to better
 
     <string name="at_desc">Discover simple, effective strategies to ease anxiety and boost your well-being. From quick calming exercises to practical tips, we\'ve got your back on the path to a more relaxed you.</string>
     <string name="anxiety_management_tips">Anxiety Management Tips</string>
+    <string name="dt">Discover practical strategies and uplifting activities to support your well-being, guiding you toward a brighter path.</string>
+    <string name="depression_management_tips">Depression Management Tips</string>
+    <string name="internet_addiction_management_tips">Internet Addiction Management Tips</string>
+    <string name="ia_desc">Balance your digital life with our Internet Addiction Tips app. Quick strategies to manage screen time and promote a healthier online-offline balance.</string>
+    <string name="st_desc">Explore quick and effective strategies to ease tension, enhance well-being, and bring more balance to your daily life. From mindful moments to practical stress-busting tips, find your path to a calmer, more resilient you.</string>
 
 </resources>
