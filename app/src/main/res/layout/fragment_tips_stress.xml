@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="@string/st_desc"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="@color/darker_blue_violet2"
         android:textSize="14sp"
         android:textStyle="bold"
