@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="30dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/greeting_title"
             android:textColor="@color/lapis_lazuli"
@@ -30,14 +30,17 @@
         style="@style/SubheadingText"
         android:layout_width="282dp"
         android:layout_height="325dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="88dp"
         android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="8sp"
         android:text="@string/greetings"
         android:textAlignment="center"
         android:textColor="@color/verdigris"
+        android:textSize="22sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/openHomeButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
