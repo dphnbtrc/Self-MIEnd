@@ -94,6 +94,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"

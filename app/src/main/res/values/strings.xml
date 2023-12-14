@@ -320,5 +320,11 @@ Thank you for using our app. We hope that it helps you on your journey to better
     <string name="internet_addiction_management_tips">Internet Addiction Management Tips</string>
     <string name="ia_desc">Balance your digital life with our Internet Addiction Tips app. Quick strategies to manage screen time and promote a healthier online-offline balance.</string>
     <string name="st_desc">Explore quick and effective strategies to ease tension, enhance well-being, and bring more balance to your daily life. From mindful moments to practical stress-busting tips, find your path to a calmer, more resilient you.</string>
+    <string name="how_are_you_nlet_s_talk">How are you? Let\'s talk!</string>
+    <string name="land_line">1553</string>
+    <string name="landline_text">Luzon Wide landline toll-fee</string>
+    <string name="globe_tm_subscribers">GLOBE/TM Subscribers</string>
+    <string name="globe_hotlines">0966-351-4518\n0917-899-8727\n0917-899-USAP</string>
+    <string name="smart_hotline">0908-639-2672</string>
 
 </resources>
