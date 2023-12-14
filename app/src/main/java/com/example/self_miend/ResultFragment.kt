@@ -11,13 +11,38 @@ import androidx.fragment.app.FragmentTransaction
 
 class ResultFragment : Fragment() {
 
-    private val advicesList = listOf(
+    private val advicesListAnxiety = listOf(
         "Hello",
         "Pisti ka",
         "Murag Fish",
         "killer"
         //Ibutang dide teh
     )
+
+    private val advicesListDepression = listOf(
+        "Hello",
+        "Pisti ka",
+        "Murag Fish",
+        "killer"
+        //Ibutang dide teh
+    )
+
+    private val advicesListInternetAddiction = listOf(
+        "Hello",
+        "Pisti ka",
+        "Murag Fish",
+        "killer"
+        //Ibutang dide teh
+    )
+
+    private val advicesListStress = listOf(
+        "Hello",
+        "Pisti ka",
+        "Murag Fish",
+        "killer"
+        //Ibutang dide teh
+    )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
