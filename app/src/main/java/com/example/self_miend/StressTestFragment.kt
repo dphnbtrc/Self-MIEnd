@@ -11,6 +11,8 @@ import androidx.fragment.app.FragmentTransaction
 
 class StressTestFragment : Fragment() {
 
+    private var scoreStressTest = 0
+
     private val questionsStress = listOf(
         "In the last month, how often have you been upset because of something that happened unexpectedly?",
         "In the last month, how often have you felt that you were unable to control the important things in your life?",
@@ -41,31 +43,71 @@ class StressTestFragment : Fragment() {
         val rateStress1B = view.findViewById<Button>(R.id.rate1)
 
         rateStress1B.setOnClickListener {
+
+            if (currentQuestionStressIndex == questionsStress.size - 1) {
+
+                rateStress1B.isEnabled = false
+            }
+
             showNextStressQuestion()
+            updateStressScore(0)
+
         }
 
         val rateStress2B = view.findViewById<Button>(R.id.rate2)
 
         rateStress2B.setOnClickListener {
+
+            if (currentQuestionStressIndex == questionsStress.size - 1) {
+
+                rateStress2B.isEnabled = false
+            }
+
             showNextStressQuestion()
+            updateStressScore(1)
+
         }
 
         val rateStress3B = view.findViewById<Button>(R.id.rate3)
 
         rateStress3B.setOnClickListener {
+
+            if (currentQuestionStressIndex == questionsStress.size - 1) {
+
+                rateStress3B.isEnabled = false
+            }
+
             showNextStressQuestion()
+            updateStressScore(2)
+
         }
 
         val rateStress4B = view.findViewById<Button>(R.id.rate4)
 
         rateStress4B.setOnClickListener {
+
+            if (currentQuestionStressIndex == questionsStress.size - 1) {
+
+                rateStress4B.isEnabled = false
+            }
+
             showNextStressQuestion()
+            updateStressScore(3)
+
         }
 
         val rateStress5B = view.findViewById<Button>(R.id.rate5)
 
         rateStress5B.setOnClickListener {
+
+            if (currentQuestionStressIndex == questionsStress.size - 1) {
+
+                rateStress5B.isEnabled = false
+            }
+
             showNextStressQuestion()
+            updateStressScore(4)
+
         }
 
         val backToPreviousStressQuestionB = view.findViewById<Button>(R.id.backButton)
@@ -96,6 +138,10 @@ class StressTestFragment : Fragment() {
             transaction.commit()
         }
 
+    }
+
+    private fun updateStressScore(value: Int) {
+        scoreStressTest += value
     }
 
     private fun displayStressQuestion() {

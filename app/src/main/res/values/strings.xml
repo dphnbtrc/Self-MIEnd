@@ -186,4 +186,31 @@ Take care of yourself and seek help if you need it.
 Thank you for using our app. We hope that it helps you on your journey to better mental health.
 ]]></string>
 
+    <!-- Result Scoring -->
+
+    <!-- Anxiety -->
+    <string name="anxietyR1">Minimal Anxiety</string>
+    <string name="anxietyR2">Mild Anxiety</string>
+    <string name="anxietyR3">Moderate Anxiety</string>
+    <string name="anxietyR4">Severe Anxiety</string>
+
+    <!-- Depression -->
+    <string name="depressionR1">Minimal Depression</string>
+    <string name="depressionR2">Mild Depression</string>
+    <string name="depressionR3">Moderate Depression</string>
+    <string name="depressionR4">Moderately Severe Depression</string>
+    <string name="depressionR5">Severe Depression</string>
+
+    <!-- Internet Addiction -->
+    <string name="internetAddictionR1">Normal Level of Internet Usage</string>
+    <string name="internetAddictionR2">Mild Level of Internet Usage</string>
+    <string name="internetAddictionR3">Moderate Level of Internet Usage</string>
+    <string name="internetAddictionR4">Severe Dependence upon the Internet</string>
+
+    <!-- Stress -->
+    <string name="stressR1">Low Stress</string>
+    <string name="stressR2">Moderate Stress</string>
+    <string name="stressR3">High Perceived Stress</string>
+
+
 </resources>

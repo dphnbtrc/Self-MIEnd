@@ -37,13 +37,19 @@ class AnxietyTestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         displayAnxietyQuestion()
+
+
 
         val rate1AnxietyB = view.findViewById<Button>(R.id.rate1)
 
         rate1AnxietyB.setOnClickListener {
+
+            if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
+
+                rate1AnxietyB.isEnabled = false
+            }
+
             showNextAnxietyQuestion()
             updateAnxietyScore(0)
         }
@@ -51,6 +57,12 @@ class AnxietyTestFragment : Fragment() {
         val rate2AnxietyB = view.findViewById<Button>(R.id.rate2)
 
         rate2AnxietyB.setOnClickListener {
+
+            if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
+
+                rate2AnxietyB.isEnabled = false
+            }
+
             showNextAnxietyQuestion()
             updateAnxietyScore(1)
         }
@@ -58,6 +70,12 @@ class AnxietyTestFragment : Fragment() {
         val rate3AnxietyB = view.findViewById<Button>(R.id.rate3)
 
         rate3AnxietyB.setOnClickListener {
+
+            if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
+
+                rate3AnxietyB.isEnabled = false
+            }
+
             showNextAnxietyQuestion()
             updateAnxietyScore(2)
         }
@@ -65,10 +83,15 @@ class AnxietyTestFragment : Fragment() {
         val rate4AnxietyB = view.findViewById<Button>(R.id.rate4)
 
         rate4AnxietyB.setOnClickListener {
+
+            if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
+
+                rate4AnxietyB.isEnabled = false
+            }
+
             showNextAnxietyQuestion()
             updateAnxietyScore(3)
         }
-
 
         val backToPreviousAnxietyQuestionB = view.findViewById<Button>(R.id.backButton)
 
@@ -81,10 +104,10 @@ class AnxietyTestFragment : Fragment() {
         toResultB1.setOnClickListener {
 
             val resultFragment = ResultFragment()
-            val anxietyTestResult = "SCORE"
             val bundleAnxietyScore = Bundle()
-            bundleAnxietyScore.putInt(anxietyTestResult, scoreAnxietyTest)
+            bundleAnxietyScore.putInt("SCORE", scoreAnxietyTest)
             resultFragment.arguments = bundleAnxietyScore
+
 
             val resultS1 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()

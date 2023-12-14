@@ -11,6 +11,8 @@ import androidx.fragment.app.FragmentTransaction
 
 class InternetAddictionTestFragment : Fragment() {
 
+    private var scoreInternetAddictionTest = 0
+
     private val questionsInternetAddiction = listOf(
         "How often do you find that you stay online longer than you intended?",
         "How often do you neglect household chores to spend more time online?",
@@ -51,37 +53,87 @@ class InternetAddictionTestFragment : Fragment() {
         val rateInternetAddiction1B = view.findViewById<Button>(R.id.rate1)
 
         rateInternetAddiction1B.setOnClickListener {
+
+            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+
+                rateInternetAddiction1B.isEnabled = false
+            }
+
             showNextInternetAddictionQuestion()
+            updateInternetAddictionScore(0)
+
         }
 
         val rateInternetAddiction2B = view.findViewById<Button>(R.id.rate2)
 
         rateInternetAddiction2B.setOnClickListener {
+
+            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+
+                rateInternetAddiction2B.isEnabled = false
+            }
+
             showNextInternetAddictionQuestion()
+            updateInternetAddictionScore(1)
+
         }
 
         val rateInternetAddiction3B = view.findViewById<Button>(R.id.rate3)
 
         rateInternetAddiction3B.setOnClickListener {
+
+            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+
+                rateInternetAddiction3B.isEnabled = false
+            }
+
             showNextInternetAddictionQuestion()
+            updateInternetAddictionScore(2)
+
         }
 
         val rateInternetAddiction4B = view.findViewById<Button>(R.id.rate4)
 
         rateInternetAddiction4B.setOnClickListener {
+
+            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+
+                rateInternetAddiction4B.isEnabled = false
+            }
+
             showNextInternetAddictionQuestion()
+            updateInternetAddictionScore(3)
+
         }
 
         val rateInternetAddiction5B = view.findViewById<Button>(R.id.rate5)
 
         rateInternetAddiction5B.setOnClickListener {
+
+            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+
+                rateInternetAddiction5B.isEnabled = false
+            }
+
             showNextInternetAddictionQuestion()
+            updateInternetAddictionScore(4)
+
         }
+
+
 
         val rateInternetAddiction6B = view.findViewById<Button>(R.id.rate6)
 
         rateInternetAddiction6B.setOnClickListener {
+
+            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+
+                rateInternetAddiction6B.isEnabled = false
+            }
+
             showNextInternetAddictionQuestion()
+            updateInternetAddictionScore(5)
+
         }
 
         val backToPreviousInternetAddictionQuestionB = view.findViewById<Button>(R.id.backButton)
@@ -110,6 +162,10 @@ class InternetAddictionTestFragment : Fragment() {
             transaction.commit()
         }
 
+    }
+
+    private fun updateInternetAddictionScore(value: Int) {
+        scoreInternetAddictionTest += value
     }
 
     private fun displayInternetAddictionQuestion() {

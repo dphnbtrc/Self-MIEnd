@@ -1,6 +1,7 @@
 package com.example.self_miend
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,8 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
 class DepressionTestFragment : Fragment() {
+
+    private var scoreDepressionTest = 0
 
     private val questionsDepression = listOf(
         "Little interest or pleasure in doing things",
@@ -40,25 +43,53 @@ class DepressionTestFragment : Fragment() {
         val rateDepression1B = view.findViewById<Button>(R.id.rate1)
 
         rateDepression1B.setOnClickListener {
+
+            if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
+
+                rateDepression1B.isEnabled = false
+            }
+
             showNextDepressionQuestion()
+            updateDepressionScore(0)
         }
 
         val rateDepression2B = view.findViewById<Button>(R.id.rate2)
 
         rateDepression2B.setOnClickListener {
+
+            if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
+
+                rateDepression2B.isEnabled = false
+            }
+
             showNextDepressionQuestion()
+            updateDepressionScore(1)
         }
 
         val rateDepression3B = view.findViewById<Button>(R.id.rate3)
 
         rateDepression3B.setOnClickListener {
+
+            if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
+
+                rateDepression3B.isEnabled = false
+            }
+
             showNextDepressionQuestion()
+            updateDepressionScore(2)
         }
 
         val rateDepression4B = view.findViewById<Button>(R.id.rate4)
 
         rateDepression4B.setOnClickListener {
+
+            if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
+
+                rateDepression4B.isEnabled = false
+            }
+
             showNextDepressionQuestion()
+            updateDepressionScore(3)
         }
 
         val backToPreviousDepressionQuestionB = view.findViewById<Button>(R.id.backButton)
@@ -87,6 +118,11 @@ class DepressionTestFragment : Fragment() {
             transaction.commit()
         }
 
+    }
+
+    private fun updateDepressionScore(value: Int) {
+        scoreDepressionTest += value
+        Log.d("AnxietyTestFragment", "Current score: $scoreDepressionTest")
     }
 
     private fun displayDepressionQuestion() {
