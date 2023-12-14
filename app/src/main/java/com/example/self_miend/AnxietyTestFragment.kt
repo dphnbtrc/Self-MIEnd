@@ -1,7 +1,6 @@
 package com.example.self_miend
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -103,12 +102,6 @@ class AnxietyTestFragment : Fragment() {
 
         toResultB1.setOnClickListener {
 
-            val resultFragment = ResultFragment()
-            val bundleAnxietyScore = Bundle()
-            bundleAnxietyScore.putInt("SCORE", scoreAnxietyTest)
-            resultFragment.arguments = bundleAnxietyScore
-
-
             val resultS1 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS1)
@@ -120,7 +113,13 @@ class AnxietyTestFragment : Fragment() {
             }
             resultS1.arguments = bundle
 
-        }
+            val scoreAnxiety = Bundle().apply {
+                putInt("AnxietyScore", scoreAnxietyTest)
+            }
+            val resultFragment = ResultFragment()
+            resultFragment.arguments = scoreAnxiety
+
+            }
 
         val toSelectTestB1 = view.findViewById<Button>(R.id.cancel_test_Button)
 
@@ -136,9 +135,7 @@ class AnxietyTestFragment : Fragment() {
 
     private fun updateAnxietyScore(value: Int) {
         scoreAnxietyTest += value
-        Log.d("AnxietyTestFragment", "Current score: $scoreAnxietyTest")
     }
-
 
     private fun displayAnxietyQuestion() {
         val questionsAnxietyTry = requireView().findViewById<TextView>(R.id.testQuestionAnxietyContainer)

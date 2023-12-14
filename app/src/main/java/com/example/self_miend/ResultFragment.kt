@@ -53,8 +53,8 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val testResultScore = requireView().findViewById<TextView>(R.id.testResultScore)
-        val testResultLevel = requireView().findViewById<TextView>(R.id.testResultSeverity)
+        val testResultScore : TextView = requireView().findViewById(R.id.testResultScore)
+        val testResultLevel : TextView = requireView().findViewById(R.id.testResultSeverity)
 
         //Anxiety Test
         val comingFromAnxietyTest = arguments?.getBoolean("comingFromAnxietyTest", false)
