@@ -125,6 +125,11 @@ class StressTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS4)
             transaction.addToBackStack(null)
             transaction.commit()
+
+            val bundle = Bundle().apply {
+                putBoolean("comingFromStressTest", true)
+            }
+            resultS4.arguments = bundle
         }
 
         val toSelectTestB4 = view.findViewById<Button>(R.id.cancel_test_Button)

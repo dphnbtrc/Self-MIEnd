@@ -150,6 +150,11 @@ class InternetAddictionTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS3)
             transaction.addToBackStack(null)
             transaction.commit()
+
+            val bundle = Bundle().apply {
+                putBoolean("comingFromInternetAddictionTest", true)
+            }
+            resultS3.arguments = bundle
         }
 
         val toSelectTestB3 = view.findViewById<Button>(R.id.cancel_test_Button)

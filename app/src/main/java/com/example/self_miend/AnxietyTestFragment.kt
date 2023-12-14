@@ -114,6 +114,12 @@ class AnxietyTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, resultS1)
             transaction.addToBackStack(null)
             transaction.commit()
+
+            val bundle = Bundle().apply {
+                putBoolean("comingFromAnxietyTest", true)
+            }
+            resultS1.arguments = bundle
+
         }
 
         val toSelectTestB1 = view.findViewById<Button>(R.id.cancel_test_Button)

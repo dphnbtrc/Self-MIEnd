@@ -28,7 +28,6 @@ class GreetingFragment : Fragment() {
             "Pisti ka",
             "Murag Fish",
             "killer"
-            //Balyui dide yot an mga namefuls daphins
         )
 
         val randomIndex = (stringsList.indices).random()
