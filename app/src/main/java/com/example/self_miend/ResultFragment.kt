@@ -43,7 +43,6 @@ class ResultFragment : Fragment() {
         //Ibutang dide teh
     )
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,19 +53,14 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val comingFromAnxietyTest = arguments?.getBoolean("comingFromAnxietyTest", false)
-        val comingFromDepressionTest = arguments?.getBoolean("comingFromDepressionTest", false)
-        val comingFromInternetAddictionTest = arguments?.getBoolean("comingFromInternetAddictionTest", false)
-        val comingFromStressTest = arguments?.getBoolean("comingFromStressTest", false)
-
-        val toResultDoneB = view.findViewById<Button>(R.id.resultDoneButton)
-
         val testResultScore = requireView().findViewById<TextView>(R.id.testResultScore)
+        val testResultLevel = requireView().findViewById<TextView>(R.id.testResultSeverity)
+
+        //Anxiety Test
+        val comingFromAnxietyTest = arguments?.getBoolean("comingFromAnxietyTest", false)
 
         val scoreResultAnxiety = arguments?.getInt("AnxietyScore", 0) ?: 0
         testResultScore.text = "$scoreResultAnxiety"
-
-        val testResultLevel = requireView().findViewById<TextView>(R.id.testResultSeverity)
 
         if (comingFromAnxietyTest == true) {
 
@@ -93,6 +87,8 @@ class ResultFragment : Fragment() {
             }
         }
 
+        //Depression Test
+        val comingFromDepressionTest = arguments?.getBoolean("comingFromDepressionTest", false)
 
         val scoreResultDepression = arguments?.getInt("DepressionScore", 0) ?: 0
         testResultScore.text = "$scoreResultDepression"
@@ -129,6 +125,9 @@ class ResultFragment : Fragment() {
             }
         }
 
+        //InternetAddiction Test
+        val comingFromInternetAddictionTest = arguments?.getBoolean("comingFromInternetAddictionTest", false)
+
         val scoreResultInternetAddiction = arguments?.getInt("InternetAddictionScore", 0) ?: 0
         testResultScore.text = "$scoreResultInternetAddiction"
 
@@ -161,6 +160,9 @@ class ResultFragment : Fragment() {
             }
         }
 
+        //Stress Test
+        val comingFromStressTest = arguments?.getBoolean("comingFromStressTest", false)
+
         val scoreResultStress = arguments?.getInt("StressScore", 0) ?: 0
         testResultScore.text = "$scoreResultStress"
 
@@ -187,6 +189,8 @@ class ResultFragment : Fragment() {
                 }
             }
         }
+
+        val toResultDoneB = view.findViewById<Button>(R.id.resultDoneButton)
 
         toResultDoneB.setOnClickListener {
             val resultDoneS = ResultDoneFragment()
