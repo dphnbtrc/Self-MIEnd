@@ -326,5 +326,6 @@ Thank you for using our app. We hope that it helps you on your journey to better
     <string name="globe_tm_subscribers">GLOBE/TM Subscribers</string>
     <string name="globe_hotlines">09663514518\n09178998727\n0917899USAP</string>
     <string name="smart_hotline">09086392672</string>
+    <string name="done_btn">Done</string>
 
 </resources>

@@ -164,35 +164,18 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/testDoneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/lapis_lazuli"
-        android:text="@string/nextText"
+        android:text="@string/done_btn"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/customized_buttons"
-        android:backgroundTint="@color/lapis_lazuli"
-        android:text="@string/backText"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/nextButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
