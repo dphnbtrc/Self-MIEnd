@@ -10,8 +10,12 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
+//A fragment that shows the result of the score of which test the user had taken
 class ResultFragment : Fragment() {
 
+    //A list of advices that will be displayed on this fragment
+    //There are different list of advices for each Test of Mental Issue
+    //Shown below is the advices for the Anxiety, an example
     private val advicesListAnxiety = listOf(
         "Practice deep breathing exercises to calm your nervous system and reduce anxiety.",
         "Engage in regular physical activity as it helps in reducing stress and anxiety.",
@@ -75,30 +79,45 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val SupportTest = view.findViewById<Button>(R.id.hotlineCall)
+        //A button that when clicked goes to the Hotline Call Number, FindSupportFragment
+        val supportTest = view.findViewById<Button>(R.id.hotlineCall)
 
+        //Creating a val for changing the result of severity of the test
         val testResultLevel : TextView = requireView().findViewById(R.id.testResultSeverity)
 
+        //Creating a val for changing the score of the test
         val resultScoreNum : TextView = requireView().findViewById(R.id.testResultScore)
 
-        //Anxiety Test
+        //Receiving the bundles in which what the previous fragment is received in this current fragment
+        //Shown below is when the previous fragment is the Anxiety
         val comingFromAnxietyTest = arguments?.getBoolean("comingFromAnxietyTest", false)
 
+        //If its previous fragment is in fact the AnxietyTestFragment in which the bundle is there
+        //Different bundles are created for each type of test
         if (comingFromAnxietyTest == true) {
 
+            //Creating a val for the bundle received in the previous fragment
+            //Shown below is the bundle received in the AnxietyTestFragment
+            //There are different bundles of the score received for each type of test
             val scoreResultAnxiety = arguments?.getInt("AnxietyScore", 0) ?: 0
 
+            //Displaying the score of the user in this fragment
             resultScoreNum.text = getString(R.string.display_score_label, scoreResultAnxiety)
 
+            //A log to know if there is in fact a bundle received
             Log.d("ResultFragment", scoreResultAnxiety.toString())
 
+            //Creating a val for changing the advice for the test
             val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
 
+            //Randomizing the advices that could be displayed
             val randomAdvicesAnxietyIndex = (advicesListAnxiety.indices).random()
             val randomAdvicesAnxiety = advicesListAnxiety[randomAdvicesAnxietyIndex]
 
+            //Displaying the advice in the fragment
             tipsOrQuotesOrAdvice.text = randomAdvicesAnxiety
 
+            //The level of severity depending on the score of the user
             when (scoreResultAnxiety) {
                 in 0..4 -> {
                     testResultLevel.text = getString(R.string.anxietyR1)
@@ -118,20 +137,20 @@ class ResultFragment : Fragment() {
 
             }
 
-            SupportTest.setOnClickListener {
+            //A button that when clicked goes to the Hotline Call Numbers, FindSupportFragment
+            supportTest.setOnClickListener {
                 val fromAnxietyResultToFindS = FindSupportFragment()
                 val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.activityMainLayout, fromAnxietyResultToFindS)
                 transaction.addToBackStack(null)
                 transaction.commit()
 
+                //A bundle to ensure that the previous fragment is this fragment with the data of the Test the user had taken
                 val bundle = Bundle().apply {
                     putBoolean("comingFromAnxietyResultFragment", true)
                     putInt("AnxietyScore", scoreResultAnxiety)
                 }
-
                 fromAnxietyResultToFindS.arguments = bundle
-
             }
 
         }
@@ -175,7 +194,7 @@ class ResultFragment : Fragment() {
 
             }
 
-            SupportTest.setOnClickListener {
+            supportTest.setOnClickListener {
                 val fromDepressionResultToFindS = FindSupportFragment()
                 val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.activityMainLayout, fromDepressionResultToFindS)
@@ -228,7 +247,7 @@ class ResultFragment : Fragment() {
 
             }
 
-            SupportTest.setOnClickListener {
+            supportTest.setOnClickListener {
                 val fromInternetAddictionResultToFindS = FindSupportFragment()
                 val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.activityMainLayout, fromInternetAddictionResultToFindS)
@@ -276,7 +295,7 @@ class ResultFragment : Fragment() {
                 }
             }
 
-            SupportTest.setOnClickListener {
+            supportTest.setOnClickListener {
                 val fromStressResultToFindS = FindSupportFragment()
                 val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.activityMainLayout, fromStressResultToFindS)
@@ -294,6 +313,7 @@ class ResultFragment : Fragment() {
 
         }
 
+        //A button that when clicked goes to the next fragment, ResultDoneFragment
         val toResultDoneB = view.findViewById<Button>(R.id.resultDoneButton)
 
         toResultDoneB.setOnClickListener {

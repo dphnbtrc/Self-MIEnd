@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 
 class AboutFragment : Fragment() {
 
+    //A fragment that tells what the app is all about
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,6 +21,7 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //A button to go the next fragment, Greeting Fragment
         val toGreetingB = view.findViewById<Button>(R.id.openGreetingButton)
 
         toGreetingB.setOnClickListener {
@@ -33,4 +35,3 @@ class AboutFragment : Fragment() {
     }
 
 }
-

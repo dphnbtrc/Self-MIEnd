@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    //Main Screen of the app when it is first initialized
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val startingButton = findViewById<Button>(R.id.startButton)
         startingButton.setOnClickListener {
 
+            //To go to the next screen which is a fragment that shows the Disclaimer
             val goToFragmentS = DisclaimerFragment()
 
             supportFragmentManager.beginTransaction()
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
                 .addToBackStack(null)
                 .commit()
 
+            //Animation for the transition
             val fadeOutAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_out)
             startingButton.startAnimation(fadeOutAnimation)
             startingButton.visibility = View.GONE

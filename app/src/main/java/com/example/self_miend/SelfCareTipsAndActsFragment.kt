@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 
 class SelfCareTipsAndActsFragment : Fragment() {
 
+    //A fragment that shows the tips and what the user will do in a specific mental or issue or in general
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

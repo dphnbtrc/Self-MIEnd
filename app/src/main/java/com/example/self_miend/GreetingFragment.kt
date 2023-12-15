@@ -23,9 +23,12 @@ class GreetingFragment : Fragment() {
 
         val toHomeB = view.findViewById<Button>(R.id.openHomeButton)
 
+        //A list that contains the introduction phrases
         val stringsList = listOf(
-            "Time for a quick mental health check! Take a moment to reflect on your well-being. If you\\'ve taken any assessments, we\\'re here to discuss the results and provide support and guidance.",
-            "We're thrilled to have you here. Our app is designed to provide the tools and support you need for a happier and healthier mindset.",
+            "Time for a quick mental health check! Take a moment to reflect on your well-being. " +
+                    "If you\\'ve taken any assessments, we\\'re here to discuss the results and provide support and guidance.",
+            "We're thrilled to have you here. Our app is designed to provide the tools and " +
+                    "support you need for a happier and healthier mindset.",
             "Step into a space designed to nurture your mental well-being. We're committed to guiding you forward.",
             "Glad to have you here! Our aim is to empower you with tools for a healthier mind.",
             "Embrace a place dedicated to mental wellness. Let's embark on a path towards greater resilience.",
@@ -41,11 +44,13 @@ class GreetingFragment : Fragment() {
             "You're at the intersection of mental wellness and digital empowerment. Let's redefine mental health on your terms."
         )
 
+        //Creating a val to randomize the strings that could show in the list
         val randomIndex = (stringsList.indices).random()
         val randomString = stringsList[randomIndex]
 
         val greetingsRandom = view.findViewById<TextView>(R.id.textView6)
 
+        //A button to go the next Fragment, HomeFragment
         greetingsRandom.text = randomString
 
         toHomeB.setOnClickListener {

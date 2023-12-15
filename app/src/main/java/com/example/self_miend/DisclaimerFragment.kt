@@ -23,6 +23,7 @@ class DisclaimerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //A handler to make the fragment disappear or move to another fragment with duration
         handler.postDelayed({
             val aboutS = AboutFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -32,6 +33,7 @@ class DisclaimerFragment : Fragment() {
         }, 10000)
     }
 
+    //to destroy the handler after
     override fun onDestroy() {
         super.onDestroy()
         handler.removeCallbacksAndMessages(null)

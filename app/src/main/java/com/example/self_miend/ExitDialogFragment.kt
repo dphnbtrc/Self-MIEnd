@@ -11,6 +11,7 @@ import kotlin.system.exitProcess
 
 class ExitDialogFragment : Fragment() {
 
+    //A fragment to assure the User if he/she really wants to quit the app
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,6 +22,7 @@ class ExitDialogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //A button that when clicked, closes/terminates the app
         val quitB = view.findViewById<Button>(R.id.yesButton)
 
         quitB.setOnClickListener {
@@ -28,6 +30,7 @@ class ExitDialogFragment : Fragment() {
             exitProcess(1)
         }
 
+        //A button that when clicked, goes back to the previous fragment, HomeFragment
         val backToHomeB = view.findViewById<Button>(R.id.noButton)
 
         backToHomeB.setOnClickListener {
@@ -41,4 +44,3 @@ class ExitDialogFragment : Fragment() {
     }
 
 }
-

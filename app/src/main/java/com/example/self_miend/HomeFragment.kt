@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 
 class HomeFragment : Fragment() {
 
+    //A fragment that is the Main Page or Home of the app
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,6 +21,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //A button that when clicked goes to the SelectTestFragment
         val toSelectTestB = view.findViewById<Button>(R.id.openDiffTestsButton)
 
         toSelectTestB.setOnClickListener {
@@ -30,6 +32,7 @@ class HomeFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked goes to the Tips, SelfCareTipsAndActsFragment
         val toActAndTips = view.findViewById<Button>(R.id.openActivitiesButton)
 
         toActAndTips.setOnClickListener {
@@ -40,6 +43,7 @@ class HomeFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked goes to the Exit, ExitDialogFragment
         val exitB = view.findViewById<Button>(R.id.exitButton)
 
         exitB.setOnClickListener {
@@ -50,6 +54,7 @@ class HomeFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked goes to the Hotline Calls, FindSupportFragment
         val fromHomeToHotline = view.findViewById<Button>(R.id.hotlineCall)
 
         fromHomeToHotline.setOnClickListener {
@@ -59,6 +64,7 @@ class HomeFragment : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
 
+            //A bundle that ensures when going to the FindSupportFragment it's previous is this fragment
             val bundle = Bundle().apply {
                 putBoolean("comingFromHomeFragment", true)
             }

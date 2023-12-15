@@ -9,6 +9,8 @@ import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
 
 class SelectTestFragment : Fragment() {
+
+    //A fragment that lets the user choose what test to take from the four we have provided
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -19,6 +21,7 @@ class SelectTestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //A button that when clicked, goes to the Anxiety Test, AnxietyTestFragment
         val toAnxietyB = view.findViewById<Button>(R.id.anxietyTestButton)
 
         toAnxietyB.setOnClickListener {
@@ -29,6 +32,7 @@ class SelectTestFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, goes to the Depression Test, DepressionTestFragment
         val toDepressionB = view.findViewById<Button>(R.id.depressionTestButton)
 
         toDepressionB.setOnClickListener {
@@ -39,6 +43,7 @@ class SelectTestFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, goes to the IntAddiction Test, InternetAddictionTestFragment
         val toInternetAddictionB = view.findViewById<Button>(R.id.internetAddictionTestButton)
 
         toInternetAddictionB.setOnClickListener {
@@ -49,6 +54,7 @@ class SelectTestFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, goes to the Stress Test, StressTestFragment
         val toStressB = view.findViewById<Button>(R.id.stressTestButton)
 
         toStressB.setOnClickListener {
@@ -59,6 +65,7 @@ class SelectTestFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, goes to back to the previous fragment, HomeFragment
         val toHomeAgainB = view.findViewById<Button>(R.id.backToHomeButton)
 
         toHomeAgainB.setOnClickListener {

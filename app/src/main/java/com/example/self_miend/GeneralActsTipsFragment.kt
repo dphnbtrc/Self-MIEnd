@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 
 class GeneralActsTipsFragment : Fragment() {
 
+    //A fragment that shows the tips and what the user will do in a specific mental or issue or in general
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,6 +23,7 @@ class GeneralActsTipsFragment : Fragment() {
 
         val toSelfCareB = view.findViewById<Button>(R.id.selfCareButton)
 
+        //A button that when clicked, goes to the general tips for assessing mental issue
         toSelfCareB.setOnClickListener {
             val selfCareS = SelfCareTipsAndActsFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -30,6 +32,7 @@ class GeneralActsTipsFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, goes back to the main home, HomeFragment
         val toHomeB3 = view.findViewById<Button>(R.id.backHomeButton3)
 
         toHomeB3.setOnClickListener {
@@ -40,6 +43,7 @@ class GeneralActsTipsFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, proceeds to the tips, activities, advices and other else for Anxiety
         val toAnxietyTipsB = view.findViewById<Button>(R.id.button4)
 
         toAnxietyTipsB.setOnClickListener {
@@ -50,6 +54,7 @@ class GeneralActsTipsFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, proceeds to the tips, activities, advices and other else for Depression
         val toDepressionTipsB = view.findViewById<Button>(R.id.button2)
 
         toDepressionTipsB.setOnClickListener {
@@ -60,6 +65,7 @@ class GeneralActsTipsFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, proceeds to the tips, activities, advices and other else for Internet Addiction
         val toInternetAddictionTipsB = view.findViewById<Button>(R.id.button5)
 
         toInternetAddictionTipsB.setOnClickListener {
@@ -70,6 +76,7 @@ class GeneralActsTipsFragment : Fragment() {
             transaction.commit()
         }
 
+        //A button that when clicked, proceeds to the tips, activities, advices and other else for Stress
         val toStressTipsB= view.findViewById<Button>(R.id.button3)
 
         toStressTipsB.setOnClickListener {
