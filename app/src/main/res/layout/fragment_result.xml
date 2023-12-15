@@ -94,34 +94,18 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/sample_result_advice"
-        android:textSize="14sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultContainer" />
 
-    <TextView
-        android:id="@+id/hotline"
-        style="@style/ParagraphText"
-        android:layout_width="301dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="25dp"
-        android:gravity="center"
-        android:text="@string/hotline_caption"
-        android:textColor="@color/lapis_lazuli"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/hotlineCall"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultAdvice"
-        app:layout_constraintVertical_bias="0.142" />
-
     <Button
         android:id="@+id/hotlineCall"
         android:layout_width="276dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/light_green"
         android:letterSpacing=".1"
@@ -132,6 +116,20 @@
         app:layout_constraintBottom_toTopOf="@+id/resultDoneButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/hotline"
+        style="@style/ParagraphText"
+        android:layout_width="301dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/hotline_caption"
+        android:textColor="@color/lapis_lazuli"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/hotlineCall"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
