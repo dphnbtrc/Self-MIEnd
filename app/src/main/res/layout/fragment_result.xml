@@ -9,7 +9,8 @@
     android:background="#ededed"
     app:defaultNavHost="true"
     app:navGraph="@navigation/nav_graph"
-    tools:context=".ResultFragment">
+    tools:context=".ResultFragment"
+    android:orientation="vertical">
 
 
     <TextView
