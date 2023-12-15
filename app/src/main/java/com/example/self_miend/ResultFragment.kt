@@ -75,6 +75,8 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val SupportTest = view.findViewById<Button>(R.id.hotlineCall)
+
         val testResultLevel : TextView = requireView().findViewById(R.id.testResultSeverity)
 
         val resultScoreNum : TextView = requireView().findViewById(R.id.testResultScore)
@@ -113,6 +115,22 @@ class ResultFragment : Fragment() {
                 in 15..21 -> {
                     testResultLevel.text = getString(R.string.anxietyR4)
                 }
+
+            }
+
+            SupportTest.setOnClickListener {
+                val fromAnxietyResultToFindS = FindSupportFragment()
+                val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.activityMainLayout, fromAnxietyResultToFindS)
+                transaction.addToBackStack(null)
+                transaction.commit()
+
+                val bundle = Bundle().apply {
+                    putBoolean("comingFromAnxietyResultFragment", true)
+                    putInt("AnxietyScore", scoreResultAnxiety)
+                }
+
+                fromAnxietyResultToFindS.arguments = bundle
 
             }
 
@@ -156,6 +174,23 @@ class ResultFragment : Fragment() {
                 }
 
             }
+
+            SupportTest.setOnClickListener {
+                val fromDepressionResultToFindS = FindSupportFragment()
+                val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.activityMainLayout, fromDepressionResultToFindS)
+                transaction.addToBackStack(null)
+                transaction.commit()
+
+                val bundle = Bundle().apply {
+                    putBoolean("comingFromDepressionResultFragment", true)
+                    putInt("DepressionScore", scoreResultDepression)
+                }
+
+                fromDepressionResultToFindS.arguments = bundle
+
+            }
+
         }
 
         //InternetAddiction Test
@@ -192,6 +227,23 @@ class ResultFragment : Fragment() {
                 }
 
             }
+
+            SupportTest.setOnClickListener {
+                val fromInternetAddictionResultToFindS = FindSupportFragment()
+                val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.activityMainLayout, fromInternetAddictionResultToFindS)
+                transaction.addToBackStack(null)
+                transaction.commit()
+
+                val bundle = Bundle().apply {
+                    putBoolean("comingFromInternetAddictionResultFragment", true)
+                    putInt("InternetAddictionScore", scoreResultInternetAddiction)
+                }
+
+                fromInternetAddictionResultToFindS.arguments = bundle
+
+            }
+
         }
 
         //Stress Test
@@ -223,6 +275,23 @@ class ResultFragment : Fragment() {
                     testResultLevel.text = getString(R.string.stressR3)
                 }
             }
+
+            SupportTest.setOnClickListener {
+                val fromStressResultToFindS = FindSupportFragment()
+                val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.activityMainLayout, fromStressResultToFindS)
+                transaction.addToBackStack(null)
+                transaction.commit()
+
+                val bundle = Bundle().apply {
+                    putBoolean("comingFromStressResultFragment", true)
+                    putInt("StressScore", scoreResultStress)
+                }
+
+                fromStressResultToFindS.arguments = bundle
+
+            }
+
         }
 
         val toResultDoneB = view.findViewById<Button>(R.id.resultDoneButton)

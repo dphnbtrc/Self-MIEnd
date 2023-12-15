@@ -50,14 +50,21 @@ class HomeFragment : Fragment() {
             transaction.commit()
         }
 
-        val toHotlineCall = view.findViewById<Button>(R.id.hotlineCall)
+        val fromHomeToHotline = view.findViewById<Button>(R.id.hotlineCall)
 
-        toHotlineCall.setOnClickListener {
-            val findSupportS = FindSupportFragment()
+        fromHomeToHotline.setOnClickListener {
+            val fromHomeToFindS = FindSupportFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.activityMainLayout, findSupportS)
+            transaction.replace(R.id.activityMainLayout, fromHomeToFindS)
             transaction.addToBackStack(null)
             transaction.commit()
+
+            val bundle = Bundle().apply {
+                putBoolean("comingFromHomeFragment", true)
+            }
+
+            fromHomeToFindS.arguments = bundle
+
         }
 
     }
