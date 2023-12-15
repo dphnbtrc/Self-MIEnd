@@ -113,6 +113,12 @@ class StressTestFragment : Fragment() {
 
         val toStressResultB4 = view.findViewById<Button>(R.id.testDoneButton)
 
+        if (currentQuestionStressIndex == questionsStress.size - 1) {
+            toStressResultB4.visibility = View.VISIBLE
+        } else {
+            toStressResultB4.visibility = View.GONE
+        }
+
         toStressResultB4.setOnClickListener {
             val resultS4 = ResultFragment()
             val transaction: FragmentTransaction =
@@ -125,14 +131,6 @@ class StressTestFragment : Fragment() {
                 putBoolean("comingFromStressTest", true)
             }
             resultS4.arguments = bundle
-
-            if (currentQuestionStressIndex == questionsStress.size - 1) {
-                toStressResultB4.visibility = View.VISIBLE
-            } else {
-                toStressResultB4.visibility = View.GONE
-            }
-
-
         }
 
         val toSelectTestB4 = view.findViewById<Button>(R.id.cancel_test_Button)

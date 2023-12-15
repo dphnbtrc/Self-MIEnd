@@ -24,9 +24,9 @@ class DisclaimerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         handler.postDelayed({
-            val greetingS = GreetingFragment()
+            val aboutS = AboutFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.activityMainLayout, greetingS)
+            transaction.replace(R.id.activityMainLayout, aboutS)
             transaction.addToBackStack(null)
             transaction.commit()
         }, 1000)

@@ -137,6 +137,12 @@ class InternetAddictionTestFragment : Fragment() {
 
         val toInternetAddictionResultB3 = view.findViewById<Button>(R.id.testDoneButton)
 
+        if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+            toInternetAddictionResultB3.visibility = View.VISIBLE
+        } else {
+            toInternetAddictionResultB3.visibility = View.GONE
+        }
+
         toInternetAddictionResultB3.setOnClickListener {
             val resultS3 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -148,13 +154,6 @@ class InternetAddictionTestFragment : Fragment() {
                 putBoolean("comingFromInternetAddictionTest", true)
             }
             resultS3.arguments = bundle
-
-            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
-                toInternetAddictionResultB3.visibility = View.VISIBLE
-            } else {
-                toInternetAddictionResultB3.visibility = View.GONE
-            }
-
         }
 
         val toSelectTestB3 = view.findViewById<Button>(R.id.cancel_test_Button)

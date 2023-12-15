@@ -93,7 +93,14 @@ class AnxietyTestFragment : Fragment() {
             updateAnxietyScore(3)
         }
 
+
         val toAnxietyResultB1 = view.findViewById<Button>(R.id.testDoneButton)
+
+        if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
+            toAnxietyResultB1.visibility = View.VISIBLE
+        } else {
+            toAnxietyResultB1.visibility = View.GONE
+        }
 
         toAnxietyResultB1.setOnClickListener {
 
@@ -111,11 +118,6 @@ class AnxietyTestFragment : Fragment() {
 
             resultS1.arguments = bundle
 
-            if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
-                toAnxietyResultB1.visibility = View.VISIBLE
-            } else {
-                toAnxietyResultB1.visibility = View.GONE
-            }
 
         }
 

@@ -94,6 +94,12 @@ class DepressionTestFragment : Fragment() {
 
         val toDepressionResultB2 = view.findViewById<Button>(R.id.testDoneButton)
 
+        if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
+            toDepressionResultB2.visibility = View.VISIBLE
+        } else {
+            toDepressionResultB2.visibility = View.GONE
+        }
+
         toDepressionResultB2.setOnClickListener {
             val resultS2 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -105,13 +111,6 @@ class DepressionTestFragment : Fragment() {
                 putBoolean("comingFromDepressionTest", true)
             }
             resultS2.arguments = bundle
-
-            if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
-                toDepressionResultB2.visibility = View.VISIBLE
-            } else {
-                toDepressionResultB2.visibility = View.GONE
-            }
-
         }
 
         val toSelectTestB2 = view.findViewById<Button>(R.id.cancel_test_Button)
