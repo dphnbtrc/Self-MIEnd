@@ -1,6 +1,7 @@
 package com.example.self_miend
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,8 @@ import androidx.fragment.app.FragmentTransaction
 class StressTestFragment : Fragment() {
 
     private var scoreStressTest = 0
+
+    private var lastAddedScoreStress = 0
 
     private val questionsStress = listOf(
         "In the last month, how often have you been upset because of something that happened unexpectedly?",
@@ -114,6 +117,11 @@ class StressTestFragment : Fragment() {
 
         backToPreviousStressQuestionB.setOnClickListener {
             showPreviousStressQuestion()
+            revertLastStressScore()
+
+            if (currentQuestionStressIndex == 0) {
+                backToPreviousStressQuestionB.isEnabled = false
+            }
         }
 
         val toResultB4 = view.findViewById<Button>(R.id.nextButton)
@@ -147,6 +155,15 @@ class StressTestFragment : Fragment() {
 
     private fun updateStressScore(value: Int) {
         scoreStressTest += value
+        Log.d("StressTestFragment", "Current score: $scoreStressTest")
+    }
+
+    private fun revertLastStressScore() {
+        scoreStressTest -= lastAddedScoreStress
+        if (scoreStressTest < 0) {
+            scoreStressTest = 0
+        }
+        Log.d("StressTestFragment", "Current score: $scoreStressTest")
     }
 
     private fun displayStressQuestion() {

@@ -2,6 +2,7 @@ package com.example.self_miend
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,8 @@ import androidx.fragment.app.FragmentTransaction
 class AnxietyTestFragment : Fragment() {
 
     private var scoreAnxietyTest = 0
+
+    private var lastAddedScoreAnxiety = 0
 
     private val questionsAnxiety = listOf(
         "Feeling nervous, anxious, or on edge",
@@ -96,6 +99,12 @@ class AnxietyTestFragment : Fragment() {
 
         backToPreviousAnxietyQuestionB.setOnClickListener {
             showPreviousAnxietyQuestion()
+            revertLastAnxietyScore()
+
+            if (currentQuestionAnxietyIndex == 0) {
+                backToPreviousAnxietyQuestionB.isEnabled = false
+            }
+
         }
 
         val toResultB1 = view.findViewById<Button>(R.id.nextButton)
@@ -133,6 +142,16 @@ class AnxietyTestFragment : Fragment() {
 
     private fun updateAnxietyScore(value: Int) {
         scoreAnxietyTest += value
+        lastAddedScoreAnxiety = value
+        Log.d("AnxietyTestFragment", "Current score: $scoreAnxietyTest")
+    }
+
+    private fun revertLastAnxietyScore() {
+        scoreAnxietyTest -= lastAddedScoreAnxiety
+        if (scoreAnxietyTest < 0) {
+            scoreAnxietyTest = 0
+        }
+        Log.d("AnxietyTestFragment", "Current score: $scoreAnxietyTest")
     }
 
     private fun displayAnxietyQuestion() {
@@ -157,6 +176,9 @@ class AnxietyTestFragment : Fragment() {
         }
         displayAnxietyQuestion()
     }
+
+
+
     private fun passDataToResultFragment() {
         val myStringValue = "Hello, Fragment B!"
         val myIntValue = 30

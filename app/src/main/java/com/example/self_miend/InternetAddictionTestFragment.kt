@@ -1,6 +1,7 @@
 package com.example.self_miend
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,8 @@ import androidx.fragment.app.FragmentTransaction
 class InternetAddictionTestFragment : Fragment() {
 
     private var scoreInternetAddictionTest = 0
+
+    private var lastAddedScoreInternetAddiction = 0
 
     private val questionsInternetAddiction = listOf(
         "How often do you find that you stay online longer than you intended?",
@@ -140,6 +143,12 @@ class InternetAddictionTestFragment : Fragment() {
 
         backToPreviousInternetAddictionQuestionB.setOnClickListener {
             showPreviousInternetAddictionQuestion()
+            revertLastInternetAddictionScore()
+
+            if (currentQuestionInternetAddictionIndex == 0) {
+                backToPreviousInternetAddictionQuestionB.isEnabled = false
+            }
+
         }
 
         val toResultB3 = view.findViewById<Button>(R.id.nextButton)
@@ -171,6 +180,15 @@ class InternetAddictionTestFragment : Fragment() {
 
     private fun updateInternetAddictionScore(value: Int) {
         scoreInternetAddictionTest += value
+        Log.d("InternetAddictionTest", "Current score: $scoreInternetAddictionTest")
+    }
+
+    private fun revertLastInternetAddictionScore() {
+        scoreInternetAddictionTest -= lastAddedScoreInternetAddiction
+        if (scoreInternetAddictionTest < 0) {
+            scoreInternetAddictionTest = 0
+        }
+        Log.d("InternetAddictionTest", "Current score: $scoreInternetAddictionTest")
     }
 
     private fun displayInternetAddictionQuestion() {

@@ -50,6 +50,16 @@ class HomeFragment : Fragment() {
             transaction.commit()
         }
 
+        val toHotlineCall = view.findViewById<Button>(R.id.hotlineCall)
+
+        toHotlineCall.setOnClickListener {
+            val findSupportS = FindSupportFragment()
+            val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.activityMainLayout, findSupportS)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
     }
 
 }

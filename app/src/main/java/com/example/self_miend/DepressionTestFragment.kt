@@ -14,6 +14,8 @@ class DepressionTestFragment : Fragment() {
 
     private var scoreDepressionTest = 0
 
+    private var lastAddedScoreDepression = 0
+
     private val questionsDepression = listOf(
         "Little interest or pleasure in doing things",
         "Feeling down, depressed, or hopeless",
@@ -96,6 +98,12 @@ class DepressionTestFragment : Fragment() {
 
         backToPreviousDepressionQuestionB.setOnClickListener {
             showPreviousDepressionQuestion()
+            revertLastDepressionScore()
+
+            if (currentQuestionDepressionIndex == 0) {
+                backToPreviousDepressionQuestionB.isEnabled = false
+            }
+
         }
 
         val toResultB2 = view.findViewById<Button>(R.id.nextButton)
@@ -127,7 +135,15 @@ class DepressionTestFragment : Fragment() {
 
     private fun updateDepressionScore(value: Int) {
         scoreDepressionTest += value
-        Log.d("AnxietyTestFragment", "Current score: $scoreDepressionTest")
+        Log.d("DepressionTestFragment", "Current score: $scoreDepressionTest")
+    }
+
+    private fun revertLastDepressionScore() {
+        scoreDepressionTest -= lastAddedScoreDepression
+        if (scoreDepressionTest < 0) {
+            scoreDepressionTest = 0
+        }
+        Log.d("DepressionTestFragment", "Current score: $scoreDepressionTest")
     }
 
     private fun displayDepressionQuestion() {
