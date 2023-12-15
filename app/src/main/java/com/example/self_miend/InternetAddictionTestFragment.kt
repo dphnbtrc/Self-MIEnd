@@ -14,8 +14,6 @@ class InternetAddictionTestFragment : Fragment() {
 
     private var scoreInternetAddictionTest = 0
 
-    private var lastAddedScoreInternetAddiction = 0
-
     private val questionsInternetAddiction = listOf(
         "How often do you find that you stay online longer than you intended?",
         "How often do you neglect household chores to spend more time online?",
@@ -123,8 +121,6 @@ class InternetAddictionTestFragment : Fragment() {
 
         }
 
-
-
         val rateInternetAddiction6B = view.findViewById<Button>(R.id.rate6)
 
         rateInternetAddiction6B.setOnClickListener {
@@ -139,21 +135,9 @@ class InternetAddictionTestFragment : Fragment() {
 
         }
 
-        val backToPreviousInternetAddictionQuestionB = view.findViewById<Button>(R.id.backButton)
+        val toInternetAddictionResultB3 = view.findViewById<Button>(R.id.testDoneButton)
 
-        backToPreviousInternetAddictionQuestionB.setOnClickListener {
-            showPreviousInternetAddictionQuestion()
-            revertLastInternetAddictionScore()
-
-            if (currentQuestionInternetAddictionIndex == 0) {
-                backToPreviousInternetAddictionQuestionB.isEnabled = false
-            }
-
-        }
-
-        val toResultB3 = view.findViewById<Button>(R.id.nextButton)
-
-        toResultB3.setOnClickListener {
+        toInternetAddictionResultB3.setOnClickListener {
             val resultS3 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS3)
@@ -164,6 +148,13 @@ class InternetAddictionTestFragment : Fragment() {
                 putBoolean("comingFromInternetAddictionTest", true)
             }
             resultS3.arguments = bundle
+
+            if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+                toInternetAddictionResultB3.visibility = View.VISIBLE
+            } else {
+                toInternetAddictionResultB3.visibility = View.GONE
+            }
+
         }
 
         val toSelectTestB3 = view.findViewById<Button>(R.id.cancel_test_Button)
@@ -183,14 +174,6 @@ class InternetAddictionTestFragment : Fragment() {
         Log.d("InternetAddictionTest", "Current score: $scoreInternetAddictionTest")
     }
 
-    private fun revertLastInternetAddictionScore() {
-        scoreInternetAddictionTest -= lastAddedScoreInternetAddiction
-        if (scoreInternetAddictionTest < 0) {
-            scoreInternetAddictionTest = 0
-        }
-        Log.d("InternetAddictionTest", "Current score: $scoreInternetAddictionTest")
-    }
-
     private fun displayInternetAddictionQuestion() {
         val questionsInternetAddictionTry = requireView().findViewById<TextView>(R.id.testQuestionInternetContainer)
         questionsInternetAddictionTry.text = questionsInternetAddiction[currentQuestionInternetAddictionIndex]
@@ -201,15 +184,6 @@ class InternetAddictionTestFragment : Fragment() {
             currentQuestionInternetAddictionIndex++
         } else {
             currentQuestionInternetAddictionIndex = questionsInternetAddiction.size - 1
-        }
-        displayInternetAddictionQuestion()
-    }
-
-    private fun showPreviousInternetAddictionQuestion() {
-        if (currentQuestionInternetAddictionIndex > 0) {
-            currentQuestionInternetAddictionIndex--
-        } else {
-            currentQuestionInternetAddictionIndex = 0
         }
         displayInternetAddictionQuestion()
     }

@@ -14,8 +14,6 @@ class DepressionTestFragment : Fragment() {
 
     private var scoreDepressionTest = 0
 
-    private var lastAddedScoreDepression = 0
-
     private val questionsDepression = listOf(
         "Little interest or pleasure in doing things",
         "Feeling down, depressed, or hopeless",
@@ -94,21 +92,9 @@ class DepressionTestFragment : Fragment() {
             updateDepressionScore(3)
         }
 
-        val backToPreviousDepressionQuestionB = view.findViewById<Button>(R.id.backButton)
+        val toDepressionResultB2 = view.findViewById<Button>(R.id.testDoneButton)
 
-        backToPreviousDepressionQuestionB.setOnClickListener {
-            showPreviousDepressionQuestion()
-            revertLastDepressionScore()
-
-            if (currentQuestionDepressionIndex == 0) {
-                backToPreviousDepressionQuestionB.isEnabled = false
-            }
-
-        }
-
-        val toResultB2 = view.findViewById<Button>(R.id.nextButton)
-
-        toResultB2.setOnClickListener {
+        toDepressionResultB2.setOnClickListener {
             val resultS2 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.activityMainLayout, resultS2)
@@ -119,6 +105,13 @@ class DepressionTestFragment : Fragment() {
                 putBoolean("comingFromDepressionTest", true)
             }
             resultS2.arguments = bundle
+
+            if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
+                toDepressionResultB2.visibility = View.VISIBLE
+            } else {
+                toDepressionResultB2.visibility = View.GONE
+            }
+
         }
 
         val toSelectTestB2 = view.findViewById<Button>(R.id.cancel_test_Button)
@@ -138,14 +131,6 @@ class DepressionTestFragment : Fragment() {
         Log.d("DepressionTestFragment", "Current score: $scoreDepressionTest")
     }
 
-    private fun revertLastDepressionScore() {
-        scoreDepressionTest -= lastAddedScoreDepression
-        if (scoreDepressionTest < 0) {
-            scoreDepressionTest = 0
-        }
-        Log.d("DepressionTestFragment", "Current score: $scoreDepressionTest")
-    }
-
     private fun displayDepressionQuestion() {
         val questionsDepressionTry = requireView().findViewById<TextView>(R.id.testQuestionDepressionContainer)
         questionsDepressionTry.text = questionsDepression[currentQuestionDepressionIndex]
@@ -156,15 +141,6 @@ class DepressionTestFragment : Fragment() {
             currentQuestionDepressionIndex++
         } else {
             currentQuestionDepressionIndex = questionsDepression.size - 1
-        }
-        displayDepressionQuestion()
-    }
-
-    private fun showPreviousDepressionQuestion() {
-        if (currentQuestionDepressionIndex > 0) {
-            currentQuestionDepressionIndex--
-        } else {
-            currentQuestionDepressionIndex = 0
         }
         displayDepressionQuestion()
     }

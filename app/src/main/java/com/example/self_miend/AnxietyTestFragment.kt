@@ -15,8 +15,6 @@ class AnxietyTestFragment : Fragment() {
 
     private var scoreAnxietyTest = 0
 
-    private var lastAddedScoreAnxiety = 0
-
     private val questionsAnxiety = listOf(
         "Feeling nervous, anxious, or on edge",
         "Not being able to stop or control worrying",
@@ -95,21 +93,9 @@ class AnxietyTestFragment : Fragment() {
             updateAnxietyScore(3)
         }
 
-        val backToPreviousAnxietyQuestionB = view.findViewById<Button>(R.id.backButton)
+        val toAnxietyResultB1 = view.findViewById<Button>(R.id.testDoneButton)
 
-        backToPreviousAnxietyQuestionB.setOnClickListener {
-            showPreviousAnxietyQuestion()
-            revertLastAnxietyScore()
-
-            if (currentQuestionAnxietyIndex == 0) {
-                backToPreviousAnxietyQuestionB.isEnabled = false
-            }
-
-        }
-
-        val toResultB1 = view.findViewById<Button>(R.id.nextButton)
-
-        toResultB1.setOnClickListener {
+        toAnxietyResultB1.setOnClickListener {
 
             passDataToResultFragment()
 
@@ -119,14 +105,19 @@ class AnxietyTestFragment : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
 
-
             val bundle = Bundle().apply {
                 putBoolean("comingFromAnxietyTest", true)
             }
 
             resultS1.arguments = bundle
 
+            if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
+                toAnxietyResultB1.visibility = View.VISIBLE
+            } else {
+                toAnxietyResultB1.visibility = View.GONE
             }
+
+        }
 
         val toSelectTestB1 = view.findViewById<Button>(R.id.cancel_test_Button)
 
@@ -142,15 +133,6 @@ class AnxietyTestFragment : Fragment() {
 
     private fun updateAnxietyScore(value: Int) {
         scoreAnxietyTest += value
-        lastAddedScoreAnxiety = value
-        Log.d("AnxietyTestFragment", "Current score: $scoreAnxietyTest")
-    }
-
-    private fun revertLastAnxietyScore() {
-        scoreAnxietyTest -= lastAddedScoreAnxiety
-        if (scoreAnxietyTest < 0) {
-            scoreAnxietyTest = 0
-        }
         Log.d("AnxietyTestFragment", "Current score: $scoreAnxietyTest")
     }
 
@@ -167,17 +149,6 @@ class AnxietyTestFragment : Fragment() {
         }
         displayAnxietyQuestion()
     }
-
-    private fun showPreviousAnxietyQuestion() {
-        if (currentQuestionAnxietyIndex > 0) {
-            currentQuestionAnxietyIndex--
-        } else {
-            currentQuestionAnxietyIndex = 0
-        }
-        displayAnxietyQuestion()
-    }
-
-
 
     private fun passDataToResultFragment() {
         val myStringValue = "Hello, Fragment B!"

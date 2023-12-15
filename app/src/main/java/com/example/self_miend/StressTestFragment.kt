@@ -14,8 +14,6 @@ class StressTestFragment : Fragment() {
 
     private var scoreStressTest = 0
 
-    private var lastAddedScoreStress = 0
-
     private val questionsStress = listOf(
         "In the last month, how often have you been upset because of something that happened unexpectedly?",
         "In the last month, how often have you felt that you were unable to control the important things in your life?",
@@ -113,20 +111,9 @@ class StressTestFragment : Fragment() {
 
         }
 
-        val backToPreviousStressQuestionB = view.findViewById<Button>(R.id.backButton)
+        val toStressResultB4 = view.findViewById<Button>(R.id.testDoneButton)
 
-        backToPreviousStressQuestionB.setOnClickListener {
-            showPreviousStressQuestion()
-            revertLastStressScore()
-
-            if (currentQuestionStressIndex == 0) {
-                backToPreviousStressQuestionB.isEnabled = false
-            }
-        }
-
-        val toResultB4 = view.findViewById<Button>(R.id.nextButton)
-
-        toResultB4.setOnClickListener {
+        toStressResultB4.setOnClickListener {
             val resultS4 = ResultFragment()
             val transaction: FragmentTransaction =
                 requireActivity().supportFragmentManager.beginTransaction()
@@ -138,6 +125,14 @@ class StressTestFragment : Fragment() {
                 putBoolean("comingFromStressTest", true)
             }
             resultS4.arguments = bundle
+
+            if (currentQuestionStressIndex == questionsStress.size - 1) {
+                toStressResultB4.visibility = View.VISIBLE
+            } else {
+                toStressResultB4.visibility = View.GONE
+            }
+
+
         }
 
         val toSelectTestB4 = view.findViewById<Button>(R.id.cancel_test_Button)
@@ -158,13 +153,6 @@ class StressTestFragment : Fragment() {
         Log.d("StressTestFragment", "Current score: $scoreStressTest")
     }
 
-    private fun revertLastStressScore() {
-        scoreStressTest -= lastAddedScoreStress
-        if (scoreStressTest < 0) {
-            scoreStressTest = 0
-        }
-        Log.d("StressTestFragment", "Current score: $scoreStressTest")
-    }
 
     private fun displayStressQuestion() {
         val questionsStressTry =
@@ -177,15 +165,6 @@ class StressTestFragment : Fragment() {
             currentQuestionStressIndex++
         } else {
             currentQuestionStressIndex = questionsStress.size - 1
-        }
-        displayStressQuestion()
-    }
-
-    private fun showPreviousStressQuestion() {
-        if (currentQuestionStressIndex > 0) {
-            currentQuestionStressIndex--
-        } else {
-            currentQuestionStressIndex = 0
         }
         displayStressQuestion()
     }
