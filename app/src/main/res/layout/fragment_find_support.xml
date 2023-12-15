@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FindSupportFragment"
-    android:background="#ededed"
-    android:orientation="vertical">
+    android:background="#ededed">
 
     <Button
         android:id="@+id/backHomeButton3"
@@ -151,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="SMART/SUN/TNT Subscribers"
+        android:text="@string/subscribers_sim"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"

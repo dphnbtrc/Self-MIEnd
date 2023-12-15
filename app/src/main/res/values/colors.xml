@@ -30,10 +30,7 @@
     <color name="select4">#FFFF00</color>
     <color name="select5">#17ff4d</color>
 
-
-
     <!-- colors for fragment_result-->
-
 
     <!-- res/values/colors.xml -->
     <color name="light_blue_600">#3F51B5</color>
@@ -41,5 +38,6 @@
     <color name="light_blue_900">#0D47A1</color>
     <color name="light_blue_A400">#448AFF</color>
 
+    <color name="buttonNotWorking">#808080</color>
 
 </resources>

@@ -39,6 +39,7 @@ class DepressionTestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         displayDepressionQuestion()
+        checkIndexAndUpdateButton()
 
         val rateDepression1B = view.findViewById<Button>(R.id.rate1)
 
@@ -94,12 +95,6 @@ class DepressionTestFragment : Fragment() {
 
         val toDepressionResultB2 = view.findViewById<Button>(R.id.testDoneButton)
 
-        if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
-            toDepressionResultB2.visibility = View.VISIBLE
-        } else {
-            toDepressionResultB2.visibility = View.GONE
-        }
-
         toDepressionResultB2.setOnClickListener {
             val resultS2 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -109,8 +104,11 @@ class DepressionTestFragment : Fragment() {
 
             val bundle = Bundle().apply {
                 putBoolean("comingFromDepressionTest", true)
+                putInt("DepressionScore", scoreDepressionTest)
             }
+
             resultS2.arguments = bundle
+
         }
 
         val toSelectTestB2 = view.findViewById<Button>(R.id.cancel_test_Button)
@@ -121,6 +119,17 @@ class DepressionTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, selectS2)
             transaction.addToBackStack(null)
             transaction.commit()
+        }
+
+    }
+
+    private fun checkIndexAndUpdateButton() {
+        val doneButton = requireView().findViewById<Button>(R.id.testDoneButton)
+
+        doneButton.isEnabled = false
+
+        if (currentQuestionDepressionIndex == questionsDepression.size - 1) {
+            doneButton.isEnabled = true
         }
 
     }
@@ -142,6 +151,7 @@ class DepressionTestFragment : Fragment() {
             currentQuestionDepressionIndex = questionsDepression.size - 1
         }
         displayDepressionQuestion()
+        checkIndexAndUpdateButton()
     }
 
 }

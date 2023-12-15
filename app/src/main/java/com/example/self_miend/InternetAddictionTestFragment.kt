@@ -50,6 +50,7 @@ class InternetAddictionTestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         displayInternetAddictionQuestion()
+        checkIndexAndUpdateButton()
 
         val rateInternetAddiction1B = view.findViewById<Button>(R.id.rate1)
 
@@ -137,12 +138,6 @@ class InternetAddictionTestFragment : Fragment() {
 
         val toInternetAddictionResultB3 = view.findViewById<Button>(R.id.testDoneButton)
 
-        if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
-            toInternetAddictionResultB3.visibility = View.VISIBLE
-        } else {
-            toInternetAddictionResultB3.visibility = View.GONE
-        }
-
         toInternetAddictionResultB3.setOnClickListener {
             val resultS3 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -152,6 +147,7 @@ class InternetAddictionTestFragment : Fragment() {
 
             val bundle = Bundle().apply {
                 putBoolean("comingFromInternetAddictionTest", true)
+                putInt("InternetAddictionScore", scoreInternetAddictionTest)
             }
             resultS3.arguments = bundle
         }
@@ -164,6 +160,17 @@ class InternetAddictionTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, selectS3)
             transaction.addToBackStack(null)
             transaction.commit()
+        }
+
+    }
+
+    private fun checkIndexAndUpdateButton() {
+        val doneButton = requireView().findViewById<Button>(R.id.testDoneButton)
+
+        doneButton.isEnabled = false
+
+        if (currentQuestionInternetAddictionIndex == questionsInternetAddiction.size - 1) {
+            doneButton.isEnabled = true
         }
 
     }
@@ -185,6 +192,7 @@ class InternetAddictionTestFragment : Fragment() {
             currentQuestionInternetAddictionIndex = questionsInternetAddiction.size - 1
         }
         displayInternetAddictionQuestion()
+        checkIndexAndUpdateButton()
     }
 
 }

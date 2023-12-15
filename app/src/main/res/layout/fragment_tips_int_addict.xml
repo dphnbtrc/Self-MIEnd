@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ededed"
-    tools:context=".TipsIntAddictFragment"
-    android:orientation="vertical">
+    tools:context=".TipsIntAddictFragment">
 
     <TextView
         style="@style/SubheadingText"
@@ -66,7 +65,7 @@
 
         <LinearLayout
             android:layout_width="330dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 

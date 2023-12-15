@@ -1,6 +1,7 @@
 package com.example.self_miend
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
-class ResultFragment : Fragment(), DataPassListener {
+class ResultFragment : Fragment() {
 
     private val advicesListAnxiety = listOf(
         "Practice deep breathing exercises to calm your nervous system and reduce anxiety.",
@@ -63,10 +64,6 @@ class ResultFragment : Fragment(), DataPassListener {
         "Focus on the positives, cultivate gratitude, and try to adopt a more optimistic perspective on challenging situations."
     )
 
-    override fun onDataPassed(myStringValue: String, myIntValue: Int) {
-        val textViewResult: TextView = requireView().findViewById(R.id.testResultScore)
-        textViewResult.text = "String: $myStringValue, Int: $myIntValue"
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -80,13 +77,18 @@ class ResultFragment : Fragment(), DataPassListener {
 
         val testResultLevel : TextView = requireView().findViewById(R.id.testResultSeverity)
 
+        val resultScoreNum : TextView = requireView().findViewById(R.id.testResultScore)
+
         //Anxiety Test
         val comingFromAnxietyTest = arguments?.getBoolean("comingFromAnxietyTest", false)
 
         if (comingFromAnxietyTest == true) {
 
-            //val receivedString = arguments?.getString("keyMyString")
             val scoreResultAnxiety = arguments?.getInt("AnxietyScore", 0) ?: 0
+
+            resultScoreNum.text = getString(R.string.display_score_label, scoreResultAnxiety)
+
+            Log.d("ResultFragment", scoreResultAnxiety.toString())
 
             val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
 
@@ -121,8 +123,9 @@ class ResultFragment : Fragment(), DataPassListener {
 
         val scoreResultDepression = arguments?.getInt("DepressionScore", 0) ?: 0
 
-
         if (comingFromDepressionTest == true) {
+
+            resultScoreNum.text = getString(R.string.display_score_label, scoreResultDepression)
 
             val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
 
@@ -160,8 +163,9 @@ class ResultFragment : Fragment(), DataPassListener {
 
         val scoreResultInternetAddiction = arguments?.getInt("InternetAddictionScore", 0) ?: 0
 
-
         if (comingFromInternetAddictionTest == true) {
+
+            resultScoreNum.text = getString(R.string.display_score_label, scoreResultInternetAddiction)
 
             val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
 
@@ -195,8 +199,9 @@ class ResultFragment : Fragment(), DataPassListener {
 
         val scoreResultStress = arguments?.getInt("StressScore", 0) ?: 0
 
-
         if (comingFromStressTest == true) {
+
+            resultScoreNum.text = getString(R.string.display_score_label, scoreResultStress)
 
             val tipsOrQuotesOrAdvice = requireView().findViewById<TextView>(R.id.resultAdvice)
 

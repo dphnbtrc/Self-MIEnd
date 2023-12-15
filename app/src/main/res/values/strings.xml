@@ -45,7 +45,7 @@
     <string name="act_try">Activities\nto Try</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="exit">Exit Button</string>
+    <string name="exit">Exit</string>
     <string name="home">Home</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
@@ -327,5 +327,9 @@ Thank you for using our app. We hope that it helps you on your journey to better
     <string name="globe_hotlines">09663514518\n09178998727\n0917899USAP</string>
     <string name="smart_hotline">09086392672</string>
     <string name="done_btn">Done</string>
+    <string name="subscribers_sim">SMART/SUN/TNT Subscribers</string>
+    <string name="tips">Tips</string>
+    <string name="sample_result_advice">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</string>
+    <string name="stress_management_tips">Stress Management Tips</string>
 
 </resources>

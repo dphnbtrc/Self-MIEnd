@@ -9,8 +9,7 @@
     android:background="#ededed"
     app:defaultNavHost="true"
     app:navGraph="@navigation/nav_graph"
-    tools:context=".ResultFragment"
-    android:orientation="vertical">
+    tools:context=".ResultFragment">
 
 
     <TextView
@@ -94,7 +93,7 @@
         android:layout_height="114dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        android:text="@string/sample_result_advice"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

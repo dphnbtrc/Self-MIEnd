@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ededed"
-    tools:context=".TipsStressFragment"
-    android:orientation="vertical">
+    tools:context=".TipsStressFragment">
 
     <TextView
         style="@style/SubheadingText"
@@ -15,7 +14,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginBottom="17dp"
         android:gravity="center"
-        android:text="Stress Management Tips"
+        android:text="@string/stress_management_tips"
         android:textColor="@color/lapis_lazuli"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
@@ -66,7 +65,7 @@
 
         <LinearLayout
             android:layout_width="330dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 

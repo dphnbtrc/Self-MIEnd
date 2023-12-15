@@ -40,6 +40,7 @@ class StressTestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         displayStressQuestion()
+        checkIndexAndUpdateButton()
 
         val rateStress1B = view.findViewById<Button>(R.id.rate1)
 
@@ -113,12 +114,6 @@ class StressTestFragment : Fragment() {
 
         val toStressResultB4 = view.findViewById<Button>(R.id.testDoneButton)
 
-        if (currentQuestionStressIndex == questionsStress.size - 1) {
-            toStressResultB4.visibility = View.VISIBLE
-        } else {
-            toStressResultB4.visibility = View.GONE
-        }
-
         toStressResultB4.setOnClickListener {
             val resultS4 = ResultFragment()
             val transaction: FragmentTransaction =
@@ -129,6 +124,7 @@ class StressTestFragment : Fragment() {
 
             val bundle = Bundle().apply {
                 putBoolean("comingFromStressTest", true)
+                putInt("StressScore", scoreStressTest)
             }
             resultS4.arguments = bundle
         }
@@ -142,6 +138,17 @@ class StressTestFragment : Fragment() {
             transaction.replace(R.id.activityMainLayout, selectS4)
             transaction.addToBackStack(null)
             transaction.commit()
+        }
+
+    }
+
+    private fun checkIndexAndUpdateButton() {
+        val doneButton = requireView().findViewById<Button>(R.id.testDoneButton)
+
+        doneButton.isEnabled = false
+
+        if (currentQuestionStressIndex == questionsStress.size - 1) {
+            doneButton.isEnabled = true
         }
 
     }
@@ -165,6 +172,7 @@ class StressTestFragment : Fragment() {
             currentQuestionStressIndex = questionsStress.size - 1
         }
         displayStressQuestion()
+        checkIndexAndUpdateButton()
     }
 
 }

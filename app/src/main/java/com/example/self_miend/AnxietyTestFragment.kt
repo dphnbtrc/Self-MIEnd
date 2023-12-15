@@ -1,6 +1,5 @@
 package com.example.self_miend
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -25,8 +24,6 @@ class AnxietyTestFragment : Fragment() {
         "Feeling afraid, as if something awful might happen"
     )
 
-    private var dataPassListener: DataPassListener? = null
-
     private var currentQuestionAnxietyIndex = 0
 
     override fun onCreateView(
@@ -40,6 +37,7 @@ class AnxietyTestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         displayAnxietyQuestion()
+        checkIndexAndUpdateButton()
 
         val rate1AnxietyB = view.findViewById<Button>(R.id.rate1)
 
@@ -93,18 +91,9 @@ class AnxietyTestFragment : Fragment() {
             updateAnxietyScore(3)
         }
 
-
         val toAnxietyResultB1 = view.findViewById<Button>(R.id.testDoneButton)
 
-        if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
-            toAnxietyResultB1.visibility = View.VISIBLE
-        } else {
-            toAnxietyResultB1.visibility = View.GONE
-        }
-
         toAnxietyResultB1.setOnClickListener {
-
-            passDataToResultFragment()
 
             val resultS1 = ResultFragment()
             val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -114,10 +103,10 @@ class AnxietyTestFragment : Fragment() {
 
             val bundle = Bundle().apply {
                 putBoolean("comingFromAnxietyTest", true)
+                putInt("AnxietyScore", scoreAnxietyTest)
             }
 
             resultS1.arguments = bundle
-
 
         }
 
@@ -133,6 +122,16 @@ class AnxietyTestFragment : Fragment() {
 
     }
 
+    private fun checkIndexAndUpdateButton() {
+        val doneButton = requireView().findViewById<Button>(R.id.testDoneButton)
+
+        doneButton.isEnabled = false
+
+        if (currentQuestionAnxietyIndex == questionsAnxiety.size - 1) {
+            doneButton.isEnabled = true
+        }
+
+    }
     private fun updateAnxietyScore(value: Int) {
         scoreAnxietyTest += value
         Log.d("AnxietyTestFragment", "Current score: $scoreAnxietyTest")
@@ -150,18 +149,9 @@ class AnxietyTestFragment : Fragment() {
             currentQuestionAnxietyIndex = questionsAnxiety.size - 1
         }
         displayAnxietyQuestion()
+        checkIndexAndUpdateButton()
     }
 
-    private fun passDataToResultFragment() {
-        val myStringValue = "Hello, Fragment B!"
-        val myIntValue = 30
-        dataPassListener?.onDataPassed(myStringValue, myIntValue)
-    }
-    override fun onAttach(anxietyContext: Context) {
-        super.onAttach(anxietyContext)
-        if (anxietyContext is DataPassListener) {
-            dataPassListener = anxietyContext
-        }
-    }
+
 
 }

@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ededed"
-    tools:context=".ResultDoneFragment"
-    android:orientation="vertical">
+    tools:context=".ResultDoneFragment">
 
     <ImageView
         android:layout_width="200dp"

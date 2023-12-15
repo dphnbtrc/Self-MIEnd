@@ -7,8 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ededed"
-    tools:context=".HomeFragment"
-    android:orientation="vertical">
+    tools:context=".HomeFragment">
 
 
     <Button
@@ -37,7 +36,7 @@
         android:layout_marginBottom="40dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/emerald"
-        android:text="Tips"
+        android:text="@string/tips"
         android:textColor="@color/lapis_lazuli"
         android:textSize="26sp"
         android:textStyle="bold"
