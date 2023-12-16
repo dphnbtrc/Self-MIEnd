@@ -14,7 +14,7 @@
         android:id="@+id/selfCareButton"
         android:layout_width="280dp"
         android:layout_height="73dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/customized_buttons"
         android:backgroundTint="@color/blue_violet2"
         android:text="@string/self_care_for_mental_wellness"
@@ -49,7 +49,7 @@
         style="@style/SubheadingText"
         android:layout_width="144dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="36dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/customized_buttons"
@@ -61,9 +61,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/backHomeButton3"
         app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <TextView
         android:id="@+id/textView7"
