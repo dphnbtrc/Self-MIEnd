@@ -329,5 +329,6 @@ Thank you for using our app. We hope that it helps you on your journey to better
     <string name="tips">Tips</string>
     <string name="sample_result_advice">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</string>
     <string name="stress_management_tips">Stress Management Tips</string>
+    <string name="message">message</string>
 
 </resources>

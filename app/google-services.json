@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816690626258",
+    "project_id": "self-miend",
+    "storage_bucket": "self-miend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816690626258:android:1334291d9411b5a7d0370b",
+        "android_client_info": {
+          "package_name": "com.example.self_miend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOvqtKG9PjH0lC5U1G9qExHQ7EEmNXLJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
